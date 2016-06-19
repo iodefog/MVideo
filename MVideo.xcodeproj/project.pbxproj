@@ -13,6 +13,9 @@
 		4F16F39D1D15926800E8B25D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F39B1D15926800E8B25D /* Main.storyboard */; };
 		4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F39E1D15926800E8B25D /* Assets.xcassets */; };
 		4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F3A01D15926800E8B25D /* LaunchScreen.storyboard */; };
+		4FB9311F1D16AA1F0030A1C3 /* LiveList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FB9311E1D16AA1E0030A1C3 /* LiveList.plist */; };
+		4FB931211D16AD930030A1C3 /* videosList0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931201D16AD930030A1C3 /* videosList0.txt */; };
+		4FB931231D16B6460030A1C3 /* videosList1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931221D16B6460030A1C3 /* videosList1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		4F16F39E1D15926800E8B25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F16F3A11D15926800E8B25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F16F3A31D15926800E8B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FB9311E1D16AA1E0030A1C3 /* LiveList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiveList.plist; sourceTree = "<group>"; };
+		4FB931201D16AD930030A1C3 /* videosList0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList0.txt; sourceTree = "<group>"; };
+		4FB931221D16B6460030A1C3 /* videosList1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 				4F16F3961D15926800E8B25D /* AppDelegate.m */,
 				4F16F3981D15926800E8B25D /* ViewController.h */,
 				4F16F3991D15926800E8B25D /* ViewController.m */,
+				4FB931201D16AD930030A1C3 /* videosList0.txt */,
+				4FB931221D16B6460030A1C3 /* videosList1.txt */,
+				4FB9311E1D16AA1E0030A1C3 /* LiveList.plist */,
 				4F16F39B1D15926800E8B25D /* Main.storyboard */,
 				4F16F39E1D15926800E8B25D /* Assets.xcassets */,
 				4F16F3A01D15926800E8B25D /* LaunchScreen.storyboard */,
@@ -136,8 +145,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FB9311F1D16AA1F0030A1C3 /* LiveList.plist in Resources */,
+				4FB931211D16AD930030A1C3 /* videosList0.txt in Resources */,
 				4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */,
 				4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */,
+				4FB931231D16B6460030A1C3 /* videosList1.txt in Resources */,
 				4F16F39D1D15926800E8B25D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MVideo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = medtree.com.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +286,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MVideo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = medtree.com.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +312,7 @@
 				4F16F3A81D15926800E8B25D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
