@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
-
+#import <AVKit/AVKit.h>
 #define FileNamePre @"videosList"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -26,7 +27,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.dataSource = [NSMutableArray array];
     [self.view addSubview:self.liveListTableView];
-
+    
+    [self addBackgroundMethod];
     [self operationStr];
     
     return;
@@ -37,6 +39,12 @@
         MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
         [self presentMoviePlayerViewControllerAnimated:player];
     });
+}
+
+- (void)addBackgroundMethod{
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setActive:YES error:nil];
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
 - (void)operationStr{
@@ -126,8 +134,18 @@
         NSDictionary *dict =  self.dataSource[indexPath.section][indexPath.row];
         NSLog(@"%@", dict);
         NSURL *movieUrl = [NSURL URLWithString:[dict[@"liveUrl"] stringByReplacingOccurrencesOfString:@"[url]" withString:@""]]; //@"http://123.108.164.75/etv2sb/phd10062/playlist.m3u8"];
+        if ([UIDevice currentDevice].systemVersion.floatValue >= 9.0) {
+            AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:movieUrl];
+            AVPlayer *avPlayer = [AVPlayer playerWithPlayerItem:playerItem];
+            
+            AVPlayerViewController *playerVC = [[AVPlayerViewController alloc] init];
+            [playerVC setPlayer:avPlayer];
+            [avPlayer play];
+            [self presentViewController:playerVC animated:YES completion:nil];
+        }else {
         MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
         [self presentMoviePlayerViewControllerAnimated:player];
+        }
     }
 }
 
