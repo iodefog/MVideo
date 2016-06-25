@@ -10,6 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVKit/AVKit.h>
+#import "NewPlayerViewController.h"
+
 #define FileNamePre @"videosList"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -32,13 +34,13 @@
     [self operationStr];
     
     return;
-    dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 3 *NSEC_PER_SEC);
-
-    dispatch_after(time, dispatch_get_main_queue(), ^{
-        NSURL *movieUrl = [NSURL URLWithString:@"http://123.108.164.110/etv1sb/pld10497/playlist.m3u8"]; //@"http://123.108.164.75/etv2sb/phd10062/playlist.m3u8"];
-        MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
-        [self presentMoviePlayerViewControllerAnimated:player];
-    });
+//    dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 3 *NSEC_PER_SEC);
+//
+//    dispatch_after(time, dispatch_get_main_queue(), ^{
+//        NSURL *movieUrl = [NSURL URLWithString:@"http://123.108.164.110/etv1sb/pld10497/playlist.m3u8"]; //@"http://123.108.164.75/etv2sb/phd10062/playlist.m3u8"];
+//        MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
+//        [self presentMoviePlayerViewControllerAnimated:player];
+//    });
 }
 
 - (void)addBackgroundMethod{
@@ -61,11 +63,21 @@
                 NSArray *videosArray = [videosText componentsSeparatedByString:@"\n"];
                 for (NSString *subStr in videosArray) {
                     NSArray *subStrArray = [subStr componentsSeparatedByString:@","];
-                    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                          [subStrArray firstObject] ?: @"",@"name",
-                                          [subStrArray lastObject] ?: @"",@"liveUrl",
-                                          nil];
-                    [itemArray addObject:dict];
+                    if(subStrArray.count == 2){
+                        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                              [subStrArray firstObject] ?: @"",@"name",
+                                              [subStrArray lastObject] ?: @"",@"liveUrl",
+                                              nil];
+                        [itemArray addObject:dict];
+                    }else {
+                        subStrArray = [subStr componentsSeparatedByString:@" "];
+                        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                              [subStrArray firstObject] ?: @"",@"name",
+                                              [subStrArray lastObject] ?: @"",@"liveUrl",
+                                              nil];
+                        [itemArray addObject:dict];
+                    }
+                  
                 }
                 [self.dataSource addObject:itemArray];
             }else {
@@ -138,7 +150,7 @@
             AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:movieUrl];
             AVPlayer *avPlayer = [AVPlayer playerWithPlayerItem:playerItem];
             
-            AVPlayerViewController *playerVC = [[AVPlayerViewController alloc] init];
+            NewPlayerViewController *playerVC = [[NewPlayerViewController alloc] init];
             [playerVC setPlayer:avPlayer];
             [avPlayer play];
             [self presentViewController:playerVC animated:YES completion:nil];
