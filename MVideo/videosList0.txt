@@ -1,43 +1,3 @@
-翡翠台,rtmp://219.232.160.161/livestream/bycgekwh
-翡翠台,p2p://60.249.213.25:9900/57121892000d960f02460bed767d17f5
-翡翠台,http://116.199.4.203:8114/a/b/index.m3u8?FvSeid=&Fsv_filetype=&Fsv_ctype=LIVES&Fsv_cid=&Fsv_chan_hls_se_idx=46&Fsv_rate_id=1&Fsv_SV_PARAM1=0&Fsv_ShiftEnable=1&Fsv_ShiftTsp=240&Provider_id=a&Pcontent_id=b
-TVB明珠,rtmp://219.232.160.161/livestream/b2xajcu7
-TVB明珠,p2p://60.249.213.25:9900/571219620009f11c0249377f7cfc15bd
-TVB翡翠J2,p2p://60.249.213.25:9900/571219e6000c6f84024b3bc364573e9b
-TVB互动新闻,p2p://60.249.213.25:9900/57121a640006fb80024d268f0b9a014c
-TVBJ5高清,p2p://60.249.213.25:9900/571217f20007ba850243996d2a1a32d0
-HKTV,http://14.198.245.129:8088/hktvlive/hktv_576p_track.m3u8?t=12e9a7f66f3a892b396e94d81206eb6c&udid=2ab17bc1-2ee0-44d4-934e-053430671eb4&uid=1&vid=1&mxres=1920&s=0f9ab3830cf484d7f5843628b25eb9a7
-HKTV,http://14.198.245.135:8088/hktvlive/hktv_432pb_track.m3u8?t=12e9a7f66f3a892b396e94d81206eb6c&udid=82ab2c92-e15a-4b81-9c1b-2f98fbf3d596&uid=1&vid=1&mxres=720&s=f28849d9f4c57e9e93a5e77cc87c7338
-经典搞笑,http://121.9.214.88/pl8.live.panda.tv/live_panda/f28d7d69a0d68afdc3e8fb032dd0c274.flv
-TVB金庸经典,http://14.215.9.21/pl3.live.panda.tv/live_panda/f60da8529201a0dc66280a67315d258b.flv?wshc_tag=0&wsts_tag=57343d81&wsid_tag=e71168b&wsiphost=ipdbm
-TVB电视剧,http://125.90.206.131/pl3.live.panda.tv/live_panda/f5b4807b4108b9143dee5cead3cbec4f.flv?wshc_tag=0&wsts_tag=57343d19&wsid_tag=e71168b&wsiphost=ipdbm
-星空卫视,http://110.77.0.182:1935/dvr/1010.stream/playlist.m3u8
-星空卫视,http://222.36.5.53:9800/live/xktv.m3u8
-星空卫视,http://110.77.0.182:1935/dvr/1010.stream/playlist.m3u8?DVR
-凤凰中文,http://110.77.0.182:1935/dvr/1008.stream/playlist.m3u8?DVR
-凤凰中文,http://ktv028.cdnak.ds.kylintv.net/nlds/kylin/pxasia/as/live/pxasia_4.m3u8 
-凤凰美洲,http://ktv029.cdnak.ds.kylintv.net/nlds/kylin/pxna/as/live/pxna_4.m3u8
-凤凰资讯,http://110.77.0.182:1935/dvr/1009.stream/playlist.m3u8
-凤凰资讯,http://110.77.0.182:1935/dvr/1009.stream/playlist.m3u8?DVR
-凤凰电影台,rtmp://219.232.160.161/livestream/fdwypqk6
-凤凰香港,http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/pxhkus/as/live/pxhkus_4.m3u8
-凤凰香港,http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/pxhkus/as/live/pxhkus_4.m3u8
-香港卫视 ,http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
-耀才财经,http://202.69.67.66:443/webcast/bshdlive-mobile/playlist.m3u8
-澳门卫视,http://live3.tdm.com.mo:1935/tv/ch3.live/chunklist_w854875034.m3u8
-澳视澳门,http://live2.tdm.com.mo/tv/ch1.live/playlist.m3u8
-澳视葡文,http://live2.tdm.com.mo/tv/ch2.live/playlist.m3u8
-澳亞衛視,http://live.mastvnet.com/n1rtlHG/500/live.m3u8
-澳门莲花卫视,http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/lotustv/as/live/lotustv_4.m3u8
-TVB8,http://110.77.0.182:1935/dvr/1013.stream/playlist.m3u8
-TVB8,http://110.77.0.182:1935/dvr/1013.stream/playlist.m3u8?DVR
-香港31台,http://rthklive1-lh.akamaihd.net/i/rthk31_1@167495/index_2052_av-b.m3u8
-香港32台,http://rthklive2-lh.akamaihd.net/i/rthk32_1@168450/index_2052_av-b.m3u8
-GOODTV ,http://210.59.248.53/hls-live/goodtv/_definst_/liveevent/live-ch1-1.m3u8
-GoodTV1,http://210.59.248.53/hls-live/livepkgr/_definst_/liveevent/live-ch1-3.m3u8
-音乐殿堂 ,http://pl3.live.panda.tv/live_panda/33ab8c68a352b03d5d08710c6654a1bb.flv
-韩-音乐TRENDY ,http://123.108.164.71/etv2sb/phd4/playlist.m3u8
-星卫电影台HD ,http://dlhls.cdn.zhanqi.tv/zqlive/35349_iXsXw.m3u8
 央视1台,http://110.77.0.182:1935/dvr/1001.stream/playlist.m3u8
 央视2台,http://110.77.0.182:1935/dvr/1002.stream/playlist.m3u8
 央视3台,http://110.77.0.182:1935/dvr/1003.stream/playlist.m3u8
@@ -46,6 +6,13 @@ GoodTV1,http://210.59.248.53/hls-live/livepkgr/_definst_/liveevent/live-ch1-3.m3
 央视6台,http://110.77.0.182:1935/dvr/1005.stream/playlist.m3u8
 央视8台,http://110.77.0.182:1935/dvr/1006.stream/playlist.m3u8
 央视9套,http://110.77.0.182:1935/dvr/1025.stream/playlist.m3u8
+综艺,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_ent_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
+音乐,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_music_1080p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
+科教?纪录片,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_jilu_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
+娱乐,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_yule_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
+自制剧,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_make_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
+演唱会,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_concert_3000&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
+MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
 央视新闻,http://110.77.0.182:1935/dvr/1007.stream/playlist.m3u8
 国际卫视,http://ktv032.cdnak.ds.kylintv.net/nlds/kylin/iavc/as/live/iavc_4.m3u8
 黑龙江卫视,http://106.120.175.80:55336/tslive/c23_ct_hljtv1_hljws_smooth_t10/c23_ct_hljtv1_hljws_smooth_t10.m3u8
@@ -90,6 +57,46 @@ GoodTV1,http://210.59.248.53/hls-live/livepkgr/_definst_/liveevent/live-ch1-3.m3
 新疆卫视,http://106.120.175.80:55336/tslive/c13_ct_xjtv1_xjws_smooth_t10/c13_ct_xjtv1_xjws_smooth_t10.m3u8
 西藏卫视,http://106.120.175.80:55336/tslive/c19_ct_xizangtv2_xzws_smooth_t10/c19_ct_xizangtv2_xzws_smooth_t10.m3u8
 健康卫视,http://106.120.175.80:55336/tslive/c27_ct_jkwshk_jkws_smooth_t10/c27_ct_jkwshk_jkws_smooth_t10.m3u8
+翡翠台,rtmp://219.232.160.161/livestream/bycgekwh
+翡翠台,p2p://60.249.213.25:9900/57121892000d960f02460bed767d17f5
+翡翠台,http://116.199.4.203:8114/a/b/index.m3u8?FvSeid=&Fsv_filetype=&Fsv_ctype=LIVES&Fsv_cid=&Fsv_chan_hls_se_idx=46&Fsv_rate_id=1&Fsv_SV_PARAM1=0&Fsv_ShiftEnable=1&Fsv_ShiftTsp=240&Provider_id=a&Pcontent_id=b
+TVB明珠,rtmp://219.232.160.161/livestream/b2xajcu7
+TVB明珠,p2p://60.249.213.25:9900/571219620009f11c0249377f7cfc15bd
+TVB翡翠J2,p2p://60.249.213.25:9900/571219e6000c6f84024b3bc364573e9b
+TVB互动新闻,p2p://60.249.213.25:9900/57121a640006fb80024d268f0b9a014c
+TVBJ5高清,p2p://60.249.213.25:9900/571217f20007ba850243996d2a1a32d0
+HKTV,http://14.198.245.129:8088/hktvlive/hktv_576p_track.m3u8?t=12e9a7f66f3a892b396e94d81206eb6c&udid=2ab17bc1-2ee0-44d4-934e-053430671eb4&uid=1&vid=1&mxres=1920&s=0f9ab3830cf484d7f5843628b25eb9a7
+HKTV,http://14.198.245.135:8088/hktvlive/hktv_432pb_track.m3u8?t=12e9a7f66f3a892b396e94d81206eb6c&udid=82ab2c92-e15a-4b81-9c1b-2f98fbf3d596&uid=1&vid=1&mxres=720&s=f28849d9f4c57e9e93a5e77cc87c7338
+经典搞笑,http://121.9.214.88/pl8.live.panda.tv/live_panda/f28d7d69a0d68afdc3e8fb032dd0c274.flv
+TVB金庸经典,http://14.215.9.21/pl3.live.panda.tv/live_panda/f60da8529201a0dc66280a67315d258b.flv?wshc_tag=0&wsts_tag=57343d81&wsid_tag=e71168b&wsiphost=ipdbm
+TVB电视剧,http://125.90.206.131/pl3.live.panda.tv/live_panda/f5b4807b4108b9143dee5cead3cbec4f.flv?wshc_tag=0&wsts_tag=57343d19&wsid_tag=e71168b&wsiphost=ipdbm
+星空卫视,http://110.77.0.182:1935/dvr/1010.stream/playlist.m3u8
+星空卫视,http://222.36.5.53:9800/live/xktv.m3u8
+星空卫视,http://110.77.0.182:1935/dvr/1010.stream/playlist.m3u8?DVR
+凤凰中文,http://110.77.0.182:1935/dvr/1008.stream/playlist.m3u8?DVR
+凤凰中文,http://ktv028.cdnak.ds.kylintv.net/nlds/kylin/pxasia/as/live/pxasia_4.m3u8 
+凤凰美洲,http://ktv029.cdnak.ds.kylintv.net/nlds/kylin/pxna/as/live/pxna_4.m3u8
+凤凰资讯,http://110.77.0.182:1935/dvr/1009.stream/playlist.m3u8
+凤凰资讯,http://110.77.0.182:1935/dvr/1009.stream/playlist.m3u8?DVR
+凤凰电影台,rtmp://219.232.160.161/livestream/fdwypqk6
+凤凰香港,http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/pxhkus/as/live/pxhkus_4.m3u8
+凤凰香港,http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/pxhkus/as/live/pxhkus_4.m3u8
+香港卫视 ,http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
+耀才财经,http://202.69.67.66:443/webcast/bshdlive-mobile/playlist.m3u8
+澳门卫视,http://live3.tdm.com.mo:1935/tv/ch3.live/chunklist_w854875034.m3u8
+澳视澳门,http://live2.tdm.com.mo/tv/ch1.live/playlist.m3u8
+澳视葡文,http://live2.tdm.com.mo/tv/ch2.live/playlist.m3u8
+澳亞衛視,http://live.mastvnet.com/n1rtlHG/500/live.m3u8
+澳门莲花卫视,http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/lotustv/as/live/lotustv_4.m3u8
+TVB8,http://110.77.0.182:1935/dvr/1013.stream/playlist.m3u8
+TVB8,http://110.77.0.182:1935/dvr/1013.stream/playlist.m3u8?DVR
+香港31台,http://rthklive1-lh.akamaihd.net/i/rthk31_1@167495/index_2052_av-b.m3u8
+香港32台,http://rthklive2-lh.akamaihd.net/i/rthk32_1@168450/index_2052_av-b.m3u8
+GOODTV ,http://210.59.248.53/hls-live/goodtv/_definst_/liveevent/live-ch1-1.m3u8
+GoodTV1,http://210.59.248.53/hls-live/livepkgr/_definst_/liveevent/live-ch1-3.m3u8
+音乐殿堂 ,http://pl3.live.panda.tv/live_panda/33ab8c68a352b03d5d08710c6654a1bb.flv
+韩-音乐TRENDY ,http://123.108.164.71/etv2sb/phd4/playlist.m3u8
+星卫电影台HD ,http://dlhls.cdn.zhanqi.tv/zqlive/35349_iXsXw.m3u8
 卡酷少儿,http://106.120.175.80:55336/tslive/c18_ct_btv10_kkdh_smooth_t10/c18_ct_btv10_kkdh_smooth_t10.m3u8
 优漫卡通,http://106.120.175.80:55336/tslive/c24_ct_jstv7_ymkt_smooth_t10/c24_ct_jstv7_ymkt_smooth_t10.m3u8
 北京影视,http://106.120.175.80:55336/tslive/c22_ct_btv4_bjys_smooth_t10/c22_ct_btv4_bjys_smooth_t10.m3u8
@@ -243,13 +250,7 @@ VIP电影,http://chyd-wsvod.wasu.tv/data9/ott/344/2013-06/07/1370600803122_73720
 动漫,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_comic_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
 体育,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_sports_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
 1080P,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_1080P_1080p3m&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
-综艺,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_ent_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
-音乐,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_music_1080p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
-科教?纪录片,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_jilu_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
-娱乐,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_yule_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
-自制剧,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_make_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
-演唱会,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_concert_3000&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
-MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
+
 动作电影,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_dzdy_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
 喜剧电影,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_comedy_720p&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1
 好莱坞,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_hlw_1800&tag=live&ext=m3u8&sign=live_tv&platid=10&splatid=1009&format=letv&expect=1

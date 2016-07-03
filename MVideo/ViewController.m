@@ -16,9 +16,10 @@
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *liveListTableView;
-@property (nonatomic, strong) NSMutableArray *dataSource;
-@property (nonatomic, assign) NSInteger tableNum;
+@property (nonatomic, strong) UITableView       *liveListTableView;
+@property (nonatomic, strong) UIViewController  *playerController;
+@property (nonatomic, strong) NSMutableArray    *dataSource;
+@property (nonatomic, assign) NSInteger         tableNum;
 
 @end
 
@@ -32,15 +33,20 @@
     
     [self addBackgroundMethod];
     [self operationStr];
+    [self registerObserver];
     
     return;
-//    dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 3 *NSEC_PER_SEC);
-//
-//    dispatch_after(time, dispatch_get_main_queue(), ^{
-//        NSURL *movieUrl = [NSURL URLWithString:@"http://123.108.164.110/etv1sb/pld10497/playlist.m3u8"]; //@"http://123.108.164.75/etv2sb/phd10062/playlist.m3u8"];
-//        MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
-//        [self presentMoviePlayerViewControllerAnimated:player];
-//    });
+    //    dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 3 *NSEC_PER_SEC);
+    //
+    //    dispatch_after(time, dispatch_get_main_queue(), ^{
+    //        NSURL *movieUrl = [NSURL URLWithString:@"http://123.108.164.110/etv1sb/pld10497/playlist.m3u8"]; //@"http://123.108.164.75/etv2sb/phd10062/playlist.m3u8"];
+    //        MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
+    //        [self presentMoviePlayerViewControllerAnimated:player];
+    //    });
+}
+
+- (BOOL)shouldAutorotate{
+    return NO;
 }
 
 - (void)addBackgroundMethod{
@@ -77,7 +83,7 @@
                                               nil];
                         [itemArray addObject:dict];
                     }
-                  
+                    
                 }
                 [self.dataSource addObject:itemArray];
             }else {
@@ -90,6 +96,29 @@
     }
     [self.liveListTableView reloadData];
 }
+
+- (void)registerObserver{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEnterForegroundNotification:) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackgroundNotification:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+}
+
+- (void)applicationWillEnterForegroundNotification:(NSNotification *)notification{
+    if ([self.playerController isKindOfClass:[NewPlayerViewController class]]) {
+        [((NewPlayerViewController *)self.playerController).player play];
+    }else {
+        [((MPMoviePlayerViewController *)self.playerController).moviePlayer play];
+    }
+}
+
+- (void)applicationDidEnterBackgroundNotification:(NSNotification *)notification{
+    if ([self.playerController isKindOfClass:[NewPlayerViewController class]]) {
+        [((NewPlayerViewController *)self.playerController).player pause];
+    }else {
+        [((MPMoviePlayerViewController *)self.playerController).moviePlayer pause];
+    }
+}
+
+#pragma mark - Private Method
 
 - (UITableView *)liveListTableView{
     if (_liveListTableView == nil) {
@@ -106,7 +135,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - tableView 
+#pragma mark - tableView
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.tableNum;
@@ -126,7 +155,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     static NSString *cellName = @"cellName";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
     if (cell == nil) {
@@ -153,10 +182,12 @@
             NewPlayerViewController *playerVC = [[NewPlayerViewController alloc] init];
             [playerVC setPlayer:avPlayer];
             [avPlayer play];
+            self.playerController = playerVC;
             [self presentViewController:playerVC animated:YES completion:nil];
         }else {
-        MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
-        [self presentMoviePlayerViewControllerAnimated:player];
+            MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
+            self.playerController = player;
+            [self presentMoviePlayerViewControllerAnimated:player];
         }
     }
 }
