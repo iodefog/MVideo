@@ -1,6 +1,5 @@
-
-test,http://124.193.230.15:1863/zijian.hls.video.qq.com/100104400.m3u8?cdncode=18907E7BE0798990&time=1467644565&cdn=zijian&sdtfrom=v10431&platform=10403&butype=1&scheduleflag=1&buname=qqlive
-
+亮剑,http://10.2.15.163:9974/liangjian_1.mkv
+毛骗01,http://10.2.15.163:9974/maopian01.rmvb
 搜狐东方卫视,http://gslb.tv.sohu.com/live?cid=346255&ver=seg&ckey=fMZ4Nlkz8VXzb2k7uPS&type=hls&prot=1&sig=6dmShtZfXIPDDBj738XcecO6tdc.
 搜狐北京卫视,http://gslb.tv.sohu.com/live?cid=346249&ver=seg&ckey=fMZ4Nl-p8VXzb2k7uPS&type=hls&prot=1&sig=xfA1ym5m8HvZpgLhHozn6Ytl6OM.
 搜狐广东卫视,http://gslb.tv.sohu.com/live?cid=346252&ver=seg&ckey=fMZ4NlkP8VXzb2k7uPS&type=hls&prot=1&sig=qdnwPebktY_XgTPeKzJ9efUqIO8.

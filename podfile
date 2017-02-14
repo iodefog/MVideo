@@ -1,0 +1,10 @@
+platform :ios, '8.0'
+
+target "MVideo" do
+
+#pod 'NSLogger', '~> 1.7.0'
+#pod 'FFmpeg', '~> 2.8.3'
+pod 'kxmovie', '~> 0.0.3'
+
+end
+

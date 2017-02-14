@@ -16,12 +16,15 @@
 		4F97C9481D1EDD3600339D1D /* NewPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97C9471D1EDD3600339D1D /* NewPlayerViewController.m */; };
 		4FB931211D16AD930030A1C3 /* videosList0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931201D16AD930030A1C3 /* videosList0.txt */; };
 		4FB931231D16B6460030A1C3 /* videosList1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931221D16B6460030A1C3 /* videosList1.txt */; };
+		7D872EDCA83C4A42043A7C99 /* libPods-MVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 555C6A4F7C914B4153854619 /* libPods-MVideo.a */; };
 		C73926EC1D1D2FAD00C93A12 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73926EB1D1D2FAD00C93A12 /* AVKit.framework */; };
 		C73926F21D1D33C600C93A12 /* videosList3.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F11D1D33C600C93A12 /* videosList3.txt */; };
 		C73926F41D1D33CF00C93A12 /* videosList2.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F31D1D33CF00C93A12 /* videosList2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FFC45E0305C9DC90791AED1 /* Pods-MVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVideo/Pods-MVideo.release.xcconfig"; sourceTree = "<group>"; };
+		456BAC7CC6557EA39F023529 /* Pods-MVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVideo/Pods-MVideo.debug.xcconfig"; sourceTree = "<group>"; };
 		4F16F38F1D15926800E8B25D /* MVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F16F3931D15926800E8B25D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F16F3951D15926800E8B25D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		4F97C9471D1EDD3600339D1D /* NewPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPlayerViewController.m; sourceTree = "<group>"; };
 		4FB931201D16AD930030A1C3 /* videosList0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList0.txt; sourceTree = "<group>"; };
 		4FB931221D16B6460030A1C3 /* videosList1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList1.txt; sourceTree = "<group>"; };
+		555C6A4F7C914B4153854619 /* libPods-MVideo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVideo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73926EB1D1D2FAD00C93A12 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C73926F11D1D33C600C93A12 /* videosList3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList3.txt; sourceTree = "<group>"; };
 		C73926F31D1D33CF00C93A12 /* videosList2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList2.txt; sourceTree = "<group>"; };
@@ -47,18 +51,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				C73926EC1D1D2FAD00C93A12 /* AVKit.framework in Frameworks */,
+				7D872EDCA83C4A42043A7C99 /* libPods-MVideo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4276F6AEEB775FFC413ECEE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				456BAC7CC6557EA39F023529 /* Pods-MVideo.debug.xcconfig */,
+				1FFC45E0305C9DC90791AED1 /* Pods-MVideo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4F16F3861D15926800E8B25D = {
 			isa = PBXGroup;
 			children = (
 				C73926EB1D1D2FAD00C93A12 /* AVKit.framework */,
 				4F16F3911D15926800E8B25D /* MVideo */,
 				4F16F3901D15926800E8B25D /* Products */,
+				4276F6AEEB775FFC413ECEE4 /* Pods */,
+				E3D7921AC30277C0E3D00926 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +116,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E3D7921AC30277C0E3D00926 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				555C6A4F7C914B4153854619 /* libPods-MVideo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F16F3A61D15926800E8B25D /* Build configuration list for PBXNativeTarget "MVideo" */;
 			buildPhases = (
+				F97F3CACD655DA69E4F9BED3 /* [CP] Check Pods Manifest.lock */,
 				4F16F38B1D15926800E8B25D /* Sources */,
 				4F16F38C1D15926800E8B25D /* Frameworks */,
 				4F16F38D1D15926800E8B25D /* Resources */,
+				AB0855775640C5F14954E2D7 /* [CP] Embed Pods Frameworks */,
+				9E06F77112723F291207BF14 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,8 @@
 				TargetAttributes = {
 					4F16F38E1D15926800E8B25D = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4AW78593E8;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -173,6 +202,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E06F77112723F291207BF14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVideo/Pods-MVideo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB0855775640C5F14954E2D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVideo/Pods-MVideo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F97F3CACD655DA69E4F9BED3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4F16F38B1D15926800E8B25D /* Sources */ = {
@@ -290,28 +367,39 @@
 		};
 		4F16F3A71D15926800E8B25D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 456BAC7CC6557EA39F023529 /* Pods-MVideo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4AW78593E8;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "48a5436e-cfb6-41c8-9aad-31d0c2f08be7";
+				PROVISIONING_PROFILE_SPECIFIER = WeiChaoSOHUDevelopStarProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		4F16F3A81D15926800E8B25D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FFC45E0305C9DC90791AED1 /* Pods-MVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4AW78593E8;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "48a5436e-cfb6-41c8-9aad-31d0c2f08be7";
+				PROVISIONING_PROFILE_SPECIFIER = WeiChaoSOHUDevelopStarProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

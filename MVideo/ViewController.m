@@ -11,7 +11,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVKit/AVKit.h>
 #import "NewPlayerViewController.h"
-
+#import "KxMovieViewController.h"
 #define FileNamePre @"videosList"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -176,14 +176,22 @@
         NSLog(@"%@", dict);
         NSURL *movieUrl = [NSURL URLWithString:[dict[@"liveUrl"] stringByReplacingOccurrencesOfString:@"[url]" withString:@""]]; //@"http://123.108.164.75/etv2sb/phd10062/playlist.m3u8"];
         if ([UIDevice currentDevice].systemVersion.floatValue >= 9.0) {
-            AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:movieUrl];
-            AVPlayer *avPlayer = [AVPlayer playerWithPlayerItem:playerItem];
+//            AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:movieUrl];
+//            AVPlayer *avPlayer = [AVPlayer playerWithPlayerItem:playerItem];
+//            
+//            NewPlayerViewController *playerVC = [[NewPlayerViewController alloc] init];
+//            [playerVC setPlayer:avPlayer];
+//            [avPlayer play];
+//            self.playerController = playerVC;
+//            [self presentViewController:playerVC animated:YES completion:nil];
             
-            NewPlayerViewController *playerVC = [[NewPlayerViewController alloc] init];
-            [playerVC setPlayer:avPlayer];
-            [avPlayer play];
-            self.playerController = playerVC;
-            [self presentViewController:playerVC animated:YES completion:nil];
+            NSMutableDictionary *params = [NSMutableDictionary dictionary];
+            params[@"KxMovieParameterDisableDeinterlacing"] = @(YES);
+            KxMovieViewController *vc = [KxMovieViewController
+                                         movieViewControllerWithContentPath:movieUrl.absoluteString
+                                         parameters:params];
+            [self presentViewController:vc animated:YES completion:nil];
+            
         }else {
             MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
             self.playerController = player;
