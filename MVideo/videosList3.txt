@@ -1,4 +1,3 @@
-沙发
 TVB翡翠,p2p://60.249.213.25:9900/57121892000d960f02460bed767d17f5
 TVBJ5高清翡翠,p2p://60.249.213.25:9900/571217f20007ba850243996d2a1a32d0
 TVB明珠,p2p://60.249.213.25:9900/571219620009f11c0249377f7cfc15bd
@@ -10,27 +9,15 @@ TVB明珠台HD,p2p://60.249.213.25:9900/571219620009f11c0249377f7cfc15bd
 TVBJ2高清HD,p2p://60.249.213.25:9900/571219e6000c6f84024b3bc364573e9b
 TVB互動新聞HD,p2p://60.249.213.25:9900/57121a640006fb80024d268f0b9a014c
 viutv,p2p://60.249.213.25:9900/57121b1a0004afb0024fece94e6d26f4
-凤凰资讯HD,http://ktv005.cdnak.ds.kylintv.n ... /live/pxinhd_4.m3u8
 凤凰资讯HD,http://110.77.0.182:1935/dvr/1009.stream/playlist.m3u8
 凤凰中文HD,http://110.77.0.182:1935/dvr/1008.stream/playlist.m3u8?DVR
 凤凰中文HD,http://110.77.0.182:1935/dvr/1008.stream/playlist.m3u8
-凤凰美洲,http://ktv029.cdnak.ds.kylintv.n ... as/live/pxna_4.m3u8
-凤凰香港HD,http://ktv039.cdnak.ds.kylintv.n ... /live/pxhkus_4.m3u8
 凤凰电影,rtmp://219.232.160.161/livestream/fdwypqk6
 凤凰电影,rtmp://219.232.160.161:1935/livestream/fdwypqk6
-阳光卫视,http://ktv011.cdnak.ds.kylintv.n ... /live/chann7_4.m3u8
 星空卫视,http://110.77.0.182:1935/dvr/1010.stream/playlist.m3u8
-星空卫视,http://110.77.0.182:1935/dvr/101 ... st_w1609220598.m3u8
 华娱卫视,http://110.77.0.182:1935/dvr/1012.stream/playlist.m3u8
-华娱卫视,http://ktv044.cdnak.ds.kylintv.n ... as/live/cetv_4.m3u8
 香港卫视,rtmp://live.hkstv.hk.lxdns.com/live/hks
 香港卫视,http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
-RHK-31,http://rthklive1-lh.akamaihd.net ... ndex_1296_av-b.m3u8
-RHK-32,http://rthklive2-lh.akamaihd.net ... ndex_1296_av-b.m3u8
-RHK-32,http://rthklive2-lh.akamaihd.net ... ndex_2052_av-b.m3u8
-HKTV,http://14.198.245.129:8088/hktvl ... 4d7f5843628b25eb9a7
-HKTV,http://14.198.245.135:8088/hktvl ... e9e93a5e77cc87c7338
-HKTV,http://ott-video-lb.hktvmall.com ... db21d5952849fdd6a17
 求索科学,http://122.227.101.159:80/livehls1-cnc.wasu.cn/hd_qspd/z.m3u8
 求索纪录,http://122.227.101.159:80/livehls1-cnc.wasu.cn/hd_qsjl/z.m3u8
 求索生活,http://122.227.101.159:80/livehls1-cnc.wasu.cn/hd_qssh/z.m3u8
@@ -38,98 +25,53 @@ HKTV,http://ott-video-lb.hktvmall.com ... db21d5952849fdd6a17
 求索生活,http://122.227.101.159:80/livehls1-cnc.wasu.cn/hd_qssh/z.m3u8
 求索动物,http://122.227.101.159:80/livehls1-cnc.wasu.cn/hd_qsdw/z.m3u8
 求索科学,http://122.227.101.159:80/padlive1-cnc.wasu.cn/hd_qspd/z.m3u8
-凤凰中文HD http://ktv028.cdnak.ds.kylintv.n ... /live/pxasia_4.m3u8
-凤凰中文HD http://ktv028.cdnak.ds.kylintv.n ... /live/pxasia_4.m3u8
-凤凰卫视-资讯HD http://ktv005.cdnak.ds.kylintv.n ... /live/pxinhd_4.m3u8
 凤凰中文 http://110.77.0.182:1935/dvr/1008.stream/playlist.m3u8?DVR
 凤凰资讯 http://110.77.0.182:1935/dvr/1009.stream/playlist.m3u8?DVR
 星空卫视 http://110.77.0.182:1935/dvr/1010.stream/playlist.m3u8?DVR
-凤凰香港台 http://ktv039.cdnak.ds.kylintv.n ... /live/pxhkus_4.m3u8
-RHK32 http://rthklive2-lh.akamaihd.net ... ndex_1296_av-b.m3u8
 香港卫视 http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
-东森卫视 http://ktv032.cdnak.ds.kylintv.n ... s/live/etgbl_4.m3u8
-东森新闻 http://ktv029.cdnak.ds.kylintv.n ... /live/etnews_4.m3u8
-莲花卫视 http://ktv039.cdnak.ds.kylintv.n ... live/lotustv_4.m3u8
 汉亚星空 http://182.92.189.193:1935/live/h_hanya_1/playlist.m3u8
 美国中文电视 http://ec.sinovision.net/video/ts/lv.m3u8
-美国中文电视 http://ktv008.cdnak.ds.kylintv.n ... as/live/snvn_4.m3u8
 香港卫视HD http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
 TVB-8频道 http://110.77.0.182:1935/dvr/1013.stream/playlist.m3u8
-港臺電視 http://rthklive2-lh.akamaihd.net ... ndex_1296_av-b.m3u8
-香港电视HKTV http://14.198.245.135:8088/hktvl ... e9e93a5e77cc87c7338
-HKTVMALL http://14.198.245.135:8088/hktvl ... e9e93a5e77cc87c7338
-RHK32 http://rthklive2-lh.akamaihd.net ... ndex_1296_av-b.m3u8
 香港卫视 http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
-香港电视HKTV http://14.198.245.135:8088/hktvl ... e9e93a5e77cc87c7338
 耀才财经 http://202.69.67.66:443/webcast/bshdlive-mobile/playlist.m3u8
 星空卫视 http://110.77.0.182:1935/dvr/1010.stream/playlist.m3u8
 健康卫视 http://2om8w3.hls1.z1.pili.qiniucdn.com/jkwshk/live1.m3u8
 东方财经 http://110.77.0.182:1935/dvr/1011.stream/playlist.m3u8
 华娱卫视 http://110.77.0.182:1935/dvr/1012.stream/playlist.m3u8
-凤凰香港 http://ktv039.cdnak.ds.kylintv.n ... /live/pxhkus_4.m3u8
-大爱频道 http://ktv033.cdnak.ds.kylintv.n ... as/live/daai_4.m3u8
 韩国有码成人高清1 http://123.108.164.71/etv2sb/phd10062/playlist.m3u8
-迈阿密性感采访1 http://k4.usastreams.com:1935/mi ... 05586_b1550000.m3u8
 唐人电视台直播源 http://174.127.67.246/live400/playlist.m3u8
 冠军电视台 http://27.100.64.99:1935/liveedge/live_2_0_0.stream/playlist.m3u8
 汉亚星空 http://182.92.189.193:1935/live/h_hanya_1/playlist.m3u8
-宏观卫视 http://mobile.ccdntech.com/live/ ... live1/playlist.m3u8
-台湾宏观卫视 http://mobile.ccdntech.com/live/ ... ist_w197568671.m3u8
-华娱卫视 http://ktv044.cdnak.ds.kylintv.n ... id/live/cetv_4.m3u8
 澳门卫视 http://live4.tdm.com.mo:1935/tv/ch3.live/playlist.m3u8
-GoodTV好消息 http://210.59.248.53/hls-live/li ... ent/live-ch1-3.m3u8
-GoodTV好消息 http://210.59.248.53/hls-live/li ... ent/live-ch1-1.m3u8
-GoodTV好消息2 http://210.59.248.53/hls-live/li ... ent/live-ch2-1.m3u8
-GoodTV好消息2 http://210.59.248.53/hls-live/li ... ent/live-ch2-3.m3u8
-澳亚卫视 http://202.86.182.18:8134/hls-li ... nt/livestream2.m3u8
 澳视澳门 http://live2.tdm.com.mo:80/tv/ch1.live/playlist.m3u8
 澳门莲花 http://122.152.139.15/zerox/LOTUS/0-42.m3u8
 澳视葡文 http://live2.tdm.com.mo/tv/ch2.live/playlist.m3u8
 唐人电视台直播源 http://174.127.67.246/live400/playlist.m3u8
 星卫娱乐 http://dlhls.cdn.zhanqi.tv/zqlive/1285_Zloy4_400/index.m3u8
 天华探索高清 http://116.77.70.98:5080/hls/wn5fsvdn.m3u8
-凤凰资讯HD http://ktv005.cdnak.ds.kylintv.n ... /live/pxinhd_4.m3u8
 澳门资讯 http://live3.tdm.com.mo/tv/info_ch5.live/playlist.m3u8
 澳门博览台 rtmp://lv1.ts33.net/sat/hk041
 澳门莲花 http://122.152.139.15/zerox/LOTUS-42.m3u8
 澳亚卫视 http://live.mastvnet.com/n1rtlHG/500/live.m3u8
-台视HD http://59.120.43.180:17822#http: ... /as/live/ttv_4.m3u8
-东森幼幼 http://ktv051.cdnak.ds.kylintv.n ... /live/etyoyo_4.m3u8
-宏观卫视 http://mobile.ccdntech.com/live/ ... live1/playlist.m3u8
-人间卫视 http://ktv027.cdnak.ds.kylintv.n ... as/live/bltv_4.m3u8
-华语电视1 http://ktv015.cdnak.ds.kylintv.n ... as/live/hyds_4.m3u8
-华夏电视台 http://ktv026.cdnak.ds.kylintv.n ... ive/cathaytv_4.m3u8
 澳视澳门 rtmp://live2.tdm.com.mo:80/tv/ch1.live
 汉亚星空 http://182.92.189.193:1935/live/h_hanya_1/playlist.m3u8
 耀才财经台 rtmp://202.69.69.180:443/webcast/bshdlive-pc
 耀才财经台 rtmp://202.69.69.180:443/webcast/bshdlive-mobile
-凤凰资讯 http://ktv005.cdnak.ds.kylintv.n ... /live/pxinhd_4.m3u8
-凤凰中文1台 http://ktv028.cdnak.ds.kylintv.n ... /live/pxasia_4.m3u8
-凤凰中文 http://ktv028.cdnak.ds.kylintv.n ... /live/pxasia_4.m3u8
 高清翡翠台 http://dlhls.cdn.zhanqi.tv/zqlive/2869_tUPFz.m3u8
 澳视卫星 rtmp://live2.tdm.com.mo:80/tv/ch3.live
-Malayisia http://stream2.1malaysiaiptv.com ... .smil/playlist.m3u8
 泰国中文台 rtmp://110.164.48.237:1935/tcctv_ch002/tcctv02.stream_live1
 纬来体育台 rtmp://kv3.ts33.net/sat/tv722
 台视HD http://59.120.43.180:17822
 中视新闻 http://59.120.43.180:17838
 冠军电视台 http://27.100.64.99:1935/liveedge/live_2_0_0.stream/playlist.m3u8
-华娱卫视 http://ktv044.cdnak.ds.kylintv.n ... id/live/cetv_4.m3u8
-澳亚卫视 http://ktv044.cdnak.ds.kylintv.n ... s/live/mastv_4.m3u8
-南方卫视 http://ktv051.cdnak.ds.kylintv.n ... /as/live/tvs_3.m3u8
-ICN国际卫视 http://ktv032.cdnak.ds.kylintv.n ... as/live/iavc_4.m3u8
 法国|Nancy-Web-TV http://rtmp.infomaniak.ch:80/livecast/nancy-webtv/playlist.m3u8
-民视无线台HD http://ktv051.cdnak.ds.kylintv.n ... ve/formosatv_4.m3u8
-台视美洲台 http://ktv042.cdnak.ds.kylintv.n ... /as/live/ttv_4.m3u8
 时尚19禁 rtmp://edge2.everyon.tv/etv2/pld24
 松视3HD http://www.sonsee.com.tw/filmfiles4/HSDN-366-2_484521.mp4
 松视3HD http://www.sonsee.com.tw/filmfiles4/HSDN-366-2_484521.mp4
-凤凰香港台 http://ktv039.cdnak.ds.kylintv.n ... /live/pxhkus_4.m3u8
 香港卫视 http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
 香港卫视 rtmp://live.hkstv.hk.lxdns.com/live/hks
 香港卫视 http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
-民视HD http://ktv051.cdnak.ds.kylintv.n ... ve/formosatv_4.m3u8
-民视HD http://ktv051.cdnak.ds.kylintv.n ... ve/formosatv_4.m3u8
 民视新闻HD http://220.228.38.16/live/fet002/chunklist.m3u8
 民视新闻HD http://59.120.43.180:17355
 中视新闻 http://59.120.43.180:17838
@@ -145,21 +87,15 @@ ICN国际卫视 http://ktv032.cdnak.ds.kylintv.n ... as/live/iavc_4.m3u8
 *中视HD http://59.120.43.180:17837
 *中视新闻 http://59.120.43.180:17838
 *中視菁采 http://59.120.43.180:17829
-凤凰资讯3,http://ktv005.cdnak.ds.kylintv.n ... /live/pxinhd_4.m3u8
-凤凰香港,http://ktv039.cdnak.ds.kylintv.n ... /live/pxhkus_4.m3u8
 新唐人亚太台,rtmp://edge2.everyon.tv/etv2/pld926
 香港卫视,rtmp://live.hkstv.hk.lxdns.com/live/hks
 耀才财经,rtmp://fc_video.bsgroup.com.hk:443/webcast/bshdlive-pc
-凤凰香港HD,http://ktv039.cdnak.ds.kylintv.n ... /live/stream1.m3u8#http://zv.3gv.ifeng.com/hongkong800k.m3u8#[url]http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/pxhkus/as/live/pxhkus_4.m3u8[/url]]http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/pxhkus/as/live/pxhkus_4.m3u8#http://111.20.115.242/live/stream1.m3u8#http://zv.3gv.ifeng.com/hongkong800k.m3u8#[url]http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/pxhkus/as/live/pxhkus_4.m3u8[/url][/url]
+凤凰香港HD,http://zv.3gv.ifeng.com/hongkong800k.m3u8
+#[url][/url]],http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/pxhkus/as/live/pxhkus_4.m3u8
+#,http://111.20.115.242/live/stream1.m3u8
+#,http://zv.3gv.ifeng.com/hongkong800k.m3u8
+#[url],http://ktv039.cdnak.ds.kylintv.net/nlds/kylin/pxhkus/as/live/pxhkus_4.m3u8
 汉亚星空,http://182.92.189.193:1935/live/h_hanya_1/playlist.m3u8
-凤凰香港台,http://ktv039.cdnak.ds.kylintv.n ... /live/pxhkus_4.m3u8
-凤凰卫视,http://ktv039.cdnak.ds.kylintv.n ... /live/pxhkus_4.m3u8
-凤凰资讯,http://ktv005.cdnak.ds.kylintv.n ... /live/pxinhd_4.m3u8
-凤凰资讯HD,http://ktv005.cdnak.ds.kylintv.n ... /live/pxinhd_4.m3u8
-凤凰香港,http://ktv039.cdnak.ds.kylintv.n ... /live/pxhkus_4.m3u8
-華夏電視台,http://ktv026.cdnak.ds.kylintv.n ... ive/cathaytv_4.m3u8
-華語電視1台,http://ktv015.cdnak.ds.kylintv.n ... as/live/hyds_4.m3u8
-華語電視2台,http://ktv008.cdnak.ds.kylintv.n ... s/live/hyds2_4.m3u8
 53,p2p://207.238.82.30:9916/51aea8a600029f63e83ff5493b03319a.ts
 154,p2p://207.238.82.30:9916/51aea8370002dc6ce83e43c11c6234f6.ts
 155,p2p://207.238.82.30:9916/51b97ba8000c65d41bbedb4c56ad01b3.ts
@@ -223,31 +159,14 @@ FYI生活,p2p://60.249.213.25:9900/5711ba4500032dfc00d5ac78471a7887
 CI犯罪现场,p2p://60.249.213.25:9900/5711b4dd000a088e00c0900213dc2f0f
 CinemaWorld电影,p2p://60.249.213.25:9900/57137f34000c4826024a58f44b2f05d3
 人间卫视,p2p://60.249.213.25:9900/571349c10003ace401798d8656530774
-534159144,http://116.199.4.203:8114/a/b/in ... a&Pcontent_id=b
-5月13更新,http://116.199.4.201:8114/a/b/in ... a&Pcontent_id=b
-CHC家庭影院,http://116.199.4.201:8114/a/b/in ... a&Pcontent_id=b
-国际台,http://116.199.4.203:8114/a/b/in ... a&Pcontent_id=b
-珠江电影,http://116.199.4.203:8114/a/b/in ... a&Pcontent_id=b
-DOXTV,http://116.199.4.203:8114/a/b/in ... a&Pcontent_id=b
-MTV,http://116.199.4.203:8114/a/b/in ... a&Pcontent_id=b
-演唱会,http://116.199.4.203:8114/a/b/in ... a&Pcontent_id=b
-香港电影,http://116.199.4.203:8114/a/b/in ... a&Pcontent_id=b
 强片剧场高清,http://58.252.186.17:9009/live/chid=601
-天映频道,http://42.63.204.15:13160.cn:131 ... rogramid=4200900116
 纬来育乐台 ,rtmp://kv3.ts33.net/sat/tv701
 纬来体育台 ,rtmp://kv3.ts33.net/sat/tv722
 纬来精采台 ,rtmp://lv1.ts33.net:1935/sat/us292
 朝鲜日报台,rtmp://live.chosun.gscdn.com:1935/live/tvchosun1.stream
-马来西亚MARA,http://stream2.1malaysiaiptv.com ... .smil/playlist.m3u8
 21天华综艺高清,http://116.77.70.98:5080/hls/228v48qf.m3u8
 30HD欧美86,
 33中视,http://59.120.43.180:17837
-44台湾台|民视HD,http://ktv051.cdnak.ds.kylintv.n ... ve/formosatv_4.m3u8
-45台湾台|华视HD,http://ktv037.cdnak.ds.kylintv.n ... s/live/ctshd_4.m3u8
-46台湾台|东森幼幼,http://ktv051.cdnak.ds.kylintv.n ... /live/etyoyo_4.m3u8
-48东森新闻,http://ktv029.cdnak.ds.kylintv.n ... /live/etnews_4.m3u8
-49壹电视新闻台,http://d2e6xlgy8sg8ji.cloudfront ... atv1/chunklist.m3u8
-50东森卫视,http://ktv032.cdnak.ds.kylintv.n ... s/live/etgbl_4.m3u8
 日本成人卡通→頻道,http://210.200.79.26:1935/live/aracity01/playlist.m3u8
 日本成人→1頻道,http://210.200.79.26:1935/live/aracity02/playlist.m3u8
 CR频道|CRHD,http://ru-element.ru/playlist/playlist.php?ch=4&r=my
@@ -291,39 +210,6 @@ CR频道|CRHD,http://ru-element.ru/playlist/playlist.php?ch=4&r=my
 极速汽车,http://58.252.186.17:9009/live/chid=125
 魅力音乐,http://58.252.186.17:9009/live/chid=126
 证券资讯,http://58.252.186.17:9009/live/chid=129
-HOT精品剧场高清HD,http://222.191.24.5:6610/2/2/ch0 ... ndex.m3u8?ispcode=3
-HOT少儿动画高清HD,http://222.191.24.5:6610/2/2/ch0 ... ndex.m3u8?ispcode=3
-HOT欧美影院高清HD,http://222.191.24.5:6610/2/2/ch0 ... ndex.m3u8?ispcode=3
-HOT探索纪录高清HD,http://222.191.24.5:6610/2/2/ch0 ... ndex.m3u8?ispcode=3
-搏击,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-德甲,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-电子竞技,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-法甲,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-高尔夫,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-广厦篮球频道,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-国安,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-极限挑战,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-极限运动,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-篮球,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-乐视游戏,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-欧洲足球,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-跑步,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-赛车,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-体育,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-体育2,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-体育资讯,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-完美游戏,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-亚洲足球,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-意甲,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-英超,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-自行车,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-足球,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-党建,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-动物世界,http://live.gslb.letv.com/gslb?s ... t=letv&expect=1
-公开课,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-文化遗产,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-新华社合作2,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-综合,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
 广东体育,http://112.90.72.209:9009/live/chid=56
 广东体育HD,p2p://76.73.57.138:9999/536929cb0007c34c7c914b234eaa473d
 新视觉HD,p2p://76.73.57.138:9999/57068492000172124b50a4935bf12aad
@@ -334,7 +220,6 @@ Golf HD,p2p://122.114.113.182:9999/55f57fa0000523822a2778f3282f1052
 欧洲体育HD,p2p://76.73.57.138:9999/53ca1fa1000f2db3bf157f7729170230
 FOXSports HD,p2p://122.114.113.182:9999/5361e4c3300114db0bc0896c5cca03a9
 FoxSports2 HD,p2p://122.114.113.182:9999/4ca8b86b8dafc085070968193873ba8b
-FoxSports3 HD,http://118.163.0.13:8134/hls-liv ... nt/MOD57-E0205.m3u8
 FOXSports3HD,p2p://76.73.57.138:9999/56079eed0006c6ec58af6a0a2f4d07f9
 J SPORTS 1,p2p://122.114.113.182:9999/57385b9a000cb4af6518bc863a5e6f2d
 J SPORTS 2,p2p://122.114.113.182:9999/57385b9b000010bf6518bd3178fc7003
@@ -436,20 +321,6 @@ BRAZZERS TV EU,p2p://122.114.113.182:9999/556489d9000f338314323a3640cd4b60
 欧洲足球,http://stream1.grtn.cn/ozzq/sd/live.m3u8?_upt=?ts
 欧洲足球,http://aiseet.lszb.atianqi.com/app_4/ozzq.m3u8?bitrate=2000
 广东体育,http://stream1.grtn.cn/typd/sd/live.m3u8?_upt=?ts
-第一体育1,http://web-play.pptv.com/web-m3u ... m&_QUICKTIME_=1
-第一体育2,http://web-play.pptv.com/web-m3u ... m&_QUICKTIME_=1
-乐视体育1,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-乐视体育2,http://live.gslb.letv.com/gslb?t ... at=C1S&expect=1
-乐视足球,http://live.gslb.letv.com/gslb?s ... t=letv&expect=1
-欧冠,http://live.g3proxy.lecloud.com/ ... t=letv&expect=1
-意甲,http://live.g3proxy.lecloud.com/ ... t=letv&expect=1
-德甲,http://live.g3proxy.lecloud.com/ ... t=letv&expect=1
-法甲,http://live.g3proxy.lecloud.com/ ... t=letv&expect=1
-中超,http://live.g3proxy.lecloud.com/ ... t=letv&expect=1
-亚洲足球,http://live.gslb.letv.com/gslb?s ... at=cs1&expect=3
-欧洲足球,http://live.gslb.letv.com/gslb?s ... t=letv&expect=1
-国安足球,http://live.gslb.letv.com/gslb?s ... t=letv&expect=3
-河南足球,http://live.gslb.letv.com/gslb?s ... t=letv&expect=1
 韩国成人标清21台,rtmp://edge2.everyon.tv/etv2sb/pld993
 韩国成人标清22台,rtmp://edge2.everyon.tv/etv2/pld1003
 韩国成人标清23台,rtmp://edge2.everyon.tv/etv2/pld1005
@@ -586,55 +457,6 @@ SDETV,http://58.252.186.17:9009/live/chid=212
 浙江,http://58.252.186.17:9009/live/chid=702
 中国气象,http://58.252.186.17:9009/live/chid=242
 中华美食,http://58.252.186.17:9009/live/chid=118
-浙A-CCTV-1,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-2,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-3,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-4,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-CCTV-5,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-5+,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-6,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-7,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-8,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-9,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-10,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-12,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-14,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-News,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-湖南卫视,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-浙江卫视,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-广东卫视,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-东方卫视,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-北京卫视,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-深圳卫视,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-东南卫视,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-厦门卫视,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-辽宁卫视,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-天津卫视,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-黑龙江卫视,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-湖北卫视,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CCTV-IP,http://115.233.62.9/live.aishang ... der/1/playlist.m3u8
-浙A-CHC高清电影,http://115.233.62.9/live.aishang ... der/3/playlist.m3u8
-浙A-CHC家庭影院,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-CHC动作电影,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-精选电影频道,http://115.233.62.9/live.aishang ... der/1/playlist.m3u8
-浙A-喜剧影院,http://115.233.62.9/live.aishang ... der/1/playlist.m3u8
-浙A-动作影院,http://115.233.62.9/live.aishang ... der/1/playlist.m3u8
-浙A-家庭影院,http://115.233.62.9/live.aishang ... der/1/playlist.m3u8
-浙A-星影,http://115.233.62.9/live.aishang ... der/1/playlist.m3u8
-浙A-IPTV谍战剧场,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV相声小品,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV3+,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV5+,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV6+,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV8+,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV热播剧场,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV经典电影,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV魅力时尚,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV少儿动画,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV春晚频道,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV野外,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV法治,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
-浙A-IPTV收视指南,http://115.233.62.9/live.aishang ... der/0/playlist.m3u8
 华数A-CCTV-1,http://112.253.38.62:80/livehls1-cnc.wasu.cn/hd_cctv1/z.m3u8
 华数A-CCTV-5,http://112.253.38.62:80/livehls1-cnc.wasu.cn/hd_cctv5/z.m3u8
 华数A-求索记录,http://112.253.38.62:80/livehls1-cnc.wasu.cn/hd_qsjl/z.m3u8
@@ -705,7 +527,6 @@ SDETV,http://58.252.186.17:9009/live/chid=212
 韩国1cr,http://cr.stream.omc.hk/etv2/phd1006/playlist.m3u8
 韩国2cr,http://cr.stream.omc.hk/etv2/phd1005/playlist.m3u8
 chengren1,http://edge2.everyon.tv/etv2sb/pld993/playlist.m3u8
-chengren4,?
 HD欧美33,http://content2.sexforsure.com/2013/07/02/5/Video.mp4
 HD欧美40,http://content2.sexforsure.com/2013/07/02/13/Video.mp4
 HD欧美41,http://content2.sexforsure.com/2013/07/02/12/Video.mp4
@@ -713,27 +534,8 @@ HD欧美44,http://content2.sexforsure.com/2013/07/02/14/Video.mp4
 HD欧美45,http://content2.sexforsure.com/2013/07/02/15/Video.mp4
 HD欧美46,http://content2.sexforsure.com/2013/07/02/16/Video.mp4
 HD欧美47,http://content2.sexforsure.com/2013/07/02/17/Video.mp4
-HD欧美75,
-HD欧美77,
-HD欧美78,
-HD欧美81,
-HD欧美86,
-HD欧美87,
-HD欧美88,
-HD欧美89,
 韩(限)3playy,http://edge2.everyon.tv/etv2sb/phd770/playlist.m3u8
-HD欧美78,
 HD欧美57,http://content2.sexforsure.com/2013/07/02/1/Video.mp4
-HD欧美73,
-HD欧美74,
-HD欧美75,
-HD欧美77,
-HD欧美81,
-HD欧美86,
-HD欧美87,
-HD欧美88,
-HD欧美89,
-HD欧美91,
 HD欧美13,http://sofuckingreal.com/movies/cfnm18/fitness08.mp4
 HD欧美31,http://content2.sexforsure.com/2013/07/02/3/Video.mp4
 HD欧美31,http://content2.sexforsure.com/2013/07/02/3/Video.mp4
@@ -765,41 +567,8 @@ HD欧美55,http://content2.sexforsure.com/2013/07/03/5/Video.mp4
 HD欧美56,http://content2.sexforsure.com/2013/07/03/7/Video.mp4
 HD欧美57,http://content2.sexforsure.com/2013/07/02/1/Video.mp4
 HD欧美58,http://content2.sexforsure.com/2013/07/02/2/Video.mp4
-HD欧美73,
-HD欧美73,
-HD欧美74,
-HD欧美75,
-HD欧美75,
-HD欧美75,
-HD欧美77,
-HD欧美78,
-HD欧美81,
-HD欧美81,
-HD欧美86,
-HD欧美86,
-HD欧美87,
-HD欧美87,
-HD欧美87,
-HD欧美88,
-HD欧美88,
-HD欧美88,
-HD欧美89,
-HD欧美89,
-HD欧美90,
-HD欧美90,
-HD欧美90,
-HD欧美91,
-HD欧美91,
-HD欧美120,
-HD欧美120,
-HD欧美120,
-HD欧美128,http://video6.thepluginz.com/4/s ... ed_flash/big_11.mp4
-HD欧美131,http://video5.thepluginz.com/30/ ... ted_flash/big_5.mp4
-欧美2,http://publish.thewebstream.co:1 ... tream/playlist.m3u8
-成人电影27,http://videohttp2.porndig.com/vi ... nklist_b730000.m3u8
 ソタチツッテトヰ1,http://edge2.everyon.tv/etv2/phd1005/chunklist_w982667849.m3u8
 x3,http://208.122.3.2:9000#http://208.122.3.2:9000
 x4,http://208.122.3.2:8700#http://208.122.3.2:8700
-Korea6台HD,http://edge2.everyon.tv/etv2/phd ... yon.tv/etv2/phd1006
 9CR,?cdn_hash=762cdcbc6d8a139754d33c17f86d4648&cdn_creation_time=1384716555&cdn_ttl=600
 6CR,?cdn_hash=08766536c88497ed0bb80f38f0141714&cdn_creation_time=1384717393&cdn_ttl=600

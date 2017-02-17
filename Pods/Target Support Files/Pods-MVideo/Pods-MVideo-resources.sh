@@ -76,40 +76,6 @@ EOM
       ;;
   esac
 }
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "kxmovie/output/kxmovie.bundle/music_icon.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_ff.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_ff@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_next.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_next@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_pause.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_pause@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_play.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_play@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_prev.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_prev@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_rew.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_rew@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/sliderthumb.png"
-  install_resource "kxmovie/output/kxmovie.bundle/sliderthumb@2x.png"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "kxmovie/output/kxmovie.bundle/music_icon.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_ff.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_ff@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_next.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_next@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_pause.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_pause@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_play.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_play@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_prev.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_prev@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_rew.png"
-  install_resource "kxmovie/output/kxmovie.bundle/playback_rew@2x.png"
-  install_resource "kxmovie/output/kxmovie.bundle/sliderthumb.png"
-  install_resource "kxmovie/output/kxmovie.bundle/sliderthumb@2x.png"
-fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

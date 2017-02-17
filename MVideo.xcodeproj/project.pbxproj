@@ -9,17 +9,28 @@
 /* Begin PBXBuildFile section */
 		4F16F3941D15926800E8B25D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F16F3931D15926800E8B25D /* main.m */; };
 		4F16F3971D15926800E8B25D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F16F3961D15926800E8B25D /* AppDelegate.m */; };
-		4F16F39A1D15926800E8B25D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F16F3991D15926800E8B25D /* ViewController.m */; };
+		4F16F39A1D15926800E8B25D /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F16F3991D15926800E8B25D /* ListViewController.m */; };
 		4F16F39D1D15926800E8B25D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F39B1D15926800E8B25D /* Main.storyboard */; };
 		4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F39E1D15926800E8B25D /* Assets.xcassets */; };
 		4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F3A01D15926800E8B25D /* LaunchScreen.storyboard */; };
-		4F97C9481D1EDD3600339D1D /* NewPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F97C9471D1EDD3600339D1D /* NewPlayerViewController.m */; };
 		4FB931211D16AD930030A1C3 /* videosList0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931201D16AD930030A1C3 /* videosList0.txt */; };
 		4FB931231D16B6460030A1C3 /* videosList1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931221D16B6460030A1C3 /* videosList1.txt */; };
 		7D872EDCA83C4A42043A7C99 /* libPods-MVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 555C6A4F7C914B4153854619 /* libPods-MVideo.a */; };
 		C73926EC1D1D2FAD00C93A12 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73926EB1D1D2FAD00C93A12 /* AVKit.framework */; };
 		C73926F21D1D33C600C93A12 /* videosList3.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F11D1D33C600C93A12 /* videosList3.txt */; };
 		C73926F41D1D33CF00C93A12 /* videosList2.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F31D1D33CF00C93A12 /* videosList2.txt */; };
+		C799DA2C1E57130C007BC8BD /* videosList6.txt in Resources */ = {isa = PBXBuildFile; fileRef = C799DA2B1E57130C007BC8BD /* videosList6.txt */; };
+		C7A33EE91E5433970009768F /* videosList4.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7A33EE81E5433970009768F /* videosList4.txt */; };
+		C7A33EEF1E54491B0009768F /* MHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A33EEE1E54491B0009768F /* MHomeViewController.m */; };
+		C7A33EF21E544CD40009768F /* videosList5.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7A33EF11E544CD40009768F /* videosList5.txt */; };
+		C7A33EF51E544F160009768F /* NewPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A33EF41E544F160009768F /* NewPlayerViewController.m */; };
+		C7A33F021E544FE00009768F /* KxAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A33EF81E544FE00009768F /* KxAudioManager.m */; };
+		C7A33F031E544FE00009768F /* kxmovie.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C7A33EFB1E544FE00009768F /* kxmovie.bundle */; };
+		C7A33F041E544FE00009768F /* KxMovieDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A33EFD1E544FE00009768F /* KxMovieDecoder.m */; };
+		C7A33F051E544FE00009768F /* KxMovieGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A33EFF1E544FE00009768F /* KxMovieGLView.m */; };
+		C7A33F061E544FE00009768F /* KxMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A33F011E544FE00009768F /* KxMovieViewController.m */; };
+		C7A33F081E5450070009768F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A33F071E5450070009768F /* UIKit.framework */; };
+		C7A33F0C1E54549A0009768F /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A33F0B1E54549A0009768F /* ListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,20 +40,40 @@
 		4F16F3931D15926800E8B25D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F16F3951D15926800E8B25D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F16F3961D15926800E8B25D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4F16F3981D15926800E8B25D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4F16F3991D15926800E8B25D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4F16F3981D15926800E8B25D /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		4F16F3991D15926800E8B25D /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		4F16F39C1D15926800E8B25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F16F39E1D15926800E8B25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F16F3A11D15926800E8B25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F16F3A31D15926800E8B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F97C9461D1EDD3600339D1D /* NewPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPlayerViewController.h; sourceTree = "<group>"; };
-		4F97C9471D1EDD3600339D1D /* NewPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPlayerViewController.m; sourceTree = "<group>"; };
 		4FB931201D16AD930030A1C3 /* videosList0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList0.txt; sourceTree = "<group>"; };
 		4FB931221D16B6460030A1C3 /* videosList1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList1.txt; sourceTree = "<group>"; };
 		555C6A4F7C914B4153854619 /* libPods-MVideo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVideo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73926EB1D1D2FAD00C93A12 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C73926F11D1D33C600C93A12 /* videosList3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList3.txt; sourceTree = "<group>"; };
 		C73926F31D1D33CF00C93A12 /* videosList2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList2.txt; sourceTree = "<group>"; };
+		C799DA2B1E57130C007BC8BD /* videosList6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList6.txt; sourceTree = "<group>"; };
+		C7A33EE81E5433970009768F /* videosList4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList4.txt; sourceTree = "<group>"; };
+		C7A33EED1E54491B0009768F /* MHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHomeViewController.h; sourceTree = "<group>"; };
+		C7A33EEE1E54491B0009768F /* MHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHomeViewController.m; sourceTree = "<group>"; };
+		C7A33EF11E544CD40009768F /* videosList5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList5.txt; sourceTree = "<group>"; };
+		C7A33EF31E544F160009768F /* NewPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPlayerViewController.h; sourceTree = "<group>"; };
+		C7A33EF41E544F160009768F /* NewPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPlayerViewController.m; sourceTree = "<group>"; };
+		C7A33EF71E544FE00009768F /* KxAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxAudioManager.h; sourceTree = "<group>"; };
+		C7A33EF81E544FE00009768F /* KxAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxAudioManager.m; sourceTree = "<group>"; };
+		C7A33EF91E544FE00009768F /* KxLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxLogger.h; sourceTree = "<group>"; };
+		C7A33EFA1E544FE00009768F /* kxmovie-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "kxmovie-Prefix.pch"; sourceTree = "<group>"; };
+		C7A33EFB1E544FE00009768F /* kxmovie.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = kxmovie.bundle; sourceTree = "<group>"; };
+		C7A33EFC1E544FE00009768F /* KxMovieDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieDecoder.h; sourceTree = "<group>"; };
+		C7A33EFD1E544FE00009768F /* KxMovieDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieDecoder.m; sourceTree = "<group>"; };
+		C7A33EFE1E544FE00009768F /* KxMovieGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieGLView.h; sourceTree = "<group>"; };
+		C7A33EFF1E544FE00009768F /* KxMovieGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieGLView.m; sourceTree = "<group>"; };
+		C7A33F001E544FE00009768F /* KxMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieViewController.h; sourceTree = "<group>"; };
+		C7A33F011E544FE00009768F /* KxMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieViewController.m; sourceTree = "<group>"; };
+		C7A33F071E5450070009768F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C7A33F091E5450530009768F /* MVideo-Pre.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVideo-Pre.pch"; sourceTree = "<group>"; };
+		C7A33F0A1E54549A0009768F /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		C7A33F0B1E54549A0009768F /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7A33F081E5450070009768F /* UIKit.framework in Frameworks */,
 				C73926EC1D1D2FAD00C93A12 /* AVKit.framework in Frameworks */,
 				7D872EDCA83C4A42043A7C99 /* libPods-MVideo.a in Frameworks */,
 			);
@@ -70,7 +102,6 @@
 		4F16F3861D15926800E8B25D = {
 			isa = PBXGroup;
 			children = (
-				C73926EB1D1D2FAD00C93A12 /* AVKit.framework */,
 				4F16F3911D15926800E8B25D /* MVideo */,
 				4F16F3901D15926800E8B25D /* Products */,
 				4276F6AEEB775FFC413ECEE4 /* Pods */,
@@ -91,14 +122,16 @@
 			children = (
 				4F16F3951D15926800E8B25D /* AppDelegate.h */,
 				4F16F3961D15926800E8B25D /* AppDelegate.m */,
-				4F16F3981D15926800E8B25D /* ViewController.h */,
-				4F16F3991D15926800E8B25D /* ViewController.m */,
-				4F97C9461D1EDD3600339D1D /* NewPlayerViewController.h */,
-				4F97C9471D1EDD3600339D1D /* NewPlayerViewController.m */,
-				4FB931201D16AD930030A1C3 /* videosList0.txt */,
-				4FB931221D16B6460030A1C3 /* videosList1.txt */,
-				C73926F31D1D33CF00C93A12 /* videosList2.txt */,
-				C73926F11D1D33C600C93A12 /* videosList3.txt */,
+				C7A33EED1E54491B0009768F /* MHomeViewController.h */,
+				C7A33EEE1E54491B0009768F /* MHomeViewController.m */,
+				4F16F3981D15926800E8B25D /* ListViewController.h */,
+				4F16F3991D15926800E8B25D /* ListViewController.m */,
+				C7A33F0A1E54549A0009768F /* ListTableViewCell.h */,
+				C7A33F0B1E54549A0009768F /* ListTableViewCell.m */,
+				C7A33EF31E544F160009768F /* NewPlayerViewController.h */,
+				C7A33EF41E544F160009768F /* NewPlayerViewController.m */,
+				C7A33EF61E544FE00009768F /* kxmovie */,
+				C7A33EF01E544B750009768F /* Resouce */,
 				4F16F39B1D15926800E8B25D /* Main.storyboard */,
 				4F16F39E1D15926800E8B25D /* Assets.xcassets */,
 				4F16F3A01D15926800E8B25D /* LaunchScreen.storyboard */,
@@ -112,13 +145,48 @@
 			isa = PBXGroup;
 			children = (
 				4F16F3931D15926800E8B25D /* main.m */,
+				C7A33F091E5450530009768F /* MVideo-Pre.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7A33EF01E544B750009768F /* Resouce */ = {
+			isa = PBXGroup;
+			children = (
+				C73926F31D1D33CF00C93A12 /* videosList2.txt */,
+				C799DA2B1E57130C007BC8BD /* videosList6.txt */,
+				4FB931221D16B6460030A1C3 /* videosList1.txt */,
+				C7A33EE81E5433970009768F /* videosList4.txt */,
+				C73926F11D1D33C600C93A12 /* videosList3.txt */,
+				4FB931201D16AD930030A1C3 /* videosList0.txt */,
+				C7A33EF11E544CD40009768F /* videosList5.txt */,
+			);
+			name = Resouce;
+			sourceTree = "<group>";
+		};
+		C7A33EF61E544FE00009768F /* kxmovie */ = {
+			isa = PBXGroup;
+			children = (
+				C7A33EF71E544FE00009768F /* KxAudioManager.h */,
+				C7A33EF81E544FE00009768F /* KxAudioManager.m */,
+				C7A33EF91E544FE00009768F /* KxLogger.h */,
+				C7A33EFA1E544FE00009768F /* kxmovie-Prefix.pch */,
+				C7A33EFB1E544FE00009768F /* kxmovie.bundle */,
+				C7A33EFC1E544FE00009768F /* KxMovieDecoder.h */,
+				C7A33EFD1E544FE00009768F /* KxMovieDecoder.m */,
+				C7A33EFE1E544FE00009768F /* KxMovieGLView.h */,
+				C7A33EFF1E544FE00009768F /* KxMovieGLView.m */,
+				C7A33F001E544FE00009768F /* KxMovieViewController.h */,
+				C7A33F011E544FE00009768F /* KxMovieViewController.m */,
+			);
+			path = kxmovie;
 			sourceTree = "<group>";
 		};
 		E3D7921AC30277C0E3D00926 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C73926EB1D1D2FAD00C93A12 /* AVKit.framework */,
+				C7A33F071E5450070009768F /* UIKit.framework */,
 				555C6A4F7C914B4153854619 /* libPods-MVideo.a */,
 			);
 			name = Frameworks;
@@ -192,12 +260,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FB931211D16AD930030A1C3 /* videosList0.txt in Resources */,
+				C7A33F031E544FE00009768F /* kxmovie.bundle in Resources */,
 				4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */,
 				4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */,
 				4FB931231D16B6460030A1C3 /* videosList1.txt in Resources */,
 				C73926F21D1D33C600C93A12 /* videosList3.txt in Resources */,
 				C73926F41D1D33CF00C93A12 /* videosList2.txt in Resources */,
 				4F16F39D1D15926800E8B25D /* Main.storyboard in Resources */,
+				C7A33EF21E544CD40009768F /* videosList5.txt in Resources */,
+				C7A33EE91E5433970009768F /* videosList4.txt in Resources */,
+				C799DA2C1E57130C007BC8BD /* videosList6.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,10 +328,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F16F39A1D15926800E8B25D /* ViewController.m in Sources */,
+				C7A33F061E544FE00009768F /* KxMovieViewController.m in Sources */,
+				4F16F39A1D15926800E8B25D /* ListViewController.m in Sources */,
+				C7A33EF51E544F160009768F /* NewPlayerViewController.m in Sources */,
 				4F16F3971D15926800E8B25D /* AppDelegate.m in Sources */,
-				4F97C9481D1EDD3600339D1D /* NewPlayerViewController.m in Sources */,
+				C7A33F051E544FE00009768F /* KxMovieGLView.m in Sources */,
+				C7A33F021E544FE00009768F /* KxAudioManager.m in Sources */,
+				C7A33EEF1E54491B0009768F /* MHomeViewController.m in Sources */,
+				C7A33F041E544FE00009768F /* KxMovieDecoder.m in Sources */,
 				4F16F3941D15926800E8B25D /* main.m in Sources */,
+				C7A33F0C1E54549A0009768F /* ListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +452,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4AW78593E8;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "./MVideo/MVideo-Pre.pch";
 				INFOPLIST_FILE = MVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -393,6 +472,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4AW78593E8;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "./MVideo/MVideo-Pre.pch";
 				INFOPLIST_FILE = MVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

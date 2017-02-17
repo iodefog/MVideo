@@ -1,0 +1,17 @@
+//
+//  MVideo-Pre.pch
+//  MVideo
+//
+//  Created by LHL on 17/2/15.
+//  Copyright © 2017年 LHL. All rights reserved.
+//
+
+#ifndef MVideo_Pre_pch
+#define MVideo_Pre_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+
+#endif /* MVideo_Pre_pch */

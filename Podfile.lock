@@ -1,12 +1,19 @@
 PODS:
-  - kxmovie (0.0.3)
+  - FFmpeg (2.8.3):
+    - FFmpeg/precompiled (= 2.8.3)
+  - FFmpeg/precompiled (2.8.3)
+  - NSLogger (1.7.0):
+    - NSLogger/Standard (= 1.7.0)
+  - NSLogger/Standard (1.7.0)
 
 DEPENDENCIES:
-  - kxmovie (~> 0.0.3)
+  - FFmpeg (~> 2.8.3)
+  - NSLogger (~> 1.7.0)
 
 SPEC CHECKSUMS:
-  kxmovie: 1372354f4da23ff5bbda198c0dd375b743f8899c
+  FFmpeg: f1428c3b60b5f9e349fcd5d7878705cd7f9a26f6
+  NSLogger: daa17368272ddf10a0850c218fe49de23b50f2eb
 
-PODFILE CHECKSUM: 395d08f3744ffa9553510b3c852697a24f5290ab
+PODFILE CHECKSUM: 417c2bf690de7094dfed19e444fbc45b3cb77691
 
 COCOAPODS: 1.2.0
