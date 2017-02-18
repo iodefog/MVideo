@@ -153,13 +153,13 @@
 		C7A33EF01E544B750009768F /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
-				C73926F31D1D33CF00C93A12 /* videosList2.txt */,
-				C799DA2B1E57130C007BC8BD /* videosList6.txt */,
-				4FB931221D16B6460030A1C3 /* videosList1.txt */,
-				C7A33EE81E5433970009768F /* videosList4.txt */,
-				C73926F11D1D33C600C93A12 /* videosList3.txt */,
 				4FB931201D16AD930030A1C3 /* videosList0.txt */,
+				4FB931221D16B6460030A1C3 /* videosList1.txt */,
+				C73926F31D1D33CF00C93A12 /* videosList2.txt */,
+				C73926F11D1D33C600C93A12 /* videosList3.txt */,
+				C7A33EE81E5433970009768F /* videosList4.txt */,
 				C7A33EF11E544CD40009768F /* videosList5.txt */,
+				C799DA2B1E57130C007BC8BD /* videosList6.txt */,
 			);
 			name = Resouce;
 			sourceTree = "<group>";

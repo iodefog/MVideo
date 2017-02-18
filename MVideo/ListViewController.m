@@ -24,6 +24,8 @@
 @property (nonatomic, assign) NSInteger         tableNum;
 @property (nonatomic, assign) BOOL              kxvcpop;
 
+@property (nonatomic, strong) UISwitch          *autoPlaySwitch;
+
 @end
 
 @implementation ListViewController
@@ -36,6 +38,19 @@
     self.dataSource = [NSMutableArray array];
     [self.view addSubview:self.liveListTableView];
     
+    self.autoPlaySwitch = [[UISwitch alloc] initWithFrame:CGRectMake(100-30, 0, 30, 20)];
+    [self.autoPlaySwitch addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
+    NSNumber *oldValue = [[NSUserDefaults standardUserDefaults] objectForKey:@"kAutoPlaySwitch"];
+    self.autoPlaySwitch.on = oldValue ? oldValue.boolValue : YES;
+    
+    UILabel *tipLable = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+    tipLable.userInteractionEnabled = YES;
+    tipLable.text = @"自动返回";
+    tipLable.font = [UIFont systemFontOfSize:14];
+    [tipLable addSubview:self.autoPlaySwitch];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tipLable];
+    
     [self addBackgroundMethod];
     [self operationStr];
     [self registerObserver];
@@ -43,6 +58,10 @@
 
 - (BOOL)shouldAutorotate{
     return NO;
+}
+
+- (void)valueChange:(UISwitch *)sender{
+    [[NSUserDefaults standardUserDefaults] setObject:@(sender.on) forKey:@"kAutoPlaySwitch"];
 }
 
 - (void)addBackgroundMethod{
@@ -232,13 +251,13 @@
                     ttcell.canPlayLabel.hidden = NO;
                     mySelf.kxvcpop = NO;
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 8 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
-                        if (mySelf.kxvcpop) {
+                        if (mySelf.kxvcpop || !self.autoPlaySwitch.on) {
                             return;
                         }
                         [myvc dismissViewControllerAnimated:YES completion:nil];
                         mySelf.kxvcpop = NO;
                         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
-                            if (mySelf.kxvcpop) {
+                            if (mySelf.kxvcpop || !self.autoPlaySwitch.on) {
                                 return;
                             }
                             [mySelf autoPlayNextVideo:indexPath delegate:mySelf];
@@ -284,7 +303,7 @@
 
 
 - (void)saveCanPlayHistoryToDocument:(NSString *)movieUrl name:(NSString *)name{
-    NSString *documentPath = [self getDocumentFilePath];
+    NSString *documentPath = [ListViewController getResultDocumentFilePath];
     NSError *error = nil;
     NSString *oldString = [NSString stringWithContentsOfFile:documentPath encoding:NSUTF8StringEncoding error:&error];
     if (!error) {
@@ -297,9 +316,9 @@
     }
 }
 
-- (NSString *)getDocumentFilePath{
++ (NSString *)getResultDocumentFilePath{
     NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    documentPath = [NSString stringWithFormat:@"%@/%@.txt", documentPath, self.dict[@"title"]];
+    documentPath = [NSString stringWithFormat:@"%@/%@.txt", documentPath, @"CanPlayResult"];
 //    if ([[NSFileManager defaultManager] fileExistsAtPath:documentPath]) {
 //        [[NSFileManager defaultManager] createFileAtPath:documentPath contents:nil attributes:nil];
 //    }

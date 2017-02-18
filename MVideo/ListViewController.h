@@ -12,5 +12,7 @@
 
 @property (nonatomic, strong) NSDictionary *dict;
 
++ (NSString *)getResultDocumentFilePath;
+
 @end
 

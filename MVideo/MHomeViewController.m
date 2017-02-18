@@ -27,6 +27,9 @@
 }
 
 - (void)operationStr{
+    [self.dataSource addObject:@{@"title":@"已测试可播放列表",
+                                 @"filePath":[ListViewController getResultDocumentFilePath]}];
+    
     for (NSInteger count = 0 ; count < NSIntegerMax; count ++) {
         
         NSString *fileName = [NSString stringWithFormat:@"%@%@",FileNamePre,@(count)];

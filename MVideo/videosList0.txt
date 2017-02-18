@@ -201,7 +201,7 @@ GoodTV1,http://210.59.248.53/hls-live/livepkgr/_definst_/liveevent/live-ch1-3.m3
 战旗电影101 ,http://dlhls.cdn.zhanqi.tv/zqlive/49858_wgGj1.m3u8
 战旗电影105 ,http://dlhls.cdn.zhanqi.tv/zqlive/20910_uUMgC.m3u8
 火影忍者 ,http://dlhls.cdn.zhanqi.tv/zqlive/41832_NfsIa.m3u8
-VEVO音乐,http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/05/prog_index.m3u8       
+VEVO音乐,http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/05/prog_index.m3u8
 爱奇艺电影,http://106.120.175.80:55336/tslive/c20_lb_dianying_high_t10/c20_lb_dianying_high_t10.m3u8
 爱奇艺动漫,http://106.120.175.80:55336/tslive/c3_lb_dongman_high_t10/c3_lb_dongman_high_t10.m3u8
 爱奇艺综艺,http://106.120.175.80:55336/tslive/c3_lb_zongyi_high_t10/c3_lb_zongyi_high_t10.m3u8
