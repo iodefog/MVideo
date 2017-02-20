@@ -1,5 +1,5 @@
-亮剑,http://10.2.15.163:9974/liangjian_1.mkv
-毛骗01,http://10.2.15.163:9974/maopian01.rmvb
+亮剑,https://10.2.15.163/movie/liangjian_1.mkv
+毛骗01,http://10.2.15.163/movie/maopian01.rmvb
 搜狐东方卫视,http://gslb.tv.sohu.com/live?cid=346255&ver=seg&ckey=fMZ4Nlkz8VXzb2k7uPS&type=hls&prot=1&sig=6dmShtZfXIPDDBj738XcecO6tdc.
 搜狐北京卫视,http://gslb.tv.sohu.com/live?cid=346249&ver=seg&ckey=fMZ4Nl-p8VXzb2k7uPS&type=hls&prot=1&sig=xfA1ym5m8HvZpgLhHozn6Ytl6OM.
 搜狐广东卫视,http://gslb.tv.sohu.com/live?cid=346252&ver=seg&ckey=fMZ4NlkP8VXzb2k7uPS&type=hls&prot=1&sig=qdnwPebktY_XgTPeKzJ9efUqIO8.

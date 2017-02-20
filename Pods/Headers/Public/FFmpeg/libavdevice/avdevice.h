@@ -1,1 +1,0 @@
-../../../../FFmpeg/ffmpeg-ios-static-libs/include/libavdevice/avdevice.h

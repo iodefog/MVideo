@@ -778,7 +778,7 @@ static int interrupt_callback(void *ctx);
         AVIOInterruptCB cb = {interrupt_callback, (__bridge void *)(self)};
         formatCtx->interrupt_callback = cb;
     }
-    
+    av_register_all();
     if (avformat_open_input(&formatCtx, [path cStringUsingEncoding: NSUTF8StringEncoding], NULL, NULL) < 0) {
         
         if (formatCtx)
@@ -857,9 +857,9 @@ static int interrupt_callback(void *ctx);
     AVStream *st = _formatCtx->streams[_videoStream];
     avStreamFPSTimeBase(st, 0.04, &_fps, &_videoTimeBase);
     
-    LoggerVideo(1, @"video codec size: %d:%d fps: %.3f tb: %f",
-                self.frameWidth,
-                self.frameHeight,
+    LoggerVideo(1, @"video codec size: %lu:%lu fps: %.3f tb: %f",
+                (unsigned long)self.frameWidth,
+                (unsigned long)self.frameHeight,
                 _fps,
                 _videoTimeBase);
     
@@ -1089,7 +1089,7 @@ static int interrupt_callback(void *ctx);
     [self closeScaler];
     
     _pictureValid = avpicture_alloc(&_picture,
-                                    PIX_FMT_RGB24,
+                                    AV_PIX_FMT_RGB24,
                                     _videoCodecCtx->width,
                                     _videoCodecCtx->height) == 0;
     
@@ -1102,7 +1102,7 @@ static int interrupt_callback(void *ctx);
                                        _videoCodecCtx->pix_fmt,
                                        _videoCodecCtx->width,
                                        _videoCodecCtx->height,
-                                       PIX_FMT_RGB24,
+                                       AV_PIX_FMT_RGB24,
                                        SWS_FAST_BILINEAR,
                                        NULL, NULL, NULL);
         
@@ -1395,11 +1395,11 @@ static int interrupt_callback(void *ctx);
                     if (!_disableDeinterlacing &&
                         _videoFrame->interlaced_frame) {
 
-                        avpicture_deinterlace((AVPicture*)_videoFrame,
-                                              (AVPicture*)_videoFrame,
-                                              _videoCodecCtx->pix_fmt,
-                                              _videoCodecCtx->width,
-                                              _videoCodecCtx->height);
+//                        avpicture_deinterlace((AVPicture*)_videoFrame,
+//                                              (AVPicture*)_videoFrame,
+//                                              _videoCodecCtx->pix_fmt,
+//                                              _videoCodecCtx->width,
+//                                              _videoCodecCtx->height);
                     }
                     
                     KxVideoFrame *frame = [self handleVideoFrame];

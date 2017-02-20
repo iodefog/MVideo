@@ -697,7 +697,7 @@ Hct (real Scary Tv),http://hls.novotelecom.ru/streaming/nstv/tvrec/playlist.m3u8
 西班牙tve ,http://iphonelive.rtve.es/LA1_LV3_IPH/LA1_LV3_IPH.m3u8
 西班牙tve 24小时,http://iphonelive.rtve.es/24H_LV3_IPH/24H_LV3_IPH.m3u8
 
-俄罗斯http://s2.edem.tv/iptv/6TGEMRUHCLH9PG/124/526/index.m3u8
+俄罗斯 http://s2.edem.tv/iptv/6TGEMRUHCLH9PG/124/526/index.m3u8
 RTP1 | http://ftvnext.stmteam.org:8000/live/pauloleite3/carlosXXlfts/19.ts
 越南BYN TV 57.3 | http://origin.onworldtv.com:1935/liveorigin/byn/index.m3u8
 CCTV-9 Documentary | http://61.238.172.87:9981/stream/channelid/2?ticket=AA4A7F8C031CE3DF1F00DED9DF9D5FD8A8D8C301
