@@ -9,7 +9,9 @@
 #import "MHomeViewController.h"
 #import "ListViewController.h"
 
-#define FileNamePre @"videosList"
+#define FileNamePre         @"videosList"
+#define TVHostURL           @"https://lihongli528628.github.io/text/"
+#define VideosTVListName    @"VideosTVListName.txt"
 
 @interface MHomeViewController ()
 
@@ -22,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self operationStr];
+    [self requestNetWorkData];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HomeTableViewCell"];
 }
@@ -43,6 +46,24 @@
             break;
         }
     }
+}
+
+- (void)requestNetWorkData{
+    NSString *videosTVListNameUrl = [NSString stringWithFormat:@"%@%@", TVHostURL,VideosTVListName];
+    __block NSError *error = nil;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSString *videoList = [NSString stringWithContentsOfURL:[NSURL URLWithString:videosTVListNameUrl] encoding:NSUTF8StringEncoding error:&error];
+        error ? NSLog(@"%@", error) : nil;
+        NSArray *titleArray = [videoList componentsSeparatedByString:@"\n"];
+        for (NSString *title in titleArray) {
+            [self.dataSource addObject:@{@"title":title,
+                                         @"filePath":[NSString stringWithFormat:@"%@%@", TVHostURL, title]}];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    });
 }
 
 - (NSMutableArray *)dataSource{

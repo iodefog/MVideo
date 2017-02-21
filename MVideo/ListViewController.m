@@ -86,47 +86,72 @@
     [session setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
+/**
+ *  处理文件，如果是本地文件，读取文件字符串，转换
+    如果是网络文件，则下载文件。然后转换。
+ */
 - (void)operationStr{
     NSString *filePath = self.dict[@"filePath"];
+    __block NSError *error = nil;
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-        NSMutableArray *itemArray = [NSMutableArray array];
-        NSError *error = nil;
         // 去除路径下的某个txt文件
         NSString *videosText = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
-        // 过滤掉特殊字符 "\r"。有些url带有"\r",导致转换失败
-        videosText = [videosText stringByReplacingOccurrencesOfString:@"\r" withString:@""];
-        if (!error) {
-            // 依据换行符截取一行字符串
-            NSArray *videosArray = [videosText componentsSeparatedByString:@"\n"];
-            
-            for (NSString *subStr in videosArray) {
-                // 根据"," 和" " 分割一行的字符串
-                NSArray *subStrArray = [subStr componentsSeparatedByString:@","];
-                NSArray *sub2StrArray = [subStr componentsSeparatedByString:@" "];
-                
-                if(subStrArray.count == 2 || (sub2StrArray.count == 2)){
-                    NSArray *tempArray = (subStrArray.count == 2)? subStrArray : sub2StrArray;
-                    itemArray = [self checkMultipleUrlInOneUrlWithUrl:[tempArray lastObject] videoName:[tempArray firstObject] itemArray:itemArray];
-                }
-                else if ([subStr stringByReplacingOccurrencesOfString:@" " withString:@""].length == 0){
-                    // nothing
-                }
-                else if (subStrArray.count >= 3 || (sub2StrArray.count >= 3)){
-                    NSArray *tempArray = (subStrArray.count >= 3)? subStrArray : sub2StrArray;
-                    NSString *tempUrl = [tempArray objectAtIndex:1];
-                    itemArray = [self checkMultipleUrlInOneUrlWithUrl:tempUrl.length>5?tempUrl:[tempArray objectAtIndex:2] videoName:[tempArray firstObject] itemArray:itemArray];
-                }
-                else {
-                    subStrArray = [subStr componentsSeparatedByString:@" "];
-                    itemArray = [self checkMultipleUrlInOneUrlWithUrl:[subStrArray lastObject] videoName:[subStrArray firstObject] itemArray:itemArray];
-                }
-            }
-            [self.dataSource addObject:@{TVList:itemArray}];
-        }else {
-            NSLog(@"error %@", error);
-        }
+        [self transformVideoUrlFromString:videosText error:error];
+        [self.liveListTableView reloadData];
     }
-    [self.liveListTableView reloadData];
+    // 网络请求文件
+    else if([filePath hasPrefix:@"http"]){
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            NSString *videosText = [NSString stringWithContentsOfURL:[NSURL URLWithString:filePath] encoding:NSUTF8StringEncoding error:&error];
+            [self transformVideoUrlFromString:videosText error:error];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.liveListTableView reloadData];
+            });
+        });
+    }
+}
+
+/**
+ *  转换字符串变成视频url+name
+ *
+ *  @param videosText 视频播放的url
+ *  @param error      是否有错误
+ */
+- (void)transformVideoUrlFromString:(NSString *)videosText error:(NSError *)error
+{
+    // 过滤掉特殊字符 "\r"。有些url带有"\r",导致转换失败
+    videosText = [videosText stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+    if (!error && (videosText.length > 0)) {
+        NSMutableArray *itemArray = [NSMutableArray array];
+        // 依据换行符截取一行字符串
+        NSArray *videosArray = [videosText componentsSeparatedByString:@"\n"];
+        
+        for (NSString *subStr in videosArray) {
+            // 根据"," 和" " 分割一行的字符串
+            NSArray *subStrArray = [subStr componentsSeparatedByString:@","];
+            NSArray *sub2StrArray = [subStr componentsSeparatedByString:@" "];
+            
+            if(subStrArray.count == 2 || (sub2StrArray.count == 2)){
+                NSArray *tempArray = (subStrArray.count == 2)? subStrArray : sub2StrArray;
+                itemArray = [self checkMultipleUrlInOneUrlWithUrl:[tempArray lastObject] videoName:[tempArray firstObject] itemArray:itemArray];
+            }
+            else if ([subStr stringByReplacingOccurrencesOfString:@" " withString:@""].length == 0){
+                // nothing
+            }
+            else if (subStrArray.count >= 3 || (sub2StrArray.count >= 3)){
+                NSArray *tempArray = (subStrArray.count >= 3)? subStrArray : sub2StrArray;
+                NSString *tempUrl = [tempArray objectAtIndex:1];
+                itemArray = [self checkMultipleUrlInOneUrlWithUrl:tempUrl.length>5?tempUrl:[tempArray objectAtIndex:2] videoName:[tempArray firstObject] itemArray:itemArray];
+            }
+            else {
+                subStrArray = [subStr componentsSeparatedByString:@" "];
+                itemArray = [self checkMultipleUrlInOneUrlWithUrl:[subStrArray lastObject] videoName:[subStrArray firstObject] itemArray:itemArray];
+            }
+        }
+        [self.dataSource addObject:@{TVList:itemArray}];
+    }else {
+        NSLog(@"error %@", error);
+    }
 }
 
 - (NSMutableArray *)checkMultipleUrlInOneUrlWithUrl:(NSString *)url
