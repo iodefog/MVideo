@@ -236,7 +236,7 @@
     
     if (indexPath.row < [self.dataSource[indexPath.section][TVList] count]) {
         NSDictionary *dict =  self.dataSource[indexPath.section][TVList][indexPath.row];
-        cell.textLabel.text = dict[@"name"];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@-%@",@(indexPath.row+1), dict[@"name"]];
         cell.detailTextLabel.numberOfLines = 0;
         cell.detailTextLabel.text = [dict[@"liveUrl"] stringByReplacingOccurrencesOfString:@"[url]" withString:@""];
         [cell checkIsCanPlay:cell.detailTextLabel.text fileName:self.dict[@"title"]];
