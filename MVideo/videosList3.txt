@@ -110,28 +110,6 @@ TVB-8频道 http://110.77.0.182:1935/dvr/1013.stream/playlist.m3u8
 華視美洲台,p2p://207.238.82.38:9926/51b97ba8000c65d41bbedb4c56ad01b3
 华研国际,http://58.99.33.4:1935/liveedge/live_184_3.stream/playlist.m3u8
 民视美洲,p2p://207.238.82.38:9926/51aea8a600029f63e83ff5493b03319a
-日本直播1,p2p://50.7.104.10:9906/5400502a000565db01505ef032c46863
-日本直播4,p2p://50.7.104.10:9906/540050270009ff6c0150546512a7eef9
-日本直播5,p2p://50.7.104.10:9906/54005029000a6c4501505c51139d7f96
-日本直播6,p2p://50.7.104.10:9906/54005028000555ef0150571cacca9cf3
-日本直播7,p2p://50.7.104.10:9906/540044fe0001069f0124b9f18b00efe5
-日本直播8,p2p://50.7.104.10:9906/540050270000a1b7015051ffa41b571c
-日本直播9,p2p://50.7.104.10:9906/540050290000343a015059b37121116a
-日本直播10,p2p://50.7.104.10:9906/540044fd00064c650124b7636fadae16
-日本无码成人1,p2p://60.249.213.25:9900/5606c63300026a49018645fc4fa242c1
-日本无码成人2,p2p://60.249.213.25:9900/5606c65c000c89a00186e8c049b37400
-欧美成人无码10,http://195.154.183.48:8000/live/roberto/roberto/1089.ts
-欧美成人无码21,http://195.154.183.48:8000/live/roberto/roberto/1100.ts
-欧美成人无码22,http://195.154.183.48:8000/live/roberto/roberto/1102.ts
-欧美成人无码23,http://195.154.183.48:8000/live/roberto/roberto/1103.ts
-欧美成人无码24,http://195.154.183.48:8000/live/roberto/roberto/1104.ts
-潘多拉粉红有码成人,p2p://60.249.213.25:9900/5713985f000b8b8a02aca8ba011b7763
-潘多拉完美有码成人,p2p://60.249.213.25:9900/57131d85000e2ff400ccc5e1018c4967
-彩虹电影有码成人,p2p://60.249.213.25:9900/57131cb40001e85300c9925340d81667
-彩虹K有码成人,p2p://60.249.213.25:9900/57131c760002b49600c8a0570239525d
-彩虹e有码成人,p2p://60.249.213.25:9900/57133c9e000853e201463dff41c350a4
-松视1HD有码成人,p2p://60.249.213.25:9900/57131c4b0007ccfb00c7f9ad180f1833
-松视2有码成人,p2p://60.249.213.25:9900/57131ce8000b1cf000ca5fcf5d282c84
 WOWOWプライム,p2p://60.249.213.25:9900/571700180000ca430ff9d0aa11623afa
 WOWOWシネマ,p2p://60.249.213.25:9900/57170136000e864b0ffe31606c9a3a2d
 WOWOWライブ,p2p://60.249.213.25:9900/571700af000eb8ee0ffc22140543783a
@@ -167,8 +145,6 @@ CinemaWorld电影,p2p://60.249.213.25:9900/57137f34000c4826024a58f44b2f05d3
 21天华综艺高清,http://116.77.70.98:5080/hls/228v48qf.m3u8
 30HD欧美86,
 33中视,http://59.120.43.180:17837
-日本成人卡通→頻道,http://210.200.79.26:1935/live/aracity01/playlist.m3u8
-日本成人→1頻道,http://210.200.79.26:1935/live/aracity02/playlist.m3u8
 CR频道|CRHD,http://ru-element.ru/playlist/playlist.php?ch=4&r=my
 松视3==,http://www.sonsee.com.tw/filmfiles4/HSDN-366-2_484521.mp4
 1台 ,http://210.200.79.26:1935/live/aracity_m_new/chunklist.m3u8
@@ -290,23 +266,6 @@ EURO SPORT,p2p://122.114.113.182:9999/56f8a2e100089fa62c61ad4936fc6255
 松视二台,p2p://122.114.113.182:9999/56b154e80002f201324504235374050d
 松视三台,p2p://122.114.113.182:9999/56b154f5000ee768324539f9369773f7
 松视四台,p2p://122.114.113.182:9999/56b1550200074f0832456acd4b615e2d
-花花公子,p2p://122.114.113.182:9999/5494b376000d471a0edfb220a3f15d61
-AV日本,p2p://122.114.113.182:9999/56e6a6590003080b01c9591fe2f88d73
-乐活频道,p2p://122.114.113.182:9999/56e6a6740007861401c9c3beef78b0dc
-欧美频道1,p2p://122.114.113.182:9999/56b15443000e69c4324282a9088965dc
-欧美频道2,p2p://122.114.113.182:9999/56b154590003bea03242d5d953b671d2
-松视一台,p2p://122.114.113.182:9999/56766922c00deaea0086670e58d76ce7
-日本1,p2p://122.114.113.182:9999/56d125c00001d9fd85640d1735872d5c
-日本2,p2p://122.114.113.182:9999/56d125ea0009251d8564b3064e620dd1
-彩虹E台,p2p://122.114.113.182:9999/567676028003bf5300c29e7458b07512
-樱花频道,p2p://122.114.113.182:9999/56cdee760000a07278d406137f163145
-一本道,p2p://122.114.113.182:9999/56b153f900074aac32415fd35c932f4c
-二本道,p2p://122.114.113.182:9999/56b1540e000efa7b3241b3cf2595591e
-三本道,p2p://122.114.113.182:9999/56b1541b0006e8533241e4840bd45262
-四本道,p2p://122.114.113.182:9999/56b1542a000c32393242207443c14176
-sex zone,p2p://122.114.113.182:9999/5494b33b000108330edec886bd45f0f0
-sextreme,p2p://122.114.113.182:9999/5494b3a6000edf180ee06e09b75538c4
-sex Hot,p2p://122.114.113.182:9999/5494b37600090cf70edfb10bea5cfb5d
 sct hd,p2p://122.114.113.182:9999/550ba032000c556b2f6e8b71c3ef1d3a
 sct 6,p2p://122.114.113.182:9999/550ba0320002a6952f6e88f77ee0962c
 Sct 7,p2p://122.114.113.182:9999/550ba031000c8f682f6e879895add54f
@@ -321,42 +280,6 @@ BRAZZERS TV EU,p2p://122.114.113.182:9999/556489d9000f338314323a3640cd4b60
 欧洲足球,http://stream1.grtn.cn/ozzq/sd/live.m3u8?_upt=?ts
 欧洲足球,http://aiseet.lszb.atianqi.com/app_4/ozzq.m3u8?bitrate=2000
 广东体育,http://stream1.grtn.cn/typd/sd/live.m3u8?_upt=?ts
-韩国成人标清21台,rtmp://edge2.everyon.tv/etv2sb/pld993
-韩国成人标清22台,rtmp://edge2.everyon.tv/etv2/pld1003
-韩国成人标清23台,rtmp://edge2.everyon.tv/etv2/pld1005
-韩国成人标清24台,rtmp://edge2.everyon.tv/etv2/pld1006
-韩国成人标清25台,rtmp://edge2.everyon.tv/etv2/pld1008
-韩国成人高清22台,rtmp://edge2.everyon.tv/etv2/phd1003
-23,http://cr.stream.omc.hk/etv2/phd1003/playlist.m3u8
-25,http://cr.stream.omc.hk/etv2/phd1006/playlist.m3u8
-cr,http://cr.stream.omc.hk/etv2/pld1003/playlist.m3u8
-cr,http://cr.stream.omc.hk/etv2/pld1005/playlist.m3u8
-pbuy-tv成人台,rtmp://123.108.164.71/etv2sb/pld993
-Korea Ask TV,http://edge2.everyon.tv/etv2/phd1005/BratuMarian.m3u8
-Korea Ask TV,rtmp://edge2.everyon.tv/etv2/phd1005
-Korea Livething Premium,rtmp://edge2.everyon.tv/etv2/phd1006
-Korea Okadai,rtmp://edge2.everyon.tv/etv2/pld1003
-Korea Okadai HD,http://edge2.everyon.tv/etv2/phd1003/BratuMarian.m3u8
-Korea Paradise TV,rtmp://edge2.everyon.tv/etv2/pld1008
-x1,http://208.122.3.2:8550
-x3,http://208.122.3.2:9000
-x4,http://208.122.3.2:8700
-成人16台,rtmp://123.108.164.71/etv2/phd1003
-成人17台,rtmp://123.108.164.71/etv2/phd1005
-成人19台,rtmp://123.108.164.71/etv2/phd1008
-野外频道,rtsp://c.itvitv.com/wild
-性感2台HD，,rtmp://edge2.everyon.tv/etv2/pld1005
-兔子成人台HD，,rtmp://edge2.everyon.tv/etv2/pld1006
-韩国红圈一台，,rtmp://edge2.everyon.tv/etv2/pld1008
-棒子3,rtmp://edge2.everyon.tv/etv2/phd1005
-日本台8,rtsp://c.itvitv.com/wowow.ghfyenxdhfdscz
-日本婴花,rtsp://c.itvitv.com/hj.kprkjmf
-日本妞优,rtsp://u.itvitv.com/jpm1
-日本台8,rtsp://c.itvitv.com/wowow.ghfyenxdhfdscz
-新韩源1,rtmp://edge2.everyon.tv:1935/etv2/phd1003
-新韩源8,rtmp://edge2.everyon.tv:1935/etv2/phd877
-新韩源9,rtmp://edge2.everyon.tv:1935/etv2/phd1008
-韩国有码高清24,rtmp://123.108.164.71/etv2/phd1006
 ?Korea Ask1 TV,http://edge2.everyon.tv/etv2/phd1005/BratuMarian.m3u8
 Korea Ask TV,rtmp://edge2.everyon.tv/etv2/phd1005
 Korea Okadai,rtmp://edge2.everyon.tv/etv2/pld1003
@@ -509,66 +432,3 @@ SDETV,http://58.252.186.17:9009/live/chid=212
 华数D-求索科学,http://112.253.38.62:80/padlive1-cnc.wasu.cn/hd_qspd/z.m3u8
 华数D-上海纪实,http://112.253.38.62:80/livehls1-cnc.wasu.cn/shjs/z.m3u8
 华数D-北京纪实,http://112.253.38.62:80/livehls1-cnc.wasu.cn/bjjs/z.m3u8
-韩国62台,http://edge2.everyon.tv/etv2sb/pld10062/playlist.m3u8
-韩国497台-1,http://123.108.164.110/etv1sb/pld10497/playlist.m3u8
-韩国499台-1,http://123.108.164.75/etv2sb/pld10499/playlist.m3u8
-韩国501台-1,http://123.108.164.75/etv2sb/pld10501/playlist.m3u8
-韩国765台-1,http://123.108.164.110/etv1sb/pld10765/playlist.m3u8
-韩国766台-1,http://123.108.164.110/etv1sb/pld10766/playlist.m3u8
-韩国769台-1,http://123.108.164.75/etv2sb/pld10769/playlist.m3u8
-韩国771台-1,http://123.108.164.75/etv2sb/pld10771/playlist.m3u8
-韩国772台-1,http://123.108.164.75/etv2sb/pld10772/playlist.m3u8
-韩国927台-1,http://123.108.164.110/etv1sb/pld10927/playlist.m3u8
-韩国928台-1,http://123.108.164.110/etv1sb/pld10928/playlist.m3u8
-韩国928台-2,http://edge1.everyon.tv/etv1sb/pld10928/playlist.m3u8
-韩国2,http://edge2.everyon.tv/etv2/pld1003/playlist.m3u8
-韩国2,http://cr.stream.omc.hk/etv2/phd1003/playlist.m3u8
-韩国2,http://cr.stream.omc.hk/etv2/phd1003/playlist.m3u8
-韩国1cr,http://cr.stream.omc.hk/etv2/phd1006/playlist.m3u8
-韩国2cr,http://cr.stream.omc.hk/etv2/phd1005/playlist.m3u8
-chengren1,http://edge2.everyon.tv/etv2sb/pld993/playlist.m3u8
-HD欧美33,http://content2.sexforsure.com/2013/07/02/5/Video.mp4
-HD欧美40,http://content2.sexforsure.com/2013/07/02/13/Video.mp4
-HD欧美41,http://content2.sexforsure.com/2013/07/02/12/Video.mp4
-HD欧美44,http://content2.sexforsure.com/2013/07/02/14/Video.mp4
-HD欧美45,http://content2.sexforsure.com/2013/07/02/15/Video.mp4
-HD欧美46,http://content2.sexforsure.com/2013/07/02/16/Video.mp4
-HD欧美47,http://content2.sexforsure.com/2013/07/02/17/Video.mp4
-韩(限)3playy,http://edge2.everyon.tv/etv2sb/phd770/playlist.m3u8
-HD欧美57,http://content2.sexforsure.com/2013/07/02/1/Video.mp4
-HD欧美13,http://sofuckingreal.com/movies/cfnm18/fitness08.mp4
-HD欧美31,http://content2.sexforsure.com/2013/07/02/3/Video.mp4
-HD欧美31,http://content2.sexforsure.com/2013/07/02/3/Video.mp4
-HD欧美32,http://content2.sexforsure.com/2013/07/02/4/Video.mp4
-HD欧美32,http://content2.sexforsure.com/2013/07/02/4/Video.mp4
-HD欧美33,http://content2.sexforsure.com/2013/07/02/5/Video.mp4
-HD欧美34,http://content2.sexforsure.com/2013/07/02/6/Video.mp4
-HD欧美35,http://content2.sexforsure.com/2013/07/02/7/Video.mp4
-HD欧美36,http://content2.sexforsure.com/2013/07/02/8/Video.mp4
-HD欧美37,http://content2.sexforsure.com/2013/07/02/9/Video.mp4
-HD欧美38,http://content2.sexforsure.com/2013/07/02/10/Video.mp4
-HD欧美39,http://content2.sexforsure.com/2013/07/02/11/Video.mp4
-HD欧美40,http://content2.sexforsure.com/2013/07/02/13/Video.mp4
-HD欧美41,http://content2.sexforsure.com/2013/07/02/12/Video.mp4
-HD欧美42,http://content2.sexforsure.com/2013/07/03/9/Video.mp4
-HD欧美43,http://content2.sexforsure.com/2013/07/02/18/Video.mp4
-HD欧美44,http://content2.sexforsure.com/2013/07/02/14/Video.mp4
-HD欧美45,http://content2.sexforsure.com/2013/07/02/15/Video.mp4
-HD欧美46,http://content2.sexforsure.com/2013/07/02/16/Video.mp4
-HD欧美47,http://content2.sexforsure.com/2013/07/02/17/Video.mp4
-HD欧美48,http://content2.sexforsure.com/2013/07/02/18/Video.mp4
-HD欧美49,http://content2.sexforsure.com/2013/07/02/19/Video.mp4
-HD欧美50,http://content2.sexforsure.com/2013/07/02/20/Video.mp4
-HD欧美51,http://content2.sexforsure.com/2013/07/03/1/Video.mp4
-HD欧美52,http://content2.sexforsure.com/2013/07/03/2/Video.mp4
-HD欧美53,http://content2.sexforsure.com/2013/07/03/3/Video.mp4
-HD欧美54,http://content2.sexforsure.com/2013/07/03/4/Video.mp4
-HD欧美55,http://content2.sexforsure.com/2013/07/03/5/Video.mp4
-HD欧美56,http://content2.sexforsure.com/2013/07/03/7/Video.mp4
-HD欧美57,http://content2.sexforsure.com/2013/07/02/1/Video.mp4
-HD欧美58,http://content2.sexforsure.com/2013/07/02/2/Video.mp4
-ソタチツッテトヰ1,http://edge2.everyon.tv/etv2/phd1005/chunklist_w982667849.m3u8
-x3,http://208.122.3.2:9000#http://208.122.3.2:9000
-x4,http://208.122.3.2:8700#http://208.122.3.2:8700
-9CR,?cdn_hash=762cdcbc6d8a139754d33c17f86d4648&cdn_creation_time=1384716555&cdn_ttl=600
-6CR,?cdn_hash=08766536c88497ed0bb80f38f0141714&cdn_creation_time=1384717393&cdn_ttl=600
