@@ -135,6 +135,7 @@ static NSMutableDictionary * gHistory;
 }
 
 @property (readwrite) BOOL playing;
+@property (readwrite) BOOL lastPlayingState;
 @property (readwrite) BOOL decoding;
 @property (readwrite, strong) KxArtworkFrame *artworkFrame;
 @end
@@ -147,7 +148,9 @@ static NSMutableDictionary * gHistory;
         gHistory = [NSMutableDictionary dictionary];
 }
 
-- (BOOL)prefersStatusBarHidden { return YES; }
+- (BOOL)prefersStatusBarHidden {
+    return _hiddenHUD;
+}
 
 + (id) movieViewControllerWithContentPath: (NSString *) path
                                parameters: (NSDictionary *) parameters
@@ -431,6 +434,12 @@ _messageLabel.hidden = YES;
                                              selector:@selector(applicationWillResignActive:)
                                                  name:UIApplicationWillResignActiveNotification
                                                object:[UIApplication sharedApplication]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationDidBecomeActive:)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:[UIApplication sharedApplication]];
+
 }
 
 - (void) viewWillDisappear:(BOOL)animated
@@ -477,6 +486,13 @@ _messageLabel.hidden = YES;
     LoggerStream(1, @"applicationWillResignActive");
 }
 
+- (void)applicationDidBecomeActive:(NSNotification *)notification{
+    [self showHUD:YES];
+    if (self.lastPlayingState) {
+        [self play];
+    }
+}
+
 #pragma mark - gesture recognizer
 
 - (void) handleTap: (UITapGestureRecognizer *) sender
@@ -506,8 +522,8 @@ _messageLabel.hidden = YES;
         
         const CGPoint vt = [sender velocityInView:self.view];
         const CGPoint pt = [sender translationInView:self.view];
-        const CGFloat sp = MAX(0.1, log10(fabsf(vt.x)) - 1.0);
-        const CGFloat sc = fabsf(pt.x) * 0.33 * sp;
+        const CGFloat sp = MAX(0.1, log10(fabs(vt.x)) - 1.0);
+        const CGFloat sc = fabs(pt.x) * 0.33 * sp;
         if (sc > 10) {
             
             const CGFloat ff = pt.x > 0 ? 1.0 : -1.0;            
@@ -557,12 +573,14 @@ _messageLabel.hidden = YES;
     if (self.playCallBack) {
         self.playCallBack(nil, YES);
     }
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     
     LoggerStream(1, @"play movie");
 }
 
 - (void) pause
 {
+    self.lastPlayingState = self.playing;
     if (!self.playing)
         return;
 
@@ -571,6 +589,7 @@ _messageLabel.hidden = YES;
     [self enableAudio:NO];
     [self updatePlayButton];
     LoggerStream(1, @"pause movie");
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
 }
 
 - (void) setMoviePosition: (CGFloat) position
@@ -1322,7 +1341,7 @@ _messageLabel.hidden = YES;
 
 #ifdef DEBUG
     const NSTimeInterval timeSinceStart = [NSDate timeIntervalSinceReferenceDate] - _debugStartTime;
-    NSString *subinfo = _decoder.validSubtitles ? [NSString stringWithFormat: @" %d",_subtitles.count] : @"";
+    NSString *subinfo = _decoder.validSubtitles ? [NSString stringWithFormat: @" %@",@(_subtitles.count)] : @"";
     
     NSString *audioStatus;
     
@@ -1338,9 +1357,9 @@ _messageLabel.hidden = YES;
     else if (_debugAudioStatus == 3) audioStatus = @"\n(audio silence)";
     else audioStatus = @"";
 
-    _messageLabel.text = [NSString stringWithFormat:@"%d %d%@ %c - %@ %@ %@\n%@",
-                          _videoFrames.count,
-                          _audioFrames.count,
+    _messageLabel.text = [NSString stringWithFormat:@"%@ %@%@ %c - %@ %@ %@\n%@",
+                          @(_videoFrames.count),
+                          @(_audioFrames.count),
                           subinfo,
                           self.decoding ? 'D' : ' ',
                           formatTimeInterval(timeSinceStart, NO),
@@ -1353,7 +1372,9 @@ _messageLabel.hidden = YES;
 
 - (void) showHUD: (BOOL) show
 {
-    _hiddenHUD = !show;    
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showHUDNumber:) object:@(NO)];
+    
+    _hiddenHUD = !show;
     _panGestureRecognizer.enabled = _hiddenHUD;
         
     [[UIApplication sharedApplication] setIdleTimerDisabled:_hiddenHUD];
@@ -1368,9 +1389,24 @@ _messageLabel.hidden = YES;
                          _topHUD.alpha = alpha;
                          _bottomBar.alpha = alpha;
                      }
-                     completion:nil];
-    
+                     completion:^(BOOL finished) {
+                         NSLog(@"finish %d", finished);
+                         if(show){
+                             [self showHUDNumber:@(show)];
+                         }
+                     }];
+   
 }
+
+- (void) showHUDNumber: (NSNumber *) show{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showHUDNumber:) object:@(NO)];
+    if(!show.boolValue){
+        [self showHUD:NO];
+        return;
+    }
+    [self performSelector:@selector(showHUDNumber:) withObject:@(NO) afterDelay:5];
+}
+
 
 - (void) fullscreenMode: (BOOL) on
 {
@@ -1473,16 +1509,17 @@ _messageLabel.hidden = YES;
 
 - (void) showInfoView: (BOOL) showInfo animated: (BOOL)animated
 {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showHUDNumber:) object:@(NO)];
+
     if (!_tableView)
         [self createTableView];
 
-    [self pause];
     
     CGSize size = self.view.bounds.size;
     CGFloat Y = _topHUD.bounds.size.height;
     
     if (showInfo) {
-        
+        [self pause];
         _tableView.hidden = NO;
         
         if (animated) {
@@ -1501,7 +1538,6 @@ _messageLabel.hidden = YES;
         }
     
     } else {
-        
         if (animated) {
             
             [UIView animateWithDuration:0.4
@@ -1513,13 +1549,13 @@ _messageLabel.hidden = YES;
                                  
                              }
                              completion:^(BOOL f){
-                                 
                                  if (f) {
                                      _tableView.hidden = YES;
                                  }
+                                 [self play];
                              }];
         } else {
-        
+            [self play];
             _tableView.frame = CGRectMake(0,size.height,size.width,size.height - Y);
             _tableView.hidden = YES;
         }

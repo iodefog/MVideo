@@ -710,6 +710,7 @@ static int interrupt_callback(void *ctx);
 - (void) dealloc
 {
     LoggerStream(2, @"%@ dealloc", self);
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
     [self closeFile];
 }
 

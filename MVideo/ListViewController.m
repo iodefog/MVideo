@@ -321,7 +321,7 @@
                 }
                 ttcell.canPlayLabel.hidden = NO;
                 mySelf.kxResetPop = NO;
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
                     if (mySelf.kxResetPop || !self.autoPlaySwitch.on) {
                         return;
                     }
