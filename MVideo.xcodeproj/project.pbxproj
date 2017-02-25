@@ -14,20 +14,20 @@
 		4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F39E1D15926800E8B25D /* Assets.xcassets */; };
 		4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F3A01D15926800E8B25D /* LaunchScreen.storyboard */; };
 		4F3AF59F1E61273300CEE308 /* MNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AF59E1E61273300CEE308 /* MNavigationController.m */; };
-		4FB931211D16AD930030A1C3 /* videosList0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931201D16AD930030A1C3 /* videosList0.txt */; };
-		4FB931231D16B6460030A1C3 /* videosList1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931221D16B6460030A1C3 /* videosList1.txt */; };
+		4FB931211D16AD930030A1C3 /* 直播列表1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931201D16AD930030A1C3 /* 直播列表1.txt */; };
+		4FB931231D16B6460030A1C3 /* 直播列表2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931221D16B6460030A1C3 /* 直播列表2.txt */; };
 		7D872EDCA83C4A42043A7C99 /* libPods-MVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 555C6A4F7C914B4153854619 /* libPods-MVideo.a */; };
-		C70F553D1E599B5900386203 /* videosList7.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553B1E599B5900386203 /* videosList7.txt */; };
-		C70F553E1E599B5900386203 /* videosList8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553C1E599B5900386203 /* videosList8.txt */; };
-		C70F55411E59A1A300386203 /* videosList9.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553F1E59A1A300386203 /* videosList9.txt */; };
-		C70F55421E59A1A300386203 /* videosList10.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F55401E59A1A300386203 /* videosList10.txt */; };
+		C70F553D1E599B5900386203 /* 直播列表8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553B1E599B5900386203 /* 直播列表8.txt */; };
+		C70F553E1E599B5900386203 /* 直播列表9.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553C1E599B5900386203 /* 直播列表9.txt */; };
+		C70F55411E59A1A300386203 /* 直播列表10.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553F1E59A1A300386203 /* 直播列表10.txt */; };
+		C70F55421E59A1A300386203 /* 直播列表11.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F55401E59A1A300386203 /* 直播列表11.txt */; };
 		C73926EC1D1D2FAD00C93A12 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73926EB1D1D2FAD00C93A12 /* AVKit.framework */; };
-		C73926F21D1D33C600C93A12 /* videosList3.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F11D1D33C600C93A12 /* videosList3.txt */; };
-		C73926F41D1D33CF00C93A12 /* videosList2.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F31D1D33CF00C93A12 /* videosList2.txt */; };
-		C799DA2C1E57130C007BC8BD /* videosList6.txt in Resources */ = {isa = PBXBuildFile; fileRef = C799DA2B1E57130C007BC8BD /* videosList6.txt */; };
-		C7A33EE91E5433970009768F /* videosList4.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7A33EE81E5433970009768F /* videosList4.txt */; };
+		C73926F21D1D33C600C93A12 /* 直播列表4.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F11D1D33C600C93A12 /* 直播列表4.txt */; };
+		C73926F41D1D33CF00C93A12 /* 直播列表3.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F31D1D33CF00C93A12 /* 直播列表3.txt */; };
+		C799DA2C1E57130C007BC8BD /* 直播列表7.txt in Resources */ = {isa = PBXBuildFile; fileRef = C799DA2B1E57130C007BC8BD /* 直播列表7.txt */; };
+		C7A33EE91E5433970009768F /* 直播列表5.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7A33EE81E5433970009768F /* 直播列表5.txt */; };
 		C7A33EEF1E54491B0009768F /* MHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A33EEE1E54491B0009768F /* MHomeViewController.m */; };
-		C7A33EF21E544CD40009768F /* videosList5.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7A33EF11E544CD40009768F /* videosList5.txt */; };
+		C7A33EF21E544CD40009768F /* 直播列表6.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7A33EF11E544CD40009768F /* 直播列表6.txt */; };
 		C7A33EF51E544F160009768F /* NewPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A33EF41E544F160009768F /* NewPlayerViewController.m */; };
 		C7A33F021E544FE00009768F /* KxAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A33EF81E544FE00009768F /* KxAudioManager.m */; };
 		C7A33F031E544FE00009768F /* kxmovie.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C7A33EFB1E544FE00009768F /* kxmovie.bundle */; };
@@ -61,21 +61,21 @@
 		4F16F3A31D15926800E8B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F3AF59D1E61273300CEE308 /* MNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNavigationController.h; sourceTree = "<group>"; };
 		4F3AF59E1E61273300CEE308 /* MNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNavigationController.m; sourceTree = "<group>"; };
-		4FB931201D16AD930030A1C3 /* videosList0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList0.txt; sourceTree = "<group>"; };
-		4FB931221D16B6460030A1C3 /* videosList1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList1.txt; sourceTree = "<group>"; };
+		4FB931201D16AD930030A1C3 /* 直播列表1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表1.txt"; sourceTree = "<group>"; };
+		4FB931221D16B6460030A1C3 /* 直播列表2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表2.txt"; sourceTree = "<group>"; };
 		555C6A4F7C914B4153854619 /* libPods-MVideo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVideo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C70F553B1E599B5900386203 /* videosList7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList7.txt; sourceTree = "<group>"; };
-		C70F553C1E599B5900386203 /* videosList8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList8.txt; sourceTree = "<group>"; };
-		C70F553F1E59A1A300386203 /* videosList9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList9.txt; sourceTree = "<group>"; };
-		C70F55401E59A1A300386203 /* videosList10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList10.txt; sourceTree = "<group>"; };
+		C70F553B1E599B5900386203 /* 直播列表8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表8.txt"; sourceTree = "<group>"; };
+		C70F553C1E599B5900386203 /* 直播列表9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表9.txt"; sourceTree = "<group>"; };
+		C70F553F1E59A1A300386203 /* 直播列表10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表10.txt"; sourceTree = "<group>"; };
+		C70F55401E59A1A300386203 /* 直播列表11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表11.txt"; sourceTree = "<group>"; };
 		C73926EB1D1D2FAD00C93A12 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		C73926F11D1D33C600C93A12 /* videosList3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList3.txt; sourceTree = "<group>"; };
-		C73926F31D1D33CF00C93A12 /* videosList2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList2.txt; sourceTree = "<group>"; };
-		C799DA2B1E57130C007BC8BD /* videosList6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList6.txt; sourceTree = "<group>"; };
-		C7A33EE81E5433970009768F /* videosList4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList4.txt; sourceTree = "<group>"; };
+		C73926F11D1D33C600C93A12 /* 直播列表4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表4.txt"; sourceTree = "<group>"; };
+		C73926F31D1D33CF00C93A12 /* 直播列表3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表3.txt"; sourceTree = "<group>"; };
+		C799DA2B1E57130C007BC8BD /* 直播列表7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表7.txt"; sourceTree = "<group>"; };
+		C7A33EE81E5433970009768F /* 直播列表5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表5.txt"; sourceTree = "<group>"; };
 		C7A33EED1E54491B0009768F /* MHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHomeViewController.h; sourceTree = "<group>"; };
 		C7A33EEE1E54491B0009768F /* MHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHomeViewController.m; sourceTree = "<group>"; };
-		C7A33EF11E544CD40009768F /* videosList5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList5.txt; sourceTree = "<group>"; };
+		C7A33EF11E544CD40009768F /* 直播列表6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表6.txt"; sourceTree = "<group>"; };
 		C7A33EF31E544F160009768F /* NewPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPlayerViewController.h; sourceTree = "<group>"; };
 		C7A33EF41E544F160009768F /* NewPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPlayerViewController.m; sourceTree = "<group>"; };
 		C7A33EF71E544FE00009768F /* KxAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxAudioManager.h; sourceTree = "<group>"; };
@@ -319,17 +319,17 @@
 		C7A33EF01E544B750009768F /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
-				4FB931201D16AD930030A1C3 /* videosList0.txt */,
-				4FB931221D16B6460030A1C3 /* videosList1.txt */,
-				C73926F31D1D33CF00C93A12 /* videosList2.txt */,
-				C73926F11D1D33C600C93A12 /* videosList3.txt */,
-				C7A33EE81E5433970009768F /* videosList4.txt */,
-				C7A33EF11E544CD40009768F /* videosList5.txt */,
-				C799DA2B1E57130C007BC8BD /* videosList6.txt */,
-				C70F553B1E599B5900386203 /* videosList7.txt */,
-				C70F553C1E599B5900386203 /* videosList8.txt */,
-				C70F553F1E59A1A300386203 /* videosList9.txt */,
-				C70F55401E59A1A300386203 /* videosList10.txt */,
+				4FB931201D16AD930030A1C3 /* 直播列表1.txt */,
+				4FB931221D16B6460030A1C3 /* 直播列表2.txt */,
+				C73926F31D1D33CF00C93A12 /* 直播列表3.txt */,
+				C73926F11D1D33C600C93A12 /* 直播列表4.txt */,
+				C7A33EE81E5433970009768F /* 直播列表5.txt */,
+				C7A33EF11E544CD40009768F /* 直播列表6.txt */,
+				C799DA2B1E57130C007BC8BD /* 直播列表7.txt */,
+				C70F553B1E599B5900386203 /* 直播列表8.txt */,
+				C70F553C1E599B5900386203 /* 直播列表9.txt */,
+				C70F553F1E59A1A300386203 /* 直播列表10.txt */,
+				C70F55401E59A1A300386203 /* 直播列表11.txt */,
 			);
 			name = Resouce;
 			sourceTree = "<group>";
@@ -700,21 +700,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C70F553E1E599B5900386203 /* videosList8.txt in Resources */,
-				C70F55421E59A1A300386203 /* videosList10.txt in Resources */,
-				4FB931211D16AD930030A1C3 /* videosList0.txt in Resources */,
+				C70F553E1E599B5900386203 /* 直播列表9.txt in Resources */,
+				C70F55421E59A1A300386203 /* 直播列表11.txt in Resources */,
+				4FB931211D16AD930030A1C3 /* 直播列表1.txt in Resources */,
 				C7A33F031E544FE00009768F /* kxmovie.bundle in Resources */,
 				4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */,
 				4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */,
-				4FB931231D16B6460030A1C3 /* videosList1.txt in Resources */,
-				C70F55411E59A1A300386203 /* videosList9.txt in Resources */,
-				C73926F21D1D33C600C93A12 /* videosList3.txt in Resources */,
-				C73926F41D1D33CF00C93A12 /* videosList2.txt in Resources */,
+				4FB931231D16B6460030A1C3 /* 直播列表2.txt in Resources */,
+				C70F55411E59A1A300386203 /* 直播列表10.txt in Resources */,
+				C73926F21D1D33C600C93A12 /* 直播列表4.txt in Resources */,
+				C73926F41D1D33CF00C93A12 /* 直播列表3.txt in Resources */,
 				4F16F39D1D15926800E8B25D /* Main.storyboard in Resources */,
-				C7A33EF21E544CD40009768F /* videosList5.txt in Resources */,
-				C7A33EE91E5433970009768F /* videosList4.txt in Resources */,
-				C70F553D1E599B5900386203 /* videosList7.txt in Resources */,
-				C799DA2C1E57130C007BC8BD /* videosList6.txt in Resources */,
+				C7A33EF21E544CD40009768F /* 直播列表6.txt in Resources */,
+				C7A33EE91E5433970009768F /* 直播列表5.txt in Resources */,
+				C70F553D1E599B5900386203 /* 直播列表8.txt in Resources */,
+				C799DA2C1E57130C007BC8BD /* 直播列表7.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

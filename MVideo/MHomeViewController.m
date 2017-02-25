@@ -9,7 +9,7 @@
 #import "MHomeViewController.h"
 #import "ListViewController.h"
 
-#define FileNamePre         @"videosList"
+#define FileNamePre         @"直播列表"
 #define TVHostURL           @"https://lihongli528628.github.io/text/"
 #define VideosTVListName    @"VideosTVListName.txt"
 
@@ -33,7 +33,7 @@
     [self.dataSource addObject:@{@"title":@"已测试可播放列表",
                                  @"filePath":[ListViewController getResultDocumentFilePath]}];
     
-    for (NSInteger count = 0 ; count < NSIntegerMax; count ++) {
+    for (NSInteger count = 1 ; count < NSIntegerMax; count ++) {
         
         NSString *fileName = [NSString stringWithFormat:@"%@%@",FileNamePre,@(count)];
         NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"txt"];

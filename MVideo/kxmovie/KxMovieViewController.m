@@ -445,7 +445,8 @@ _messageLabel.hidden = YES;
 - (void) viewWillDisappear:(BOOL)animated
 {    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showHUDNumber:) object:@(NO)];
+
     [super viewWillDisappear:animated];
     
     [_activityIndicatorView stopAnimating];
@@ -1408,7 +1409,7 @@ _messageLabel.hidden = YES;
         });
         return;
     }
-    [self performSelector:@selector(showHUDNumber:) withObject:@(NO) afterDelay:5 inModes:@[[NSRunLoop mainRunLoop]]];
+    [self performSelector:@selector(showHUDNumber:) withObject:@(NO) afterDelay:5 ];
 }
 
 
