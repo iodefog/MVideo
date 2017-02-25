@@ -1403,10 +1403,12 @@ _messageLabel.hidden = YES;
 - (void) showHUDNumber: (NSNumber *) show{
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showHUDNumber:) object:@(NO)];
     if(!show.boolValue){
-        [self showHUD:NO];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self showHUD:NO];
+        });
         return;
     }
-    [self performSelector:@selector(showHUDNumber:) withObject:@(NO) afterDelay:5];
+    [self performSelector:@selector(showHUDNumber:) withObject:@(NO) afterDelay:5 inModes:@[[NSRunLoop mainRunLoop]]];
 }
 
 
