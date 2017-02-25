@@ -36,6 +36,16 @@
     return self;
 }
 
+- (void)setNeedsStatusBarAppearanceUpdate{
+    self.liveListTableView.frame = self.view.bounds;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [UIApplication sharedApplication].statusBarOrientation = UIInterfaceOrientationPortrait;
+    self.liveListTableView.frame = self.view.bounds;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.dict[@"title"];
@@ -64,9 +74,6 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tipLable];
 }
 
-- (BOOL)shouldAutorotate{
-    return NO;
-}
 
 /**
  *  Switch 开关值改变方法回调
@@ -268,6 +275,7 @@
     }
 }
 
+#pragma mark - private Method
 
 /**
  *  播放某一个index下的视频。对于可播放的，存储。然后根据条件自动判断是否进行下一个视频播放
@@ -378,9 +386,8 @@
 - (void)saveCanPlayHistory:(NSString *)movieUrl{
     NSMutableDictionary *canPlaylistDict = [NSMutableDictionary dictionary];
     [canPlaylistDict setDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:self.dict[@"title"]]];
-    if (!canPlaylistDict) {
-    }
     [canPlaylistDict setValue:movieUrl forKey:movieUrl];
+    // 保存到 NSUserDefaults
     [[NSUserDefaults standardUserDefaults] setObject:canPlaylistDict forKey:self.dict[@"title"]];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }

@@ -13,6 +13,7 @@
 		4F16F39D1D15926800E8B25D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F39B1D15926800E8B25D /* Main.storyboard */; };
 		4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F39E1D15926800E8B25D /* Assets.xcassets */; };
 		4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F3A01D15926800E8B25D /* LaunchScreen.storyboard */; };
+		4F3AF59F1E61273300CEE308 /* MNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AF59E1E61273300CEE308 /* MNavigationController.m */; };
 		4FB931211D16AD930030A1C3 /* videosList0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931201D16AD930030A1C3 /* videosList0.txt */; };
 		4FB931231D16B6460030A1C3 /* videosList1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931221D16B6460030A1C3 /* videosList1.txt */; };
 		7D872EDCA83C4A42043A7C99 /* libPods-MVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 555C6A4F7C914B4153854619 /* libPods-MVideo.a */; };
@@ -58,6 +59,8 @@
 		4F16F39E1D15926800E8B25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F16F3A11D15926800E8B25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F16F3A31D15926800E8B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F3AF59D1E61273300CEE308 /* MNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNavigationController.h; sourceTree = "<group>"; };
+		4F3AF59E1E61273300CEE308 /* MNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNavigationController.m; sourceTree = "<group>"; };
 		4FB931201D16AD930030A1C3 /* videosList0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList0.txt; sourceTree = "<group>"; };
 		4FB931221D16B6460030A1C3 /* videosList1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList1.txt; sourceTree = "<group>"; };
 		555C6A4F7C914B4153854619 /* libPods-MVideo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVideo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,6 +283,8 @@
 				4F16F3991D15926800E8B25D /* ListViewController.m */,
 				C7A33F0A1E54549A0009768F /* ListTableViewCell.h */,
 				C7A33F0B1E54549A0009768F /* ListTableViewCell.m */,
+				4F3AF59D1E61273300CEE308 /* MNavigationController.h */,
+				4F3AF59E1E61273300CEE308 /* MNavigationController.m */,
 				C7A33EF31E544F160009768F /* NewPlayerViewController.h */,
 				C7A33EF41E544F160009768F /* NewPlayerViewController.m */,
 				C73005C41E5ACB700044DE4E /* 3rParty */,
@@ -777,6 +782,7 @@
 				C7A33EEF1E54491B0009768F /* MHomeViewController.m in Sources */,
 				C7A33F041E544FE00009768F /* KxMovieDecoder.m in Sources */,
 				4F16F3941D15926800E8B25D /* main.m in Sources */,
+				4F3AF59F1E61273300CEE308 /* MNavigationController.m in Sources */,
 				C7A33F0C1E54549A0009768F /* ListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -912,8 +918,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "48a5436e-cfb6-41c8-9aad-31d0c2f08be7";
-				PROVISIONING_PROFILE_SPECIFIER = WeiChaoSOHUDevelopStarProfile;
+				PROVISIONING_PROFILE = "5fa40e5c-0f31-4a04-b61c-ea5b1f7b16bb";
+				PROVISIONING_PROFILE_SPECIFIER = develop_universal_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -942,8 +948,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "48a5436e-cfb6-41c8-9aad-31d0c2f08be7";
-				PROVISIONING_PROFILE_SPECIFIER = WeiChaoSOHUDevelopStarProfile;
+				PROVISIONING_PROFILE = "5fa40e5c-0f31-4a04-b61c-ea5b1f7b16bb";
+				PROVISIONING_PROFILE_SPECIFIER = develop_universal_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -1379,6 +1379,8 @@ _messageLabel.hidden = YES;
         
     [[UIApplication sharedApplication] setIdleTimerDisabled:_hiddenHUD];
     
+    __weak __block typeof(self) mySelf = self;
+    
     [UIView animateWithDuration:0.2
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionNone
@@ -1392,7 +1394,7 @@ _messageLabel.hidden = YES;
                      completion:^(BOOL finished) {
                          NSLog(@"finish %d", finished);
                          if(show){
-                             [self showHUDNumber:@(show)];
+                             [mySelf showHUDNumber:@(show)];
                          }
                      }];
    
