@@ -13,17 +13,20 @@
 #import <AVKit/AVKit.h>
 #import "NewPlayerViewController.h"
 #import "KxMovieViewController.h"
+#import "MMovieModel.h"
 
-#define TVList          @"tvList"
 #define CanPlayResult   @"CanPlayResult"
 
-@interface ListViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ListViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @property (nonatomic, strong) UITableView       *liveListTableView;
 @property (nonatomic, strong) UISwitch          *autoPlaySwitch;
 @property (nonatomic, strong) UIViewController  *playerController;
+@property (nonatomic, strong) NSMutableArray    *originalSource;
 @property (nonatomic, strong) NSMutableArray    *dataSource;
 @property (nonatomic, assign) BOOL              kxResetPop;
+
+@property (nonatomic, strong) UISearchBar       *searchBar;
 
 @end
 
@@ -32,24 +35,30 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.dataSource = [NSMutableArray array];
+        self.originalSource = [NSMutableArray array];
     }
     return self;
 }
 
 - (void)setNeedsStatusBarAppearanceUpdate{
-    self.liveListTableView.frame = self.view.bounds;
+    self.searchBar.frame = CGRectMake(0, 64, self.view.bounds.size.width, 44);
+    self.liveListTableView.frame = CGRectMake(0, self.searchBar.frame.size.height+64, self.view.bounds.size.width, self.view.bounds.size.height-self.searchBar.frame.size.height);
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     [UIApplication sharedApplication].statusBarOrientation = UIInterfaceOrientationPortrait;
-    self.liveListTableView.frame = self.view.bounds;
+    self.searchBar.frame = CGRectMake(0, 64, self.view.bounds.size.width, 44);
+    self.liveListTableView.frame = CGRectMake(0, self.searchBar.frame.size.height+64, self.view.bounds.size.width, self.view.bounds.size.height-self.searchBar.frame.size.height-64);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.title = self.dict[@"title"];
+    [self.view addSubview:self.searchBar];
     [self.view addSubview:self.liveListTableView];
+    
     [self addBackgroundMethod];
     [self operationStr];
     [self registerObserver];
@@ -155,7 +164,8 @@
                 itemArray = [self checkMultipleUrlInOneUrlWithUrl:[subStrArray lastObject] videoName:[subStrArray firstObject] itemArray:itemArray];
             }
         }
-        [self.dataSource addObject:@{TVList:itemArray}];
+        [self.originalSource addObjectsFromArray:itemArray];
+        [self.dataSource addObjectsFromArray:itemArray];
     }else {
         NSLog(@"error %@", error);
     }
@@ -167,11 +177,8 @@
 {
     NSArray *multipleArray = [url componentsSeparatedByString:@"#"];
     for (NSString *itemUrl in multipleArray) {
-        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                              videoName ?: @"",@"name",
-                              itemUrl ?: @"",@"liveUrl",
-                              nil];
-        [itemArray addObject:dict];
+      MMovieModel *model = [MMovieModel getMovieModelWithTitle:videoName ?: @"" url:itemUrl ?: @""];
+        [itemArray addObject:model];
     }
     return itemArray;
 }
@@ -204,9 +211,21 @@
 
 #pragma mark - Private Method
 
+- (UISearchBar *)searchBar{
+    if (!_searchBar) {
+        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, 44)];
+        _searchBar.searchBarStyle = UISearchBarStyleDefault;
+        _searchBar.tintColor = [UIColor lightTextColor];
+        _searchBar.returnKeyType = UIReturnKeySearch;
+        _searchBar.placeholder = @"请输入要搜索的文字";
+        _searchBar.delegate = self;
+    }
+    return _searchBar;
+}
+
 - (UITableView *)liveListTableView{
     if (_liveListTableView == nil) {
-        _liveListTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _liveListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.searchBar.frame.size.height+64, self.view.bounds.size.width, self.view.bounds.size.height-self.searchBar.frame.size.height) style:UITableViewStylePlain];
         _liveListTableView.delegate = self;
         _liveListTableView.dataSource = self;
         [_liveListTableView registerClass:[ListTableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
@@ -214,20 +233,25 @@
     return _liveListTableView;
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark - scroll delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [self.searchBar resignFirstResponder];
 }
 
 #pragma mark - tableView
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return self.dataSource.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSArray *tvListArray = (self.dataSource.count > section) ? self.dataSource[section][TVList] : nil;
-    return tvListArray.count;
+    return self.dataSource.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -241,11 +265,11 @@
         cell = [[ListTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellName];
     }
     
-    if (indexPath.row < [self.dataSource[indexPath.section][TVList] count]) {
-        NSDictionary *dict =  self.dataSource[indexPath.section][TVList][indexPath.row];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@-%@",@(indexPath.row+1), dict[@"name"]];
+    if (indexPath.row < [self.dataSource count]) {
+        MMovieModel *model =  self.dataSource[indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@-%@",@(indexPath.row+1), model.title];
         cell.detailTextLabel.numberOfLines = 0;
-        cell.detailTextLabel.text = [dict[@"liveUrl"] stringByReplacingOccurrencesOfString:@"[url]" withString:@""];
+        cell.detailTextLabel.text = [model.url stringByReplacingOccurrencesOfString:@"[url]" withString:@""];
         [cell checkIsCanPlay:cell.detailTextLabel.text fileName:self.dict[@"title"]];
     }
     return cell;
@@ -253,22 +277,22 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row < [self.dataSource[indexPath.section][TVList] count]) {
+    if (indexPath.row < [self.dataSource count]) {
         
         ListTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         if (![tableView.visibleCells containsObject:cell]) {
-            if ((indexPath.row+2) < [self.dataSource[indexPath.section][TVList] count]) {
+            if ((indexPath.row+2) < [self.dataSource count]) {
                 [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:(indexPath.row+2) inSection:indexPath.section] atScrollPosition:UITableViewScrollPositionNone animated:YES];
             }else {
                 [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:(indexPath.row) inSection:indexPath.section] atScrollPosition:UITableViewScrollPositionNone animated:YES];
             }
         }
         
-        NSDictionary *dict =  self.dataSource[indexPath.section][TVList][indexPath.row];
-        NSString *videoName = dict[@"name"];
-        NSString *movieUrl = [dict[@"liveUrl"] stringByReplacingOccurrencesOfString:@"[url]" withString:@""];
+        MMovieModel *model =  self.dataSource[indexPath.row];
+        NSString *videoName = model.title;
+        NSString *movieUrl = [model.url stringByReplacingOccurrencesOfString:@"[url]" withString:@""];
         
-        NSLog(@"%@\n name = %@", dict, videoName);
+        NSLog(@"title%@\n url = %@", videoName, movieUrl);
         self.title = videoName;
         
         [self playVideoWithMovieUrl:movieUrl movieName:videoName indexPath:indexPath];
@@ -426,5 +450,61 @@
     NSLog(@"documentPath  %@", documentPath);
     return documentPath;
 }
+
+
+#pragma mark - SearchBar delegate
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    NSLog(@"searchBar %@, searchText %@",searchBar.text, searchText );
+    if ([searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@""].length > 0) {
+        [self filterDataSourceWithKey:searchBar.text finish:NO];
+    }else{
+        [self.dataSource removeAllObjects];
+        [self.dataSource addObjectsFromArray:self.originalSource];
+        [self.liveListTableView reloadData];
+    }
+}
+
+- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+//    if(searchBar.text.length==1 && [text isEqualToString:@""]){
+//    }
+    return YES;
+}
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+//    NSLog(@"searchBarTextDidEndEditing:");
+    if ([searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@""].length > 0) {
+        [self filterDataSourceWithKey:searchBar.text finish:YES];
+    }else {
+        [self.dataSource removeAllObjects];
+        [self.dataSource addObjectsFromArray:self.originalSource];
+        [self.liveListTableView reloadData];
+    }
+}
+
+- (void)filterDataSourceWithKey:(NSString *)searchKey finish:(BOOL)finish{
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title CONTAINS %@", searchKey];
+    NSArray *persons = [self.originalSource filteredArrayUsingPredicate:predicate];
+    NSLog(@"************ \n%@", persons);
+    
+    
+    if (persons.count) {
+        [self.dataSource removeAllObjects];
+        [self.dataSource addObjectsFromArray:persons];
+        [self.liveListTableView reloadData];
+    }else if(!finish && persons.count==0){
+        [self.dataSource removeAllObjects];
+        [self.liveListTableView reloadData];
+    }
+    else {
+        [[[UIAlertView alloc] initWithTitle:nil message:@"筛选无结果" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:Nil, nil] show];
+    }
+}
+
 
 @end

@@ -21,6 +21,7 @@
 		C70F553E1E599B5900386203 /* 直播列表9.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553C1E599B5900386203 /* 直播列表9.txt */; };
 		C70F55411E59A1A300386203 /* 直播列表10.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553F1E59A1A300386203 /* 直播列表10.txt */; };
 		C70F55421E59A1A300386203 /* 直播列表11.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F55401E59A1A300386203 /* 直播列表11.txt */; };
+		C73892FA1E644E0F0044C969 /* MMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C73892F91E644E0F0044C969 /* MMovieModel.m */; };
 		C73926EC1D1D2FAD00C93A12 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73926EB1D1D2FAD00C93A12 /* AVKit.framework */; };
 		C73926F21D1D33C600C93A12 /* 直播列表4.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F11D1D33C600C93A12 /* 直播列表4.txt */; };
 		C73926F41D1D33CF00C93A12 /* 直播列表3.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F31D1D33CF00C93A12 /* 直播列表3.txt */; };
@@ -68,6 +69,8 @@
 		C70F553C1E599B5900386203 /* 直播列表9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表9.txt"; sourceTree = "<group>"; };
 		C70F553F1E59A1A300386203 /* 直播列表10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表10.txt"; sourceTree = "<group>"; };
 		C70F55401E59A1A300386203 /* 直播列表11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表11.txt"; sourceTree = "<group>"; };
+		C73892F81E644E0F0044C969 /* MMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMovieModel.h; sourceTree = "<group>"; };
+		C73892F91E644E0F0044C969 /* MMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMovieModel.m; sourceTree = "<group>"; };
 		C73926EB1D1D2FAD00C93A12 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C73926F11D1D33C600C93A12 /* 直播列表4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表4.txt"; sourceTree = "<group>"; };
 		C73926F31D1D33CF00C93A12 /* 直播列表3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表3.txt"; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 				4F3AF59E1E61273300CEE308 /* MNavigationController.m */,
 				C7A33EF31E544F160009768F /* NewPlayerViewController.h */,
 				C7A33EF41E544F160009768F /* NewPlayerViewController.m */,
+				C73892F81E644E0F0044C969 /* MMovieModel.h */,
+				C73892F91E644E0F0044C969 /* MMovieModel.m */,
 				C73005C41E5ACB700044DE4E /* 3rParty */,
 				C7A33EF01E544B750009768F /* Resouce */,
 				4F16F39B1D15926800E8B25D /* Main.storyboard */,
@@ -783,6 +788,7 @@
 				C7A33F041E544FE00009768F /* KxMovieDecoder.m in Sources */,
 				4F16F3941D15926800E8B25D /* main.m in Sources */,
 				4F3AF59F1E61273300CEE308 /* MNavigationController.m in Sources */,
+				C73892FA1E644E0F0044C969 /* MMovieModel.m in Sources */,
 				C7A33F0C1E54549A0009768F /* ListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
