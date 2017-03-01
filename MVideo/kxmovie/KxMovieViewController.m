@@ -154,7 +154,8 @@ static NSMutableDictionary * gHistory;
 
 + (id) movieViewControllerWithContentPath: (NSString *) path
                                parameters: (NSDictionary *) parameters
-{    
+{
+    //初始化音频
     id<KxAudioManager> audioManager = [KxAudioManager audioManager];
     [audioManager activateAudioSession];    
     return [[KxMovieViewController alloc] initWithContentPath: path parameters: parameters];
@@ -177,6 +178,7 @@ static NSMutableDictionary * gHistory;
         
         KxMovieDecoder *decoder = [[KxMovieDecoder alloc] init];
         
+        //设置解码器中断回调
         decoder.interruptCallback = ^BOOL(){
             
             __strong KxMovieViewController *strongSelf = weakSelf;
@@ -560,9 +562,11 @@ _messageLabel.hidden = YES;
     _debugStartTime = -1;
 #endif
 
+    //解码frame  
     [self asyncDecodeFrames];
     [self updatePlayButton];
 
+    // 这个函数也就是延时操作，为什么这样做其实就是为了做开始加载的缓存，可以分析一下这里是0.1s后再去执行tick函数，在此之间已经解码几十帧数据了。接下来看tick函数:
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [self tick];
@@ -972,6 +976,12 @@ _messageLabel.hidden = YES;
     }
 }
 
+/*****
+ *
+ *这个函数主要对_bufferedDuration(缓存时长)进行累加，以及对数据的保存都存放一个数组里面，最后面判断当前的缓存有没有超过最大的缓存。这样一个视频帧的解码以及的采集就完成，接着回去看主线程的显示。
+ 第一次定时(tick)：
+
+ */
 - (BOOL) addFrames: (NSArray *)frames
 {
     if (_decoder.validVideo) {
@@ -1017,6 +1027,7 @@ _messageLabel.hidden = YES;
         }
     }
     
+    //最大缓存  
     return self.playing && _bufferedDuration < _maxBufferedDuration;
 }
 
@@ -1038,6 +1049,11 @@ _messageLabel.hidden = YES;
     return NO;
 }
 
+/**
+ *
+ * 这里就得分两步走了 asyncDecodeFrames 开启一个异步线程去执行解码操作 另外一边在主线程执行播放的操作.
+ * 代码很简单在这个线程里面开启一个whil(1)循环，使这个线程一直存活，一直在解码数据将解码玩的数据放addFrames进行处理。
+ */
 - (void) asyncDecodeFrames
 {
     if (self.decoding)
@@ -1058,6 +1074,7 @@ _messageLabel.hidden = YES;
         }
         
         BOOL good = YES;
+        // while(1)
         while (good) {
             
             good = NO;
@@ -1086,8 +1103,21 @@ _messageLabel.hidden = YES;
     });
 }
 
+/****
+ *
+ *tick函数其实就相当于一个被一个定时器循环调用一样隔多少秒调用一次隔多少秒调用一次，调用一次显示一帧数据，下面来看具体的操作：
+ 首先
+ if (_buffered && ((_bufferedDuration >_minBufferedDuration) || _decoder.isEOF))
+ 这里有个判断语句 _buffered表示是否需要缓存，如果数组里面有数据当然不需要缓存为NO否则为
+ YES。_bufferedDuration > _minBufferedDuration判断是否大于最小的缓存这里是2s。分析一下，tick()是在开始解码后0.1s才开始调用_bufferedDuration是进行帧的duration进行累加的，一帧是0.04s要大于2s的缓存肯定至少要解码50帧才可以显示。但是_buffered初始化设置为No，所以第一次缓存帧数是定时0.1的数量。
+ if (!_buffered)
+ interval = [selfpresentFrame];  //显示一帧
+
+ */
+
 - (void) tick
 {
+    //缓存的时长
     if (_buffered && ((_bufferedDuration > _minBufferedDuration) || _decoder.isEOF)) {
         
         _tickCorrectionTime = 0;
@@ -1097,14 +1127,17 @@ _messageLabel.hidden = YES;
     
     CGFloat interval = 0;
     if (!_buffered)
-        interval = [self presentFrame];
+        interval = [self presentFrame];  //显示一帧
     
     if (self.playing) {
         
+        //还有可显示的音视频帧
         const NSUInteger leftFrames =
         (_decoder.validVideo ? _videoFrames.count : 0) +
         (_decoder.validAudio ? _audioFrames.count : 0);
         
+        // 网络不好的操作, 如果没有要显示的数据了
+        //这里也很好理解，当显示数据的数组里面没有数据了，自然就要等待，进行缓存，此时_minBufferedDuration肯定为0了，因为每显示一帧数据都要减去这一帧的duration，等数据都显示完了自然也就为0，将_buffered置为YES。这时不会调用presentFrame而且必须要等到_bufferedDuration > _minBufferedDuration才开始显示。
         if (0 == leftFrames) {
             
             if (_decoder.isEOF) {
@@ -1114,9 +1147,11 @@ _messageLabel.hidden = YES;
                 return;
             }
             
+            //确认缓存里面是否还有数据
             if (_minBufferedDuration > 0 && !_buffered) {
                                 
                 _buffered = YES;
+                //开始loading
                 [_activityIndicatorView startAnimating];
             }
         }
@@ -1150,6 +1185,7 @@ _messageLabel.hidden = YES;
     if (!_tickCorrectionTime) {
         
         _tickCorrectionTime = now;
+        //播放的位置 就是现在播的的时间
         _tickCorrectionPosition = _moviePosition;
         return 0;
     }

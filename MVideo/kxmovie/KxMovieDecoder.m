@@ -247,6 +247,7 @@ static NSArray *collectStreams(AVFormatContext *formatCtx, enum AVMediaType code
 {
     NSMutableArray *ma = [NSMutableArray array];
     for (NSInteger i = 0; i < formatCtx->nb_streams; ++i)
+        //判断类型
         if (codecType == formatCtx->streams[i]->codec->codec_type)
             [ma addObject: [NSNumber numberWithInteger: i]];
     return [ma copy];
@@ -403,13 +404,13 @@ static int interrupt_callback(void *ctx);
     AVCodecContext      *_subtitleCodecCtx;
     AVFrame             *_videoFrame;
     AVFrame             *_audioFrame;
-    NSInteger           _videoStream;
+    NSInteger           _videoStream;  
     NSInteger           _audioStream;
     NSInteger           _subtitleStream;
 	AVPicture           _picture;
     BOOL                _pictureValid;
     struct SwsContext   *_swsContext;
-    CGFloat             _videoTimeBase;
+    CGFloat             _videoTimeBase;  //基时
     CGFloat             _audioTimeBase;
     CGFloat             _position;
     NSArray             *_videoStreams;
@@ -722,22 +723,27 @@ static int interrupt_callback(void *ctx);
     NSAssert(path, @"nil path");
     NSAssert(!_formatCtx, @"already open");
     
+    //先判断是不是网络流
     _isNetwork = isNetworkPath(path);
     
     static BOOL needNetworkInit = YES;
     if (needNetworkInit && _isNetwork) {
         
         needNetworkInit = NO;
+        //如果是网络流得先初始化
         avformat_network_init();
     }
     
     _path = path;
     
+     //打开文件
     kxMovieError errCode = [self openInput: path];
     
     if (errCode == kxMovieErrorNone) {
         
+        //打开视频流
         kxMovieError videoErr = [self openVideoStream];
+        //打开音频流
         kxMovieError audioErr = [self openAudioStream];
         
         _subtitleStream = -1;
@@ -766,20 +772,50 @@ static int interrupt_callback(void *ctx);
     return YES;
 }
 
+
+/**  avformat_alloc_context 的实现,方便理解
+ *
+ *  AVFormatContext *avformat_alloc_context(void)
+     {
+         AVFormatContext *ic;
+         ic = av_malloc(sizeof(AVFormatContext));
+         if (!ic) return ic;
+         avformat_get_context_defaults(ic);
+         ic->internal = av_mallocz(sizeof(*ic->internal));
+         if (!ic->internal) {
+         avformat_free_context(ic);
+         return NULL;
+         }
+         return ic;
+     }
+ */
+
+
 - (kxMovieError) openInput: (NSString *) path
 {
     AVFormatContext *formatCtx = NULL;
+
+///**** 网络上有加这些
+    AVDictionary* options = NULL;
+    av_dict_set(&options, "rtsp_transport", "tcp", 0);      //把视频流的传输模式强制成tcp传输
+    //设置加载时间
+    av_dict_set(&options, "analyzeduration", "2000000", 0); //解析的最大时长这里的数字代表微妙 2000000/1000000 = 2s
+    av_dict_set(&options, "probesize", "122880", 0);        //解析的容量上限为122880/1024M = 120M 可以自己设置不能太小否则会导致流的信息分析不完整
+//*/
     
     if (_interruptCallback) {
         
+    //初始化AVFormatContext 基本结构体 使用av_malloc分配了一块内存 主要用于处理封装格式（FLV/MKV/RMVB等）
         formatCtx = avformat_alloc_context();
         if (!formatCtx)
             return kxMovieErrorOpenFile;
         
+        //处理中断函数 第一个参数函数指针 指向一个函数
         AVIOInterruptCB cb = {interrupt_callback, (__bridge void *)(self)};
         formatCtx->interrupt_callback = cb;
     }
     av_register_all();
+    //打开文件 url_open,url_read
     if (avformat_open_input(&formatCtx, [path cStringUsingEncoding: NSUTF8StringEncoding], NULL, NULL) < 0) {
         
         if (formatCtx)
@@ -787,6 +823,7 @@ static int interrupt_callback(void *ctx);
         return kxMovieErrorOpenFile;
     }
     
+    //读取视音频数据相关的信息 parser find_decoder  avcodec_open2 实现了解码器的查找，解码器的打开，视音频帧的读取，视音频帧的解码
     if (avformat_find_stream_info(formatCtx, NULL) < 0) {
         
         avformat_close_input(&formatCtx);
@@ -804,6 +841,8 @@ static int interrupt_callback(void *ctx);
     kxMovieError errCode = kxMovieErrorStreamNotFound;
     _videoStream = -1;
     _artworkStream = -1;
+    
+    //收集视频流
     _videoStreams = collectStreams(_formatCtx, AVMEDIA_TYPE_VIDEO);
     for (NSNumber *n in _videoStreams) {
         
@@ -826,10 +865,10 @@ static int interrupt_callback(void *ctx);
 
 - (kxMovieError) openVideoStream: (NSInteger) videoStream
 {    
-    // get a pointer to the codec context for the video stream
+    // get a pointer to the codec context for the video stream 视频编解码器结构体
     AVCodecContext *codecCtx = _formatCtx->streams[videoStream]->codec;
     
-    // find the decoder for the video stream
+    // find the decoder for the video stream  找到解码器 我这里是H264
     AVCodec *codec = avcodec_find_decoder(codecCtx->codec_id);
     if (!codec)
         return kxMovieErrorCodecNotFound;
@@ -839,10 +878,12 @@ static int interrupt_callback(void *ctx);
     //if(codec->capabilities & CODEC_CAP_TRUNCATED)
     //    _codecCtx->flags |= CODEC_FLAG_TRUNCATED;
     
-    // open codec
+    // open codec 打开解码器
     if (avcodec_open2(codecCtx, codec, NULL) < 0)
         return kxMovieErrorOpenCodec;
-        
+    
+    //初始化一个视频帧 分配一次 存储原始数据对于视频就是YUV或者RGB
+    //视频帧结构体
     _videoFrame = av_frame_alloc();
 
     if (!_videoFrame) {
@@ -850,12 +891,15 @@ static int interrupt_callback(void *ctx);
         return kxMovieErrorAllocateFrame;
     }
     
+     //视频流在streams的位置
     _videoStream = videoStream;
+    //视频解码器结构体
     _videoCodecCtx = codecCtx;
     
     // determine fps
-    
+    //AVStream 存储每一个视频/音频流信息的结构体 st
     AVStream *st = _formatCtx->streams[_videoStream];
+     //PTS*time_base=真正的时间
     avStreamFPSTimeBase(st, 0.04, &_fps, &_videoTimeBase);
     
     LoggerVideo(1, @"video codec size: %lu:%lu fps: %.3f tb: %f",
@@ -1110,6 +1154,15 @@ static int interrupt_callback(void *ctx);
     return _swsContext != NULL;
 }
 
+/****
+ *
+ * 这个函数首先把YUV格式的数据分离开来分别放到luma、chromaB、chromaR中。
+ frame.position =av_frame_get_best_effort_timestamp(_videoFrame) *_videoTimeBase;这个参数非常重要得到当前显示的时间在播放器中用在播放时间的显示。
+ frame.duration =1.0 / _fps; //得到了当前帧的需要显示的时长 比如我的推流端设置的帧率是25帧那么一帧需要显示的时长就是0.04s这个参数也很重要。
+ 解码完返回数据:
+ - (BOOL) addFrames: (NSArray *)frames
+ */
+
 - (KxVideoFrame *) handleVideoFrame
 {
     if (!_videoFrame->data[0])
@@ -1121,16 +1174,20 @@ static int interrupt_callback(void *ctx);
             
         KxVideoFrameYUV * yuvFrame = [[KxVideoFrameYUV alloc] init];
         
+        //将YUV分离出来w*h*3/2 Byte的数据
+        //Y 亮度  w*h Byte存储Y 拷贝一帧图片的数据
         yuvFrame.luma = copyFrameData(_videoFrame->data[0],
                                       _videoFrame->linesize[0],
                                       _videoCodecCtx->width,
                                       _videoCodecCtx->height);
         
+        //U 色度 w*h*1/4 Byte存储U
         yuvFrame.chromaB = copyFrameData(_videoFrame->data[1],
                                          _videoFrame->linesize[1],
                                          _videoCodecCtx->width / 2,
                                          _videoCodecCtx->height / 2);
         
+        //V 浓度 w*h*1/4 Byte存储V
         yuvFrame.chromaR = copyFrameData(_videoFrame->data[2],
                                          _videoFrame->linesize[2],
                                          _videoCodecCtx->width / 2,
@@ -1261,6 +1318,7 @@ static int interrupt_callback(void *ctx);
     vDSP_vsmul(data.mutableBytes, 1, &scale, data.mutableBytes, 1, numElements);
     
     KxAudioFrame *frame = [[KxAudioFrame alloc] init];
+    //_videoTimeBase = 0.001 当前的时间 = pts*_videoTimeBase
     frame.position = av_frame_get_best_effort_timestamp(_audioFrame) * _audioTimeBase;
     frame.duration = av_frame_get_pkt_duration(_audioFrame) * _audioTimeBase;
     frame.samples = data;
@@ -1353,6 +1411,11 @@ static int interrupt_callback(void *ctx);
     return _videoFrameFormat == format;
 }
 
+/**
+ *  解码帧
+ *
+ * 解码帧的函数，看得挺多的其实我们只需要看视频流和音频流就是了，一步一步来看。av_read_frame将读到的数据放到了一个AVPacket结构体中，如果是视频帧解码器是h264格式的话那AVPacket存的数据应该就是h264格式的数据，但是我们打印packet.data的数据并不是我们看到标准的nalu格式的数据也没有看到sps pps的一些信息，如果你们需要这些信息的话就可以这样做：
+ */
 - (NSArray *) decodeFrames: (CGFloat) minDuration
 {
     if (_videoStream == -1 &&
@@ -1369,6 +1432,7 @@ static int interrupt_callback(void *ctx);
     
     while (!finished) {
         
+        //读取码流中的音频若干帧或者视频一帧
         if (av_read_frame(_formatCtx, &packet) < 0) {
             _isEOF = YES;
             break;
@@ -1381,10 +1445,17 @@ static int interrupt_callback(void *ctx);
             while (pktSize > 0) {
                             
                 int gotframe = 0;
+                //解码一帧视频  gotframe如果为0 代表没有帧解码 出错为负
                 int len = avcodec_decode_video2(_videoCodecCtx,
                                                 _videoFrame,
                                                 &gotframe,
                                                 &packet);
+                
+                /**
+                 *调用关键的函数 主要设置 picture
+                 *avctx->codec->decode(avctx, picture, got_picture_ptr,&tmp);
+                 *
+                 */
                 
                 if (len < 0) {
                     LoggerVideo(0, @"decode video error, skip packet");
