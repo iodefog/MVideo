@@ -6,7 +6,7 @@
 动图
 ----
 
-![github](https://github.com/lihongli528628/MVideo/blob/master/ScreenSpot/home1.png "github")  
+![github](https://github.com/lihongli528628/MVideo/blob/master/ScreenSpot/animal.gif "github")  
 
 
 静图
