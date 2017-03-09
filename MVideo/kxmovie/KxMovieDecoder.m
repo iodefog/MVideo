@@ -795,13 +795,13 @@ static int interrupt_callback(void *ctx);
 {
     AVFormatContext *formatCtx = NULL;
 
-///**** 网络上有加这些
+/**** 网络上有加这些
     AVDictionary* options = NULL;
     av_dict_set(&options, "rtsp_transport", "tcp", 0);      //把视频流的传输模式强制成tcp传输
     //设置加载时间
     av_dict_set(&options, "analyzeduration", "2000000", 0); //解析的最大时长这里的数字代表微妙 2000000/1000000 = 2s
     av_dict_set(&options, "probesize", "122880", 0);        //解析的容量上限为122880/1024M = 120M 可以自己设置不能太小否则会导致流的信息分析不完整
-//*/
+*/
     
     if (_interruptCallback) {
         
