@@ -1439,7 +1439,7 @@ _messageLabel.hidden = YES;
 
 - (void) showHUDNumber: (NSNumber *) show{
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showHUDNumber:) object:@(NO)];
-    if(!show.boolValue){
+    if(!show.boolValue && !_activityIndicatorView.isAnimating){
         dispatch_async(dispatch_get_main_queue(), ^{
             [self showHUD:NO];
         });

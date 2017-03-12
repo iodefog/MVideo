@@ -333,7 +333,7 @@
         KxMovieViewController *vc = [KxMovieViewController
                                      movieViewControllerWithContentPath:movieUrl
                                      parameters:params];
-        vc.timeout = 15;
+        vc.timeout = 60;
         __block NSString *movieStr = movieUrl;
         __weak __block typeof(self) mySelf = self;
         __weak __block typeof(KxMovieViewController *) myvc = vc;
