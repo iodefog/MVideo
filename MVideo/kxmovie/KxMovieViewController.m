@@ -98,12 +98,13 @@ static NSMutableDictionary * gHistory;
     UIToolbar           *_bottomBar;
     UISlider            *_progressSlider;
 
-    UIBarButtonItem     *_playBtn;
-    UIBarButtonItem     *_pauseBtn;
-    UIBarButtonItem     *_rewindBtn;
-    UIBarButtonItem     *_fforwardBtn;
-    UIBarButtonItem     *_spaceItem;
-    UIBarButtonItem     *_fixedSpaceItem;
+    UIBarButtonItem     *_playBtn;     // 播放
+    UIBarButtonItem     *_pauseBtn;    // 暂停
+    UIBarButtonItem     *_rewindBtn;   // 倒放
+    UIBarButtonItem     *_fforwardBtn; // 前进
+    UIBarButtonItem     *_fullScreenBtn;   // 占位
+    UIBarButtonItem     *_spaceItem;   // 占位
+    UIBarButtonItem     *_fixedSpaceItem; // 占位
 
     UIButton            *_doneButton;
     UILabel             *_progressLabel;
@@ -346,6 +347,8 @@ _messageLabel.hidden = YES;
     _fforwardBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward
                                                                  target:self
                                                                  action:@selector(forwardDidTouch:)];
+    
+    _fullScreenBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"kxmovie.bundle/fullscreen-normal"] style:UIBarButtonItemStyleDone target:self action:@selector(fullScreenDidTouch:)];
 
     [self updateBottomBar];
 
@@ -647,6 +650,38 @@ _messageLabel.hidden = YES;
 - (void) rewindDidTouch: (id) sender
 {
     [self setMoviePosition: _moviePosition - 10];
+}
+
+- (void)fullScreenDidTouch:(id)sender{
+//    [UIView animateWithDuration:0.3 animations:^{
+//        CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI_2);
+//        [self.view setTransform:transform];
+////        self.view.frame = CGRectMake(0, 0, CGRectGetHeight([UIScreen mainScreen].bounds), CGRectGetWidth([UIScreen mainScreen].bounds));
+//    } completion:^(BOOL finished) {
+//        [self fullscreenMode:YES];
+//        [self.view setNeedsLayout];
+//    }];
+    if (_fullscreen) {
+        [self transformToInterfaceOrientation:UIInterfaceOrientationPortrait];
+        [self fullscreenMode:NO];
+    }else {
+        [self transformToInterfaceOrientation:UIInterfaceOrientationLandscapeRight];
+        [self fullscreenMode:YES];
+    }
+}
+
+- (void)transformToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
+        SEL selector = NSSelectorFromString(@"setOrientation:");
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
+        [invocation setSelector:selector];
+        [invocation setTarget:[UIDevice currentDevice]];
+        int val = interfaceOrientation;;
+        [invocation setArgument:&val atIndex:2];
+        [invocation invoke];
+        
+    }
 }
 
 - (void) progressDidChange: (id) sender
@@ -1353,7 +1388,7 @@ _messageLabel.hidden = YES;
 {
     UIBarButtonItem *playPauseBtn = self.playing ? _pauseBtn : _playBtn;
     [_bottomBar setItems:@[_spaceItem, _rewindBtn, _fixedSpaceItem, playPauseBtn,
-                           _fixedSpaceItem, _fforwardBtn, _spaceItem] animated:NO];
+                           _fixedSpaceItem, _fforwardBtn, _spaceItem ,_fullScreenBtn] animated:NO];
 }
 
 - (void) updatePlayButton

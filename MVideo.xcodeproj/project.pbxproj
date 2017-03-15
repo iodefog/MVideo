@@ -509,13 +509,13 @@
 				C7A33EF81E544FE00009768F /* KxAudioManager.m */,
 				C7A33EF91E544FE00009768F /* KxLogger.h */,
 				C7A33EFA1E544FE00009768F /* kxmovie-Prefix.pch */,
-				C7A33EFB1E544FE00009768F /* kxmovie.bundle */,
 				C7A33EFC1E544FE00009768F /* KxMovieDecoder.h */,
 				C7A33EFD1E544FE00009768F /* KxMovieDecoder.m */,
 				C7A33EFE1E544FE00009768F /* KxMovieGLView.h */,
 				C7A33EFF1E544FE00009768F /* KxMovieGLView.m */,
 				C7A33F001E544FE00009768F /* KxMovieViewController.h */,
 				C7A33F011E544FE00009768F /* KxMovieViewController.m */,
+				C7A33EFB1E544FE00009768F /* kxmovie.bundle */,
 			);
 			path = kxmovie;
 			sourceTree = "<group>";

@@ -1,4 +1,6 @@
 
+阎罗特攻队,http://data.video.qiyi.com/videos/v0/20170307/52/fa/987830860538c1c21c9524f6809b18ed.mp4?key=032aa2052573aac5eba9376530e9d8885&dis_k=06e629a9d3f5405fb13883daa2dd08c1&dis_t=1489381762&src=iqiyi.com&m=v&qd_src=03020031010000000000&qd_vip=1&qd_k=d310bffccce58e67130662c4e38df4aa&qd_tm=1489381762685&qd_ip=65251eab&qd_sc=1031e30405b2c3781f6af7667b7e68d8&qd_uid=1346170852&dis_src=vrs&uuid=add4a0f-58c62982-c3&parse_sign=47ks
+
 搜狐广东卫视 http://gslb.tv.sohu.com/live?cid=346252&ver=seg&ckey=fMZ4NlkP8VXzb2k7uPS&type=hls&prot=1&sig=qdnwPebktY_XgTPeKzJ9efUqIO8.
 搜狐北京卫视 http://gslb.tv.sohu.com/live?cid=346249&ver=seg&ckey=fMZ4Nl-p8VXzb2k7uPS&type=hls&prot=1&sig=xfA1ym5m8HvZpgLhHozn6Ytl6OM.
 搜狐山东卫视 http://gslb.tv.sohu.com/live?cid=346262&ver=seg&ckey=fMZ4NlsP8VXzb2k7uPS&type=hls&prot=1&sig=TrPp81kCyKnDO_pL4M6RrhoEQ0Y.
