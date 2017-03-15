@@ -18,9 +18,8 @@
 		4FB931231D16B6460030A1C3 /* 直播列表2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FB931221D16B6460030A1C3 /* 直播列表2.txt */; };
 		7D872EDCA83C4A42043A7C99 /* libPods-MVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 555C6A4F7C914B4153854619 /* libPods-MVideo.a */; };
 		C70F553D1E599B5900386203 /* 直播列表8.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553B1E599B5900386203 /* 直播列表8.txt */; };
-		C70F553E1E599B5900386203 /* 直播列表9.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553C1E599B5900386203 /* 直播列表9.txt */; };
-		C70F55411E59A1A300386203 /* 直播列表10.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553F1E59A1A300386203 /* 直播列表10.txt */; };
-		C70F55421E59A1A300386203 /* 直播列表11.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F55401E59A1A300386203 /* 直播列表11.txt */; };
+		C70F55411E59A1A300386203 /* 直播列表9.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F553F1E59A1A300386203 /* 直播列表9.txt */; };
+		C70F55421E59A1A300386203 /* 直播列表10.txt in Resources */ = {isa = PBXBuildFile; fileRef = C70F55401E59A1A300386203 /* 直播列表10.txt */; };
 		C7148ECB1E74DB390048662C /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7148EC91E74DB390048662C /* libcrypto.a */; };
 		C7148ECC1E74DB390048662C /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7148ECA1E74DB390048662C /* libssl.a */; };
 		C73892FA1E644E0F0044C969 /* MMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C73892F91E644E0F0044C969 /* MMovieModel.m */; };
@@ -68,9 +67,8 @@
 		4FB931221D16B6460030A1C3 /* 直播列表2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表2.txt"; sourceTree = "<group>"; };
 		555C6A4F7C914B4153854619 /* libPods-MVideo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVideo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70F553B1E599B5900386203 /* 直播列表8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表8.txt"; sourceTree = "<group>"; };
-		C70F553C1E599B5900386203 /* 直播列表9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表9.txt"; sourceTree = "<group>"; };
-		C70F553F1E59A1A300386203 /* 直播列表10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表10.txt"; sourceTree = "<group>"; };
-		C70F55401E59A1A300386203 /* 直播列表11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表11.txt"; sourceTree = "<group>"; };
+		C70F553F1E59A1A300386203 /* 直播列表9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表9.txt"; sourceTree = "<group>"; };
+		C70F55401E59A1A300386203 /* 直播列表10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "直播列表10.txt"; sourceTree = "<group>"; };
 		C7148E7E1E74DB300048662C /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
 		C7148E7F1E74DB300048662C /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
 		C7148E801E74DB300048662C /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
@@ -495,9 +493,8 @@
 				C7A33EF11E544CD40009768F /* 直播列表6.txt */,
 				C799DA2B1E57130C007BC8BD /* 直播列表7.txt */,
 				C70F553B1E599B5900386203 /* 直播列表8.txt */,
-				C70F553C1E599B5900386203 /* 直播列表9.txt */,
-				C70F553F1E59A1A300386203 /* 直播列表10.txt */,
-				C70F55401E59A1A300386203 /* 直播列表11.txt */,
+				C70F553F1E59A1A300386203 /* 直播列表9.txt */,
+				C70F55401E59A1A300386203 /* 直播列表10.txt */,
 			);
 			name = Resouce;
 			sourceTree = "<group>";
@@ -871,14 +868,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C70F553E1E599B5900386203 /* 直播列表9.txt in Resources */,
-				C70F55421E59A1A300386203 /* 直播列表11.txt in Resources */,
+				C70F55421E59A1A300386203 /* 直播列表10.txt in Resources */,
 				4FB931211D16AD930030A1C3 /* 直播列表1.txt in Resources */,
 				C7A33F031E544FE00009768F /* kxmovie.bundle in Resources */,
 				4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */,
 				4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */,
 				4FB931231D16B6460030A1C3 /* 直播列表2.txt in Resources */,
-				C70F55411E59A1A300386203 /* 直播列表10.txt in Resources */,
+				C70F55411E59A1A300386203 /* 直播列表9.txt in Resources */,
 				C73926F21D1D33C600C93A12 /* 直播列表4.txt in Resources */,
 				C73926F41D1D33CF00C93A12 /* 直播列表3.txt in Resources */,
 				4F16F39D1D15926800E8B25D /* Main.storyboard in Resources */,
