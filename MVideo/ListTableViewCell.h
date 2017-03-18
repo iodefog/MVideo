@@ -11,7 +11,13 @@
 @interface ListTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *canPlayLabel;
+@property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic, strong) UILabel *urlLabel;
+
 
 - (void)checkIsCanPlay:(NSString *)url fileName:(NSString *)fileName;
+
+- (void)setObject:(id)anObject;
+
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "ListTableViewCell.h"
+#import "Masonry.h"
+#import "MMovieModel.h"
 
 @implementation ListTableViewCell
 
@@ -24,13 +26,27 @@
 }
 
 - (void)createUI{
-    self.canPlayLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 50, 0, 50, 22)];
-    self.canPlayLabel.backgroundColor = [UIColor greenColor];
-    self.canPlayLabel.textAlignment = NSTextAlignmentCenter;
-    self.canPlayLabel.text = @"可播";
-    self.canPlayLabel.font = [UIFont systemFontOfSize:14];
-    self.canPlayLabel.hidden = YES;
+    
     [self addSubview:self.canPlayLabel];
+    [self addSubview:self.nameLabel];
+    [self addSubview:self.urlLabel];
+    
+    [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(@(10));
+        make.right.equalTo(self).offset(-10);
+        make.height.mas_equalTo(20);
+    }];
+    
+    [self.urlLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.nameLabel);
+        make.top.equalTo(self.nameLabel.mas_bottom).offset(10);
+        make.bottom.equalTo(self).offset(-20);
+    }];
+}
+
+- (void)setObject:(MMovieModel *)anObject{
+    self.urlLabel.text = [anObject.url stringByReplacingOccurrencesOfString:@"[url]" withString:@""];
+
 }
 
 - (void)checkIsCanPlay:(NSString *)url fileName:(NSString *)fileName{
@@ -42,12 +58,37 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
 }
 
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    self.canPlayLabel.frame = CGRectMake(self.frame.size.width - 50, 0, 50, 22);
+#pragma mark - 
+- (UILabel *)canPlayLabel{
+    if (_canPlayLabel) {
+        _canPlayLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds) - 50, 0, 50, 22)];
+        _canPlayLabel.backgroundColor = [UIColor greenColor];
+        _canPlayLabel.textAlignment = NSTextAlignmentCenter;
+        _canPlayLabel.text = @"可播";
+        _canPlayLabel.font = [UIFont systemFontOfSize:14];
+        _canPlayLabel.hidden = YES;
+
+    }
+    return _canPlayLabel;
+}
+
+- (UILabel *)nameLabel{
+    if (!_nameLabel) {
+        _nameLabel = [[UILabel alloc] init];
+        _nameLabel.font = [UIFont boldSystemFontOfSize:15];
+    }
+    return _nameLabel;
+}
+
+- (UILabel *)urlLabel{
+    if (!_urlLabel) {
+        _urlLabel = [[UILabel alloc] init];
+        _urlLabel.font = [UIFont systemFontOfSize:13];
+        _urlLabel.numberOfLines = 0;
+    }
+    return _urlLabel;
 }
 
 @end

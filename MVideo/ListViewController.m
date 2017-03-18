@@ -56,6 +56,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = self.dict[@"title"];
+    
     [self.view addSubview:self.searchBar];
     [self.view addSubview:self.liveListTableView];
     
@@ -179,10 +180,63 @@
     for (NSString *itemUrl in multipleArray) {
       MMovieModel *model = [MMovieModel getMovieModelWithTitle:videoName ?: @"" url:itemUrl ?: @""];
         [itemArray addObject:model];
+      /*
+        if (![self isContainObject:itemUrl] && itemUrl && videoName) {
+            [self writeNotRepeatURL:itemUrl name:videoName fileName:@"NotRepeat"];
+        }
+        else {
+            [self writeNotRepeatURL:itemUrl name:videoName fileName:@"Repeat"];
+        }
+       */
     }
     return itemArray;
 }
+    
+/**
+ *  检查是否有重复url
+ *
+ *  @param url url description
+ *
+ *  @return 重复 YES， 不重复返回NO
+ */
+- (BOOL)isContainObject:(NSString *)url{
+    NSString *document = [NSString stringWithFormat:@"%@/Documents/urlsSet.plist",NSHomeDirectory()];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:document]) {
+        [[NSFileManager defaultManager] createFileAtPath:document contents:nil attributes:nil];
+    }
+    
+    NSMutableArray *urlArray = [NSMutableArray arrayWithContentsOfFile:document];
+    BOOL contain = [urlArray containsObject:url];
+    [urlArray addObject:url];
+    NSSet *urlSet = [NSSet setWithArray:urlArray];
+    urlArray = (id)[urlSet allObjects];
+    [urlArray writeToFile:document atomically:YES];
+    return contain;
+}
 
+/**
+ *  把重复的保存在一起，不重复的保存在一起
+ *
+ *  @param url      url description
+ *  @param name     TV name
+ *  @param fileName 保存文件名
+ */
+- (void)writeNotRepeatURL:(NSString *)url name:(NSString *)name fileName:(NSString *)fileName{
+    NSString *document = [NSString stringWithFormat:@"%@/Documents/%@.txt",NSHomeDirectory(), fileName];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:document]) {
+        [[NSFileManager defaultManager] createFileAtPath:document contents:nil attributes:nil];
+    }
+    NSLog(@"Home ==== %@", document);
+    
+    NSError *error = nil;
+    NSString *NotRepeat = [NSString stringWithContentsOfFile:document encoding:NSUTF8StringEncoding error:&error];
+   NotRepeat = [NotRepeat stringByAppendingFormat:@"%@,%@\n",name, url];
+    NSLog(@"读取字符串 error %@", error);
+    [NotRepeat writeToFile:document atomically:YES encoding:NSUTF8StringEncoding error:&error];
+    NSLog(@"写入 error %@", error);
+}
+    
 /**
  *  注册前后台观察者
  *  进入后台，暂停。进去前台，播放
@@ -227,6 +281,8 @@
     if (_liveListTableView == nil) {
         _liveListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.searchBar.frame.size.height+64, self.view.bounds.size.width, self.view.bounds.size.height-self.searchBar.frame.size.height) style:UITableViewStylePlain];
         _liveListTableView.delegate = self;
+        _liveListTableView.estimatedRowHeight = 100;
+        _liveListTableView.rowHeight = UITableViewAutomaticDimension;
         _liveListTableView.dataSource = self;
         [_liveListTableView registerClass:[ListTableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     }
@@ -254,9 +310,9 @@
     return self.dataSource.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 90;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return 90;
+//}
 
 - (ListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellName = @"cellName";
@@ -267,9 +323,8 @@
     
     if (indexPath.row < [self.dataSource count]) {
         MMovieModel *model =  self.dataSource[indexPath.row];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@-%@",@(indexPath.row+1), model.title];
-        cell.detailTextLabel.numberOfLines = 0;
-        cell.detailTextLabel.text = [model.url stringByReplacingOccurrencesOfString:@"[url]" withString:@""];
+        [cell setObject:model];
+        cell.nameLabel.text = [NSString stringWithFormat:@"%@-%@",@(indexPath.row+1), model.title];
         [cell checkIsCanPlay:cell.detailTextLabel.text fileName:self.dict[@"title"]];
     }
     return cell;
@@ -464,19 +519,8 @@
     }
 }
 
-- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
-//    if(searchBar.text.length==1 && [text isEqualToString:@""]){
-//    }
-    return YES;
-}
-
-
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    [searchBar resignFirstResponder];
-}
 
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
-//    NSLog(@"searchBarTextDidEndEditing:");
     if ([searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@""].length > 0) {
         [self filterDataSourceWithKey:searchBar.text finish:YES];
     }else {
