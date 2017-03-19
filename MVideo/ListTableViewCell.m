@@ -27,10 +27,10 @@
 
 - (void)createUI{
     
-    [self addSubview:self.canPlayLabel];
     [self addSubview:self.nameLabel];
     [self addSubview:self.urlLabel];
-    
+    [self addSubview:self.canPlayLabel];
+
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(@(10));
         make.right.equalTo(self).offset(-10);
@@ -41,6 +41,12 @@
         make.left.right.equalTo(self.nameLabel);
         make.top.equalTo(self.nameLabel.mas_bottom).offset(10);
         make.bottom.equalTo(self).offset(-20);
+    }];
+    
+    [self.canPlayLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.height.mas_equalTo(20);
+        make.width.mas_equalTo(50);
+        make.right.equalTo(self).offset(-20);
     }];
 }
 
@@ -55,15 +61,30 @@
     self.canPlayLabel.hidden = !tmpUrl;
 }
 
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{
+    [super setHighlighted:highlighted animated:animated];
+    if (highlighted) {
+        _canPlayLabel.backgroundColor = [UIColor darkGrayColor];
+    }
+    else {
+        _canPlayLabel.backgroundColor = [UIColor greenColor];
+    }
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    if (selected) {
+        _canPlayLabel.backgroundColor = [UIColor darkGrayColor];
+    }
+    else {
+        _canPlayLabel.backgroundColor = [UIColor greenColor];
+    }
 }
 
 #pragma mark - 
 - (UILabel *)canPlayLabel{
-    if (_canPlayLabel) {
-        _canPlayLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds) - 50, 0, 50, 22)];
+    if (!_canPlayLabel) {
+        _canPlayLabel = [[UILabel alloc] init];
         _canPlayLabel.backgroundColor = [UIColor greenColor];
         _canPlayLabel.textAlignment = NSTextAlignmentCenter;
         _canPlayLabel.text = @"可播";

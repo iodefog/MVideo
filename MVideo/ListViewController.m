@@ -14,6 +14,7 @@
 #import "NewPlayerViewController.h"
 #import "KxMovieViewController.h"
 #import "MMovieModel.h"
+#import "Masonry.h"
 
 #define CanPlayResult   @"CanPlayResult"
 
@@ -64,6 +65,23 @@
     [self operationStr];
     [self registerObserver];
     [self setNavgationRightItem];
+    [self addMasonry];
+}
+
+/**
+ *  添加约束
+ */
+- (void)addMasonry{
+    [self.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(@(64));
+        make.height.mas_equalTo(44);
+    }];
+    
+    [self.liveListTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.searchBar.mas_bottom);
+    }];
 }
 
 /**
@@ -325,7 +343,7 @@
         MMovieModel *model =  self.dataSource[indexPath.row];
         [cell setObject:model];
         cell.nameLabel.text = [NSString stringWithFormat:@"%@-%@",@(indexPath.row+1), model.title];
-        [cell checkIsCanPlay:cell.detailTextLabel.text fileName:self.dict[@"title"]];
+        [cell checkIsCanPlay:cell.urlLabel.text fileName:self.dict[@"title"]];
     }
     return cell;
 }
@@ -351,6 +369,28 @@
         self.title = videoName;
         
         [self playVideoWithMovieUrl:movieUrl movieName:videoName indexPath:indexPath];
+    }
+}
+
+-(void)viewDidLayoutSubviews {
+    if ([self.liveListTableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [self.liveListTableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
+    if ([self.liveListTableView respondsToSelector:@selector(setLayoutMargins:)])  {
+        [self.liveListTableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]){
+        [cell setPreservesSuperviewLayoutMargins:NO];
     }
 }
 
