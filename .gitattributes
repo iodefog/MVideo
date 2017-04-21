@@ -1,2 +1,5 @@
 *.swift linguist-language=objective-c
 *.c linguist-language=objective-c
+*.h linguist-language=objective-c
+*.m linguist-language=objective-c
+*.a linguist-language=objective-c
