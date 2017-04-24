@@ -11,7 +11,6 @@
 #import "ListTableViewCell.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVKit/AVKit.h>
-#import "NewPlayerViewController.h"
 #import "KxMovieViewController.h"
 #import "MMovieModel.h"
 #import "Masonry.h"
@@ -32,6 +31,10 @@
 @end
 
 @implementation ListViewController
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -266,19 +269,11 @@
 
 
 - (void)applicationWillEnterForegroundNotification:(NSNotification *)notification{
-    if ([self.playerController isKindOfClass:[NewPlayerViewController class]]) {
-        [((NewPlayerViewController *)self.playerController).player play];
-    }else {
         [((MPMoviePlayerViewController *)self.playerController).moviePlayer play];
-    }
 }
 
 - (void)applicationDidEnterBackgroundNotification:(NSNotification *)notification{
-    if ([self.playerController isKindOfClass:[NewPlayerViewController class]]) {
-        [((NewPlayerViewController *)self.playerController).player pause];
-    }else {
         [((MPMoviePlayerViewController *)self.playerController).moviePlayer pause];
-    }
 }
 
 #pragma mark - Private Method
@@ -327,10 +322,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataSource.count;
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return 90;
-//}
 
 - (ListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellName = @"cellName";
