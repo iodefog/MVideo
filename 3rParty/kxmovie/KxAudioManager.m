@@ -19,24 +19,30 @@
 #import <Accelerate/Accelerate.h>
 #import "KxLogger.h"
 
+// 最大帧数
 #define MAX_FRAME_SIZE 4096
+// 最大音轨数
 #define MAX_CHAN       2
-
+// 最大采样率
 #define MAX_SAMPLE_DUMPED 5
 
+// 检查错误
 static BOOL checkError(OSStatus error, const char *operation);
+// 会话属性监听
 static void sessionPropertyListener(void *inClientData, AudioSessionPropertyID inID, UInt32 inDataSize, const void *inData);
+// 会话中断监听
 static void sessionInterruptionListener(void *inClientData, UInt32 inInterruption);
+// 给予回应
 static OSStatus renderCallback (void *inRefCon, AudioUnitRenderActionFlags	*ioActionFlags, const AudioTimeStamp * inTimeStamp, UInt32 inOutputBusNumber, UInt32 inNumberFrames, AudioBufferList* ioData);
 
 
 @interface KxAudioManagerImpl : KxAudioManager<KxAudioManager> {
     
-    BOOL                        _initialized;
-    BOOL                        _activated;
-    float                       *_outData;
-    AudioUnit                   _audioUnit;
-    AudioStreamBasicDescription _outputFormat;
+    BOOL                        _initialized;  // 是否已初始化
+    BOOL                        _activated;    // 是否已激活
+    float                       *_outData;     // 输出数据
+    AudioUnit                   _audioUnit;    // 音频单元
+    AudioStreamBasicDescription _outputFormat; // 输出格式
 }
 
 @property (readonly) UInt32             numOutputChannels;
@@ -47,16 +53,20 @@ static OSStatus renderCallback (void *inRefCon, AudioUnitRenderActionFlags	*ioAc
 @property (readonly, strong) NSString   *audioRoute;
 
 @property (readwrite, copy) KxAudioManagerOutputBlock outputBlock;
-@property (readwrite) BOOL playAfterSessionEndInterruption;
+@property (readwrite) BOOL playAfterSessionEndInterruption;  // 会话结束中断后是否播放
 
 - (BOOL) activateAudioSession;
 - (void) deactivateAudioSession;
 - (BOOL) play;
 - (void) pause;
 
+// 检查音频线
 - (BOOL) checkAudioRoute;
+// 建立音频
 - (BOOL) setupAudio;
+// 检查会话属性
 - (BOOL) checkSessionProperties;
+// 给予帧及数据
 - (BOOL) renderFrames: (UInt32) numFrames
                ioData: (AudioBufferList *) ioData;
 
@@ -102,6 +112,7 @@ static OSStatus renderCallback (void *inRefCon, AudioUnitRenderActionFlags	*ioAc
 
 // Debug: dump the current frame data. Limited to 20 samples.
 
+// 倾倒音频样本 （字首，数据buffer，样本打印格式，样本数，频道数）
 #define dumpAudioSamples(prefix, dataBuffer, samplePrintFormat, sampleCount, channelCount) \
 { \
     NSMutableString *dump = [NSMutableString stringWithFormat:prefix]; \
@@ -116,6 +127,7 @@ static OSStatus renderCallback (void *inRefCon, AudioUnitRenderActionFlags	*ioAc
     LoggerAudio(3, @"%@", dump); \
 }
 
+// 倾倒音频帧非交叉存取 （字首，数据buffer，样本打印格式，样本数，频道数）
 #define dumpAudioSamplesNonInterleaved(prefix, dataBuffer, samplePrintFormat, sampleCount, channelCount) \
 { \
     NSMutableString *dump = [NSMutableString stringWithFormat:prefix]; \
