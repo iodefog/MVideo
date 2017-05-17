@@ -139,9 +139,19 @@
     }
     // 网络请求文件
     else if([filePath hasPrefix:@"http"]){
+        
+        NSString *result = nil;
+        if (filePath) {
+           result =  [[NSUserDefaults standardUserDefaults] objectForKey:filePath];
+        }
+        [self transformVideoUrlFromString:result error:error];
+        
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             NSString *videosText = [NSString stringWithContentsOfURL:[NSURL URLWithString:filePath] encoding:NSUTF8StringEncoding error:&error];
             [self transformVideoUrlFromString:videosText error:error];
+            if (filePath && videosText) {
+                [[NSUserDefaults standardUserDefaults] setObject:videosText forKey:filePath];
+            }
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.liveListTableView reloadData];
             });

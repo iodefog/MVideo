@@ -9,7 +9,7 @@
 #import "MHomeViewController.h"
 #import "ListViewController.h"
 
-#define FileNamePre         @"直播列表"
+#define FileNamePre         @"LiveList"
 #define TVHostURL           @"https://lihongli528628.github.io/text/"
 #define VideosTVListName    @"VideosTVListName.txt"
 
@@ -49,6 +49,7 @@
 }
 
 - (void)requestNetWorkData{
+    
     NSString *videosTVListNameUrl = [NSString stringWithFormat:@"%@%@", TVHostURL,VideosTVListName];
     __block NSError *error = nil;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
