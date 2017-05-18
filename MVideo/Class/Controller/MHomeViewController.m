@@ -51,19 +51,37 @@
 - (void)requestNetWorkData{
     
     NSString *videosTVListNameUrl = [NSString stringWithFormat:@"%@%@", TVHostURL,VideosTVListName];
+    
     __block NSError *error = nil;
+
+    NSString *result = nil;
+    if (videosTVListNameUrl) {
+        result =  [[NSUserDefaults standardUserDefaults] objectForKey:videosTVListNameUrl];
+    }
+    [self transformVideoUrlFromString:result error:error];
+
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSString *videoList = [NSString stringWithContentsOfURL:[NSURL URLWithString:videosTVListNameUrl] encoding:NSUTF8StringEncoding error:&error];
         error ? NSLog(@"%@", error) : nil;
-        NSArray *titleArray = [videoList componentsSeparatedByString:@"\n"];
-        for (NSString *title in titleArray) {
-            [self.dataSource addObject:@{@"title":title,
-                                         @"filePath":[NSString stringWithFormat:@"%@%@", TVHostURL, title]}];
-        }
+        [self transformVideoUrlFromString:videoList error:error];
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
+        if (videosTVListNameUrl && videoList) {
+            [[NSUserDefaults standardUserDefaults] setObject:videoList forKey:videosTVListNameUrl];
+        }
+    });
+}
+
+- (void)transformVideoUrlFromString:(NSString *)videoList error:(NSError *)error
+{
+    [self.dataSource removeAllObjects];
+    NSArray *titleArray = [videoList componentsSeparatedByString:@"\n"];
+    for (NSString *title in titleArray) {
+        [self.dataSource addObject:@{@"title":title,
+                                     @"filePath":[NSString stringWithFormat:@"%@%@", TVHostURL, title]}];
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
     });
 }
 

@@ -8,7 +8,6 @@
 
 #import "ListTableViewCell.h"
 #import "Masonry.h"
-#import "MMovieModel.h"
 
 @implementation ListTableViewCell
 
@@ -51,6 +50,7 @@
 }
 
 - (void)setObject:(MMovieModel *)anObject{
+    _object = anObject;
     self.urlLabel.text = [anObject.url stringByReplacingOccurrencesOfString:@"[url]" withString:@""];
 
 }
@@ -59,6 +59,9 @@
     NSDictionary *canPlaylistDict = [[NSUserDefaults standardUserDefaults] objectForKey:fileName];
    NSString *tmpUrl = [canPlaylistDict objectForKey:url];
     self.canPlayLabel.hidden = !tmpUrl;
+    if (self.canPlayLabel.hidden == NO) {
+        self.object.canPlay = YES;
+    }
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{

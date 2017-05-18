@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *url;
+@property (nonatomic, assign) BOOL     canPlay;
+
 
 + (id)getMovieModelWithTitle:(NSString *)title
                          url:(NSString *)url;

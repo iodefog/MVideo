@@ -167,6 +167,9 @@
  */
 - (void)transformVideoUrlFromString:(NSString *)videosText error:(NSError *)error
 {
+    [self.originalSource removeAllObjects];
+    [self.dataSource removeAllObjects];
+    
     // 过滤掉特殊字符 "\r"。有些url带有"\r",导致转换失败
     videosText = [videosText stringByReplacingOccurrencesOfString:@"\r" withString:@""];
     if (!error && (videosText.length > 0)) {
@@ -354,6 +357,15 @@
     if (indexPath.row < [self.dataSource count]) {
         
         ListTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        MMovieModel *model =  self.dataSource[indexPath.row];
+
+        // 可播，则转移到下一个播放
+        if (self.autoPlaySwitch.isOn && (model.canPlay == YES)) {
+            [self autoPlayNextVideo:indexPath delegate:self];
+            return;
+        }
+
+        
         if (![tableView.visibleCells containsObject:cell]) {
             if ((indexPath.row+2) < [self.dataSource count]) {
                 [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:(indexPath.row+2) inSection:indexPath.section] atScrollPosition:UITableViewScrollPositionNone animated:YES];
@@ -362,7 +374,6 @@
             }
         }
         
-        MMovieModel *model =  self.dataSource[indexPath.row];
         NSString *videoName = model.title;
         NSString *movieUrl = [model.url stringByReplacingOccurrencesOfString:@"[url]" withString:@""];
         
@@ -447,6 +458,8 @@
                     [mySelf saveCanPlayHistory:movieStr];
                     [mySelf saveCanPlayHistoryToDocument:movieStr name:movieName];
                 }
+                MMovieModel *model =  self.dataSource[indexPath.row];
+                model.canPlay = YES;
                 ttcell.canPlayLabel.hidden = NO;
                 mySelf.kxResetPop = NO;
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
