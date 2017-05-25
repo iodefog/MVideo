@@ -18,6 +18,8 @@
 
 8.支持筛选搜索
 
+Mac app 地址：
+[https://github.com/lihongli528628/MVideo-Mac](https://github.com/lihongli528628/MVideo-Mac)
 
 效果
 ----
