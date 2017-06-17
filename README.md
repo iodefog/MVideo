@@ -1,6 +1,6 @@
 ## MVideo 各类直播列表集合
 
-
+----
 
 1.港澳台直播列表
 
@@ -19,10 +19,17 @@
 8.支持筛选搜索
 
 
+## MVideo-iPhone
+
+-----
+
+代码地址：
+[https://github.com/lihongli528628/MVideo](https://github.com/lihongli528628/MVideo.git)
+
 效果
 ----
 
-![github](https://github.com/lihongli528628/MVideo/blob/master/ScreenSpot/animal.gif "github")  
+![image](./SnapShoot/animal.gif)  
 
 
 
@@ -53,8 +60,11 @@ MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&s
 [https://github.com/lihongli528628/MVideo-Mac](https://github.com/lihongli528628/MVideo-Mac)
 
 效果图:
-![image](./ScreenSpot/list.png)
-![image](./ScreenSpot/movie.png)
+![image](./SnapShoot/list.png)
+
+--
+
+![image](./SnapShoot/movie.png)
 
 
 
@@ -66,4 +76,4 @@ MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&s
 [https://github.com/lihongli528628/MVideo-Mac2](https://github.com/lihongli528628/MVideo-Mac2)
 
 效果图:
-![image](./ScreenSpot/20170616-180526.png)
+![image](./SnapShoot/20170616-180526.png)
