@@ -1,4 +1,4 @@
-# MVideo 各类直播列表集合
+## MVideo 各类直播列表集合
 
 
 
@@ -18,8 +18,6 @@
 
 8.支持筛选搜索
 
-Mac app 地址：
-[https://github.com/lihongli528628/MVideo-Mac](https://github.com/lihongli528628/MVideo-Mac)
 
 效果
 ----
@@ -45,3 +43,27 @@ MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&s
 火影忍者,http://dlhls.cdn.zhanqi.tv/zqlive/41832_NfsIa.m3u8
 
 ```
+
+
+## MVideo-Mac
+
+-----
+
+代码地址：
+[https://github.com/lihongli528628/MVideo-Mac](https://github.com/lihongli528628/MVideo-Mac)
+
+效果图:
+![image](./ScreenSpot/list.png)
+![image](./ScreenSpot/movie.png)
+
+
+
+## MVideo-Mac2
+
+-----
+
+代码地址：
+[https://github.com/lihongli528628/MVideo-Mac2](https://github.com/lihongli528628/MVideo-Mac2)
+
+效果图:
+![image](./ScreenSpot/20170616-180526.png)

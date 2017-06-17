@@ -1039,7 +1039,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 4AW78593E8;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "./MVideo/MVideo-Pre.pch";
@@ -1058,8 +1058,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8c36b64d-252c-40f1-a9d0-e8ac7291ee3a";
-				PROVISIONING_PROFILE_SPECIFIER = develop_universal_profile;
+				PROVISIONING_PROFILE = "4fffb6ce-c752-4f4e-b5fa-ed44af1b7e98";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: *";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1069,7 +1069,7 @@
 			baseConfigurationReference = 1FFC45E0305C9DC90791AED1 /* Pods-MVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 4AW78593E8;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "./MVideo/MVideo-Pre.pch";
@@ -1088,8 +1088,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8c36b64d-252c-40f1-a9d0-e8ac7291ee3a";
-				PROVISIONING_PROFILE_SPECIFIER = develop_universal_profile;
+				PROVISIONING_PROFILE = "4fffb6ce-c752-4f4e-b5fa-ed44af1b7e98";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: *";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
