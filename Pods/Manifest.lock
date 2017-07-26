@@ -1,12 +1,21 @@
 PODS:
+  - BarrageRenderer (2.0.1)
   - Masonry (1.0.2)
+  - MLEmojiLabel (1.0.0):
+    - TTTAttributedLabel (~> 1.13.4)
+  - TTTAttributedLabel (1.13.4)
 
 DEPENDENCIES:
+  - BarrageRenderer (~> 2.0.1)
   - Masonry
+  - MLEmojiLabel (= 1.0.0)
 
 SPEC CHECKSUMS:
+  BarrageRenderer: 976447f2ad499281f189f7d5d261f7f3f184d0f6
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MLEmojiLabel: ceeab17d10d296cc00636bf201c8da597fdede10
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
 
-PODFILE CHECKSUM: 16c1bc3ecbf6600dcf832a293958980b273be605
+PODFILE CHECKSUM: 47cbea7b913e4f6c7c4b25e0cec595efc791d945
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

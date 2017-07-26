@@ -18,6 +18,9 @@
 #import "KxMovieDecoder.h"
 #import "KxLogger.h"
 
+#import "BarrageRenderer.h"
+#import "BarrageWalkImageTextSprite.h"
+
 //////////////////////////////////////////////////////////
 
 #pragma mark - shaders
@@ -350,6 +353,10 @@ enum {
    	ATTRIBUTE_TEXCOORD,
 };
 
+@interface KxMovieGLView()<BarrageRendererDelegate>
+
+@end
+
 @implementation KxMovieGLView {
     
     KxMovieDecoder  *_decoder;
@@ -363,6 +370,9 @@ enum {
     GLfloat         _vertices[8];
     
     id<KxMovieGLRenderer> _renderer;
+    
+    UIView *_barrageContentView;
+    BarrageRenderer *_barrageRenderer;
 }
 
 + (Class) layerClass
@@ -447,15 +457,43 @@ enum {
         _vertices[7] =  1.0f;  // y3
         
         LoggerVideo(1, @"OK setup GL");
+        [self initBarrageRenderer];
     }
     
     return self;
 }
 
+- (void)initBarrageRenderer
+{
+    _barrageContentView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)/2)];
+    [self addSubview:_barrageContentView];
+    
+    _barrageRenderer = [[BarrageRenderer alloc]init];
+    _barrageRenderer.delegate = self;
+    _barrageRenderer.smoothness = NO;
+    _barrageRenderer.redisplay = NO;
+    [_barrageContentView addSubview:_barrageRenderer.view];
+    [_barrageContentView sendSubviewToBack:_barrageRenderer.view];
+}
+
+/// 图文混排精灵弹幕 - 过场图文弹幕A
+- (BarrageDescriptor *)walkImageTextSpriteDescriptorAWithDirection:(NSInteger)direction
+{
+    BarrageDescriptor * descriptor = [[BarrageDescriptor alloc]init];
+    descriptor.spriteName = NSStringFromClass([BarrageWalkImageTextSprite class]);
+    descriptor.params[@"text"] = [NSString stringWithFormat:@"AA-图文混排/::B过场弹幕:%ld",1];
+    descriptor.params[@"textColor"] = [UIColor greenColor];
+    descriptor.params[@"speed"] = @100;
+//    @(100 * (double)random()/RAND_MAX+50);
+    descriptor.params[@"direction"] = @(direction);
+    return descriptor;
+}
+
 - (void)dealloc
 {
     _renderer = nil;
-
+    [_barrageRenderer stop];
+    
     if (_framebuffer) {
         glDeleteFramebuffers(1, &_framebuffer);
         _framebuffer = 0;
@@ -582,8 +620,22 @@ exit:
     _vertices[7] =   h;
 }
 
+static BOOL isWaiting = NO;
 - (void)render: (KxVideoFrame *) frame
-{        
+{
+    if (!isWaiting) {
+        isWaiting = YES;
+        __weak typeof(self) mySelf = self;
+        __block BarrageRenderer *barrageRenderer = _barrageRenderer;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_global_queue(0, 0), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [barrageRenderer receive:[mySelf walkImageTextSpriteDescriptorAWithDirection:BarrageWalkDirectionR2L]];
+                [_barrageRenderer start];
+                isWaiting = NO;
+            });
+        });
+    }
+    
     static const GLfloat texCoords[] = {
         0.0f, 1.0f,
         1.0f, 1.0f,

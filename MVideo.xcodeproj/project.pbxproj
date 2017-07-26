@@ -31,6 +31,9 @@
 		C73D4E1C1EADAF5000ED8308 /* KxMovieDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C73D4E0F1EADAF5000ED8308 /* KxMovieDecoder.m */; };
 		C73D4E1D1EADAF5000ED8308 /* KxMovieGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C73D4E111EADAF5000ED8308 /* KxMovieGLView.m */; };
 		C73D4E1E1EADAF5000ED8308 /* KxMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C73D4E131EADAF5000ED8308 /* KxMovieViewController.m */; };
+		C7829A121F0A2DFF003C005A /* AdvancedBarrageController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7829A0D1F0A2DFF003C005A /* AdvancedBarrageController.m */; };
+		C7829A131F0A2DFF003C005A /* BarrageWalkImageTextSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = C7829A0F1F0A2DFF003C005A /* BarrageWalkImageTextSprite.m */; };
+		C7829A141F0A2DFF003C005A /* MLEmojiLabel+BarrageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7829A111F0A2DFF003C005A /* MLEmojiLabel+BarrageView.m */; };
 		C7A33F081E5450070009768F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A33F071E5450070009768F /* UIKit.framework */; };
 		C7CD070B1E5AB04C007A2F21 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7CD070A1E5AB04C007A2F21 /* VideoToolbox.framework */; };
 		C7CD070D1E5AB10D007A2F21 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C7CD070C1E5AB10D007A2F21 /* libz.1.2.5.tbd */; };
@@ -271,6 +274,12 @@
 		C73D4E111EADAF5000ED8308 /* KxMovieGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieGLView.m; sourceTree = "<group>"; };
 		C73D4E121EADAF5000ED8308 /* KxMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieViewController.h; sourceTree = "<group>"; };
 		C73D4E131EADAF5000ED8308 /* KxMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieViewController.m; sourceTree = "<group>"; };
+		C7829A0C1F0A2DFF003C005A /* AdvancedBarrageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedBarrageController.h; sourceTree = "<group>"; };
+		C7829A0D1F0A2DFF003C005A /* AdvancedBarrageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedBarrageController.m; sourceTree = "<group>"; };
+		C7829A0E1F0A2DFF003C005A /* BarrageWalkImageTextSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageWalkImageTextSprite.h; sourceTree = "<group>"; };
+		C7829A0F1F0A2DFF003C005A /* BarrageWalkImageTextSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageWalkImageTextSprite.m; sourceTree = "<group>"; };
+		C7829A101F0A2DFF003C005A /* MLEmojiLabel+BarrageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MLEmojiLabel+BarrageView.h"; sourceTree = "<group>"; };
+		C7829A111F0A2DFF003C005A /* MLEmojiLabel+BarrageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MLEmojiLabel+BarrageView.m"; sourceTree = "<group>"; };
 		C7A33F071E5450070009768F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C7A33F091E5450530009768F /* MVideo-Pre.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVideo-Pre.pch"; sourceTree = "<group>"; };
 		C7CD070A1E5AB04C007A2F21 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
@@ -709,6 +718,7 @@
 			children = (
 				C73D4D6D1EADAF3E00ED8308 /* MMovieModel.h */,
 				C73D4D6E1EADAF3E00ED8308 /* MMovieModel.m */,
+				C7829A0B1F0A2DFF003C005A /* AdvancedBarrage */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -771,6 +781,20 @@
 				C73D4E131EADAF5000ED8308 /* KxMovieViewController.m */,
 			);
 			path = kxmovie;
+			sourceTree = "<group>";
+		};
+		C7829A0B1F0A2DFF003C005A /* AdvancedBarrage */ = {
+			isa = PBXGroup;
+			children = (
+				C7829A0C1F0A2DFF003C005A /* AdvancedBarrageController.h */,
+				C7829A0D1F0A2DFF003C005A /* AdvancedBarrageController.m */,
+				C7829A0E1F0A2DFF003C005A /* BarrageWalkImageTextSprite.h */,
+				C7829A0F1F0A2DFF003C005A /* BarrageWalkImageTextSprite.m */,
+				C7829A101F0A2DFF003C005A /* MLEmojiLabel+BarrageView.h */,
+				C7829A111F0A2DFF003C005A /* MLEmojiLabel+BarrageView.m */,
+			);
+			name = AdvancedBarrage;
+			path = "../../../../../../../Downloads/BarrageRenderer-master/BarrageRendererDemo/BarrageRendererDemo/AdvancedBarrage";
 			sourceTree = "<group>";
 		};
 		E3D7921AC30277C0E3D00926 /* Frameworks */ = {
@@ -904,7 +928,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -915,11 +939,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F16F3971D15926800E8B25D /* AppDelegate.m in Sources */,
+				C7829A121F0A2DFF003C005A /* AdvancedBarrageController.m in Sources */,
 				C73D4E1C1EADAF5000ED8308 /* KxMovieDecoder.m in Sources */,
 				C73D4E1D1EADAF5000ED8308 /* KxMovieGLView.m in Sources */,
 				C73D4D731EADAF3E00ED8308 /* MHomeViewController.m in Sources */,
+				C7829A131F0A2DFF003C005A /* BarrageWalkImageTextSprite.m in Sources */,
 				C73D4E1E1EADAF5000ED8308 /* KxMovieViewController.m in Sources */,
 				C73D4E1A1EADAF5000ED8308 /* KxAudioManager.m in Sources */,
+				C7829A141F0A2DFF003C005A /* MLEmojiLabel+BarrageView.m in Sources */,
 				4F16F3941D15926800E8B25D /* main.m in Sources */,
 				C73D4D761EADAF3E00ED8308 /* ListTableViewCell.m in Sources */,
 				C73D4D751EADAF3E00ED8308 /* MMovieModel.m in Sources */,
@@ -1039,7 +1066,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4AW78593E8;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "./MVideo/MVideo-Pre.pch";
@@ -1058,8 +1085,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4fffb6ce-c752-4f4e-b5fa-ed44af1b7e98";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: *";
+				PROVISIONING_PROFILE = "8c36b64d-252c-40f1-a9d0-e8ac7291ee3a";
+				PROVISIONING_PROFILE_SPECIFIER = develop_universal_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1069,7 +1096,7 @@
 			baseConfigurationReference = 1FFC45E0305C9DC90791AED1 /* Pods-MVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4AW78593E8;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "./MVideo/MVideo-Pre.pch";
@@ -1088,8 +1115,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4fffb6ce-c752-4f4e-b5fa-ed44af1b7e98";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: *";
+				PROVISIONING_PROFILE = "8c36b64d-252c-40f1-a9d0-e8ac7291ee3a";
+				PROVISIONING_PROFILE_SPECIFIER = develop_universal_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
