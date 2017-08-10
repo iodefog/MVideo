@@ -31,6 +31,9 @@
 		C73D4E1C1EADAF5000ED8308 /* KxMovieDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C73D4E0F1EADAF5000ED8308 /* KxMovieDecoder.m */; };
 		C73D4E1D1EADAF5000ED8308 /* KxMovieGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C73D4E111EADAF5000ED8308 /* KxMovieGLView.m */; };
 		C73D4E1E1EADAF5000ED8308 /* KxMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C73D4E131EADAF5000ED8308 /* KxMovieViewController.m */; };
+		C74CF2361F3BFC1200D83251 /* canplay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C74CF2331F3BFC1200D83251 /* canplay@2x.png */; };
+		C74CF2371F3BFC1200D83251 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C74CF2341F3BFC1200D83251 /* menu@2x.png */; };
+		C74CF2381F3BFC1200D83251 /* menu_highted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C74CF2351F3BFC1200D83251 /* menu_highted@2x.png */; };
 		C7A33F081E5450070009768F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A33F071E5450070009768F /* UIKit.framework */; };
 		C7CD070B1E5AB04C007A2F21 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7CD070A1E5AB04C007A2F21 /* VideoToolbox.framework */; };
 		C7CD070D1E5AB10D007A2F21 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C7CD070C1E5AB10D007A2F21 /* libz.1.2.5.tbd */; };
@@ -271,6 +274,9 @@
 		C73D4E111EADAF5000ED8308 /* KxMovieGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieGLView.m; sourceTree = "<group>"; };
 		C73D4E121EADAF5000ED8308 /* KxMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieViewController.h; sourceTree = "<group>"; };
 		C73D4E131EADAF5000ED8308 /* KxMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieViewController.m; sourceTree = "<group>"; };
+		C74CF2331F3BFC1200D83251 /* canplay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "canplay@2x.png"; sourceTree = "<group>"; };
+		C74CF2341F3BFC1200D83251 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		C74CF2351F3BFC1200D83251 /* menu_highted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_highted@2x.png"; sourceTree = "<group>"; };
 		C7A33F071E5450070009768F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C7A33F091E5450530009768F /* MVideo-Pre.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVideo-Pre.pch"; sourceTree = "<group>"; };
 		C7CD070A1E5AB04C007A2F21 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
@@ -333,6 +339,7 @@
 			children = (
 				4F16F3951D15926800E8B25D /* AppDelegate.h */,
 				4F16F3961D15926800E8B25D /* AppDelegate.m */,
+				C74CF2321F3BFC1200D83251 /* Resource */,
 				C73D4D771EADAF5000ED8308 /* 3rParty */,
 				C73D4D641EADAF3E00ED8308 /* Class */,
 				4F16F39B1D15926800E8B25D /* Main.storyboard */,
@@ -773,6 +780,16 @@
 			path = kxmovie;
 			sourceTree = "<group>";
 		};
+		C74CF2321F3BFC1200D83251 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C74CF2331F3BFC1200D83251 /* canplay@2x.png */,
+				C74CF2341F3BFC1200D83251 /* menu@2x.png */,
+				C74CF2351F3BFC1200D83251 /* menu_highted@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		E3D7921AC30277C0E3D00926 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -852,6 +869,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74CF2361F3BFC1200D83251 /* canplay@2x.png in Resources */,
+				C74CF2371F3BFC1200D83251 /* menu@2x.png in Resources */,
+				C74CF2381F3BFC1200D83251 /* menu_highted@2x.png in Resources */,
 				4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */,
 				C73D4E1B1EADAF5000ED8308 /* kxmovie.bundle in Resources */,
 				4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */,
@@ -1039,7 +1059,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4AW78593E8;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "./MVideo/MVideo-Pre.pch";
@@ -1058,8 +1078,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4fffb6ce-c752-4f4e-b5fa-ed44af1b7e98";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: *";
+				PROVISIONING_PROFILE = "eea16c42-a343-4a0e-ad91-e8d1a3d2c62a";
+				PROVISIONING_PROFILE_SPECIFIER = develop_universal_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1069,7 +1089,7 @@
 			baseConfigurationReference = 1FFC45E0305C9DC90791AED1 /* Pods-MVideo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4AW78593E8;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "./MVideo/MVideo-Pre.pch";
@@ -1088,8 +1108,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4fffb6ce-c752-4f4e-b5fa-ed44af1b7e98";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: *";
+				PROVISIONING_PROFILE = "eea16c42-a343-4a0e-ad91-e8d1a3d2c62a";
+				PROVISIONING_PROFILE_SPECIFIER = develop_universal_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

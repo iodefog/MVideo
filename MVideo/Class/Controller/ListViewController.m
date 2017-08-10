@@ -94,11 +94,12 @@
     self.autoPlaySwitch = [[UISwitch alloc] initWithFrame:CGRectMake(100-30, 0, 30, 20)];
     [self.autoPlaySwitch addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
     NSNumber *oldValue = [[NSUserDefaults standardUserDefaults] objectForKey:@"kAutoPlaySwitch"];
-    self.autoPlaySwitch.on = oldValue ? oldValue.boolValue : YES;
+    self.autoPlaySwitch.on = oldValue ? oldValue.boolValue : NO;
     
     UILabel *tipLable = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+    tipLable.textColor = [UIColor whiteColor];
     tipLable.userInteractionEnabled = YES;
-    tipLable.text = @"自动返回";
+    tipLable.text = @"AutoPlay";
     tipLable.font = [UIFont systemFontOfSize:14];
     [tipLable addSubview:self.autoPlaySwitch];
     

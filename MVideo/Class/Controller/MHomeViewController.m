@@ -13,6 +13,24 @@
 #define TVHostURL           @"https://lihongli528628.github.io/text/"
 #define VideosTVListName    @"VideosTVListName.txt"
 
+@interface HomeTableViewCell : UITableViewCell
+
+@end
+
+@implementation HomeTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"menu"] highlightedImage:[UIImage imageNamed:@"menu_highted"]];
+        self.accessoryView.frame = CGRectMake(0, 0, 30, 30);
+    }
+    return self;
+}
+
+@end
+
+#pragma mark - MHomeViewController
+
 @interface MHomeViewController ()
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -26,7 +44,7 @@
     [self operationStr];
     [self requestNetWorkData];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HomeTableViewCell"];
+    [self.tableView registerClass:[HomeTableViewCell class] forCellReuseIdentifier:@"HomeTableViewCell"];
 }
 
 - (void)operationStr{
@@ -106,9 +124,12 @@
     return self.dataSource.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 64;
+}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCell" forIndexPath:indexPath];
+- (HomeTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCell" forIndexPath:indexPath];
     cell.textLabel.text = self.dataSource[indexPath.row][@"title"];
     return cell;
 }

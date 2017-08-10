@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UILabel *canPlayLabel;
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *urlLabel;
+@property (nonatomic, strong) UIImageView *iconImageView;
 
 @property (nonatomic, strong) MMovieModel *object;
 

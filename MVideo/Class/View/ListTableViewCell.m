@@ -29,10 +29,17 @@
     [self addSubview:self.nameLabel];
     [self addSubview:self.urlLabel];
     [self addSubview:self.canPlayLabel];
+    [self addSubview:self.iconImageView];
+
+    [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self);
+        make.right.equalTo(self.mas_right).offset(-15);
+        make.size.mas_equalTo(self.iconImageView.image.size);
+    }];
 
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(@(10));
-        make.right.equalTo(self).offset(-10);
+        make.left.top.equalTo(@(15));
+        make.right.equalTo(self.iconImageView.mas_left).offset(-10);
         make.height.mas_equalTo(20);
     }];
     
@@ -47,6 +54,7 @@
         make.width.mas_equalTo(50);
         make.right.equalTo(self).offset(-20);
     }];
+    
 }
 
 - (void)setObject:(MMovieModel *)anObject{
@@ -113,6 +121,13 @@
         _urlLabel.numberOfLines = 0;
     }
     return _urlLabel;
+}
+
+- (UIImageView *)iconImageView{
+    if (!_iconImageView) {
+        _iconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"canplay"]];
+    }
+    return _iconImageView;
 }
 
 @end
