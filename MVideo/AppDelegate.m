@@ -20,7 +20,7 @@
     NSLog(@"%@", NSHomeDirectory());
 //    [UIColor colorWithRed:82/255. green:143/255. blue:255/255. alpha:1]
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:82/255. green:143/255. blue:255/255. alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:193/255. green:100/255. blue:6/255. alpha:1]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
     [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
