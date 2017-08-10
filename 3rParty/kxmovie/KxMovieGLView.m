@@ -583,7 +583,10 @@ exit:
 }
 
 - (void)render: (KxVideoFrame *) frame
-{        
+{
+    if(!frame){
+        return;
+    }
     static const GLfloat texCoords[] = {
         0.0f, 1.0f,
         1.0f, 1.0f,

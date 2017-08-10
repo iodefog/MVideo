@@ -34,6 +34,7 @@
 @interface MHomeViewController ()
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) UIButton *emptyView;
 
 @end
 
@@ -41,10 +42,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self operationStr];
-    [self requestNetWorkData];
     
     [self.tableView registerClass:[HomeTableViewCell class] forCellReuseIdentifier:@"HomeTableViewCell"];
+    
+    [self refreshData];
+}
+
+- (void)refreshData{
+    [self operationStr];
+    [self requestNetWorkData];
 }
 
 - (void)operationStr{
@@ -121,6 +127,20 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.dataSource.count > 0) {
+        [self.emptyView removeFromSuperview];
+        self.emptyView = nil;
+    }else {
+        if (!self.emptyView) {
+            self.emptyView = [UIButton buttonWithType:UIButtonTypeCustom];
+            self.emptyView.frame = CGRectMake(0, 64, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.navigationController.view.bounds)-64);
+            self.emptyView.backgroundColor = [UIColor whiteColor];
+            [self.emptyView addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventTouchUpInside];
+            [self.emptyView setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            [self.emptyView setTitle:@"当前无数据,点我刷新" forState:UIControlStateNormal];;
+            [self.navigationController.view addSubview:self.emptyView];
+        }
+    }
     return self.dataSource.count;
 }
 

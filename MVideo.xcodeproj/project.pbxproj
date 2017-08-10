@@ -11,7 +11,6 @@
 		4F16F3971D15926800E8B25D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F16F3961D15926800E8B25D /* AppDelegate.m */; };
 		4F16F39D1D15926800E8B25D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F39B1D15926800E8B25D /* Main.storyboard */; };
 		4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F39E1D15926800E8B25D /* Assets.xcassets */; };
-		4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F16F3A01D15926800E8B25D /* LaunchScreen.storyboard */; };
 		7D872EDCA83C4A42043A7C99 /* libPods-MVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 555C6A4F7C914B4153854619 /* libPods-MVideo.a */; };
 		C7345B151EC07B3E00104C1C /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7345B131EC07B3E00104C1C /* libcrypto.a */; };
 		C7345B161EC07B3E00104C1C /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7345B141EC07B3E00104C1C /* libssl.a */; };
@@ -48,7 +47,6 @@
 		4F16F3961D15926800E8B25D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4F16F39C1D15926800E8B25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F16F39E1D15926800E8B25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F16F3A11D15926800E8B25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F16F3A31D15926800E8B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555C6A4F7C914B4153854619 /* libPods-MVideo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVideo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7345B131EC07B3E00104C1C /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
@@ -344,7 +342,6 @@
 				C73D4D641EADAF3E00ED8308 /* Class */,
 				4F16F39B1D15926800E8B25D /* Main.storyboard */,
 				4F16F39E1D15926800E8B25D /* Assets.xcassets */,
-				4F16F3A01D15926800E8B25D /* LaunchScreen.storyboard */,
 				4F16F3921D15926800E8B25D /* Supporting Files */,
 			);
 			path = MVideo;
@@ -836,7 +833,7 @@
 				TargetAttributes = {
 					4F16F38E1D15926800E8B25D = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 4AW78593E8;
+						DevelopmentTeam = M675EFBDE2;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -872,7 +869,6 @@
 				C74CF2361F3BFC1200D83251 /* canplay@2x.png in Resources */,
 				C74CF2371F3BFC1200D83251 /* menu@2x.png in Resources */,
 				C74CF2381F3BFC1200D83251 /* menu_highted@2x.png in Resources */,
-				4F16F3A21D15926800E8B25D /* LaunchScreen.storyboard in Resources */,
 				C73D4E1B1EADAF5000ED8308 /* kxmovie.bundle in Resources */,
 				4F16F39F1D15926800E8B25D /* Assets.xcassets in Resources */,
 				4F16F39D1D15926800E8B25D /* Main.storyboard in Resources */,
@@ -956,14 +952,6 @@
 				4F16F39C1D15926800E8B25D /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4F16F3A01D15926800E8B25D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F16F3A11D15926800E8B25D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1061,7 +1049,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4AW78593E8;
+				DEVELOPMENT_TEAM = M675EFBDE2;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "./MVideo/MVideo-Pre.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1077,10 +1065,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rParty/FFmpeg/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.emule5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eea16c42-a343-4a0e-ad91-e8d1a3d2c62a";
-				PROVISIONING_PROFILE_SPECIFIER = develop_universal_profile;
+				PROVISIONING_PROFILE = "f07800fa-d182-4450-b41a-ac49a6eb1987";
+				PROVISIONING_PROFILE_SPECIFIER = emule_development;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1091,8 +1079,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4AW78593E8;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = M675EFBDE2;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "./MVideo/MVideo-Pre.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1108,10 +1096,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rParty/FFmpeg/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.emule5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eea16c42-a343-4a0e-ad91-e8d1a3d2c62a";
-				PROVISIONING_PROFILE_SPECIFIER = develop_universal_profile;
+				PROVISIONING_PROFILE = "b64b40f0-cb1d-49ee-9358-2eefc8467d82";
+				PROVISIONING_PROFILE_SPECIFIER = emule_distribution;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
