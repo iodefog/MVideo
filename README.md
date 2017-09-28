@@ -52,22 +52,10 @@ MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&s
 ```
 
 
+
 ## 妖孽Live-Mac
 
 [妖孽Live.dmg](https://github.com/lihongli528628/MVideo-Mac2/tree/master/dmg/妖孽Live.dmg)
-
------
-
-代码地址：
-[https://github.com/lihongli528628/MVideo-Mac2](https://github.com/lihongli528628/MVideo-Mac2)
-
-效果图:
-![image](https://github.com/lihongli528628/MVideo/blob/master/SnapShoot/20170616-180526.png)
-
-
-
-
-## 妖孽Live-Mac2
 
 -----
 
@@ -80,5 +68,17 @@ MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&s
 --
 
 ![image](https://github.com/lihongli528628/MVideo/blob/master/SnapShoot/movie.png)
+
+
+
+## 妖孽Live-Mac2
+
+-----
+
+代码地址：
+[https://github.com/lihongli528628/MVideo-Mac2](https://github.com/lihongli528628/MVideo-Mac2)
+
+效果图:
+![image](https://github.com/lihongli528628/MVideo/blob/master/SnapShoot/20170616-180526.png)
 
 
