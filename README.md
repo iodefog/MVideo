@@ -62,12 +62,8 @@ MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&s
 代码地址：
 [https://github.com/lihongli528628/MVideo-Mac](https://github.com/lihongli528628/MVideo-Mac)
 
-效果图:
-![image](https://github.com/lihongli528628/MVideo/blob/master/SnapShoot/list.png)
 
---
-
-![image](https://github.com/lihongli528628/MVideo/blob/master/SnapShoot/movie.png)
+![image](https://github.com/lihongli528628/MVideo/blob/master/SnapShoot/20170616-180526.png)
 
 
 
@@ -78,7 +74,12 @@ MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&s
 代码地址：
 [https://github.com/lihongli528628/MVideo-Mac2](https://github.com/lihongli528628/MVideo-Mac2)
 
+
 效果图:
-![image](https://github.com/lihongli528628/MVideo/blob/master/SnapShoot/20170616-180526.png)
+![image](https://github.com/lihongli528628/MVideo/blob/master/SnapShoot/list.png)
+
+--
+
+![image](https://github.com/lihongli528628/MVideo/blob/master/SnapShoot/movie.png)
 
 
