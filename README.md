@@ -54,7 +54,8 @@ MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&s
 
 ## 妖孽Live-Mac
 
-[妖孽Live.dmg](https://github.com/lihongli528628/MVideo/blob/master/dmg/妖孽Live.dmg)
+[妖孽Live.dmg](https://github.com/lihongli528628/MVideo-Mac2/tree/master/dmg/妖孽Live.dmg)
+
 -----
 
 代码地址：
