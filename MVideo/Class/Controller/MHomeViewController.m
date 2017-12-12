@@ -10,7 +10,7 @@
 #import "ListViewController.h"
 
 #define FileNamePre         @"LiveList"
-#define TVHostURL           @"https://lihongli528628.github.io/text/"
+#define TVHostURL           @"https://iodefog.github.io/text/"
 #define VideosTVListName    @"VideosTVListName.txt"
 
 @interface MHomeViewController ()
