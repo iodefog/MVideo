@@ -1,4 +1,4 @@
-## 妖孽Live 各类直播列表集合
+## MLive 各类直播列表集合
 
 ----
 
@@ -19,7 +19,7 @@
 8.支持筛选搜索
 
 
-## 妖孽Live-iPhone
+## MLive-iPhone
 
 -----
 
@@ -53,9 +53,9 @@ MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&s
 
 
 
-## 妖孽Live-Mac
+## MLive-Mac
 
-[妖孽Live.dmg](https://github.com/iodefog/MVideo-Mac2/tree/master/dmg/妖孽Live.dmg)
+[MLive.dmg](https://iodefog.github.io/dmg/MVideo.dmg)
 
 -----
 
@@ -64,22 +64,5 @@ MV,http://live.g3proxy.lecloud.com/gslb?stream_id=lb_mv_720p&tag=live&ext=m3u8&s
 
 
 ![image](https://github.com/iodefog/MVideo/blob/master/SnapShoot/20170616-180526.png)
-
-
-
-## 妖孽Live-Mac2
-
------
-
-代码地址：
-[https://github.com/iodefog/MVideo-Mac2](https://github.com/iodefog/MVideo-Mac2)
-
-
-效果图:
-![image](https://github.com/iodefog/MVideo/blob/master/SnapShoot/list.png)
-
---
-
-![image](https://github.com/iodefog/MVideo/blob/master/SnapShoot/movie.png)
 
 
